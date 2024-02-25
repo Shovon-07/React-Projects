@@ -10,6 +10,7 @@ import Perfume from "../assets/images/perfume.jpg";
 //___ Components ___//
 import Card from "../Components/Card";
 import TempRemote from "../Components/TempRemote";
+import Header from "../Components/Header";
 
 const Dashboard = () => {
   const productsData = [
@@ -20,6 +21,7 @@ const Dashboard = () => {
   ];
   return (
     <>
+      <Header />
       <section className="container">
         <h2 className="title">Products</h2>
         <div className="products">
