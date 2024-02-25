@@ -1,0 +1,108 @@
+.sideNav {
+  background: var(--dark-1);
+  color: var(--light-1);
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: var(--trans);
+}
+.sideNav.active {
+  width: 250px;
+}
+.sideNav .logo {
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: var(--main);
+  background: var(--dark-1);
+  font-size: 30px;
+  text-align: center;
+  padding: 15px 0 25px 0;
+  text-transform: uppercase;
+  cursor: default;
+  z-index: 1;
+}
+.sideNav .menu {
+  margin-top: 25px;
+}
+.sideNav .task {
+  color: var(--light-3);
+  padding: 0 0 10px 10px;
+}
+.sideNav .menu li a {
+  margin: 15px;
+  display: inline-block;
+  font-size: 15px;
+  width: 100%;
+  cursor: pointer;
+}
+.activeLink {
+  color: var(--main);
+}
+.pendingLink {
+  color: var(--light-1);
+  background: transparent;
+}
+.sideNav .menu li:hover .menuLink,
+.sideNav .menu li a:hover,
+.sideNav .menu li .dropdown li a:hover {
+  color: var(--main);
+}
+.sideNav .menu li a .leftIcon {
+  margin-right: 10px;
+}
+.sideNav .menu li a .rightIcon {
+  position: absolute;
+  right: 10%;
+  transition: var(--trans);
+  transform: rotate(90deg);
+}
+.sideNav .menu li a .rightIcon.rotate {
+  transform: rotate(-90deg);
+}
+.sideNav .menu li .dropdown li {
+  margin-left: 30px;
+}
+
+.sideNav .bottom {
+  position: sticky;
+  bottom: 3%;
+  left: 10%;
+  width: 80%;
+  background: var(--main);
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 50px;
+}
+.sideNav .bottom a {
+  color: var(--light);
+  width: 100%;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+.toggler {
+  background: var(--btn-gradient);
+  font-size: 20px;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  margin-left: 250px;
+  z-index: 1000;
+  cursor: pointer;
+  display: none;
+}
+
+/*___ Responsive ___*/
+@media screen and (max-width: 900px) {
+  .sideNav {
+    width: 0px;
+    height: 100vh;
+  }
+  .toggler {
+    display: block;
+    margin: 20px 0 0 20px;
+  }
+}
