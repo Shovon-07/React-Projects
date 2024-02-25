@@ -9,6 +9,7 @@ import Perfume from "../assets/images/perfume.jpg";
 
 //___ Components ___//
 import Card from "../Components/Card";
+import TempRemote from "../Components/TempRemote";
 
 const Dashboard = () => {
   const productsData = [
@@ -34,6 +35,8 @@ const Dashboard = () => {
           })}
         </div>
       </section>
+
+      <TempRemote />
     </>
   );
 };

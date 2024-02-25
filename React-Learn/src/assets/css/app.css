@@ -11,6 +11,7 @@
   --blue: #7f69ff;
   --dark-blue: #001529;
   --green: rgb(4, 170, 4);
+  --red: rgb(248, 28, 28);
 
   --btn-gradient: linear-gradient(-7deg, #52026a, #d8048b);
   --box-gradient: linear-gradient(-35deg, #52026a, #fe09a5);
@@ -47,6 +48,9 @@ body {
   overflow-x: hidden;
   background: var(--dark-2);
   color: var(--light-1);
+}
+section {
+  margin: 50px 0;
 }
 .container {
   width: 100%;
