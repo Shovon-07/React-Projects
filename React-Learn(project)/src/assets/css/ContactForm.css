@@ -1,0 +1,37 @@
+.contactForm {
+  margin: 20px 0;
+}
+.contactForm,
+.contactFormBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contactFormBox {
+  width: 50%;
+  /* box-shadow: 2px 2px 10px var(--dark-1); */
+  background: var(--dark-1);
+  padding: 30px 0;
+  border-radius: 12px;
+}
+.contactForm .inputBox {
+  width: 80%;
+  margin: 15px 0;
+  text-align: center;
+}
+.contactForm div input {
+  width: 100%;
+  background: transparent;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 1px solid var(--light-1);
+  border-radius: 15px;
+  outline: none;
+  color: var(--light-1);
+}
+.contactForm .button {
+  border: none;
+  width: 30%;
+  padding: 10px;
+}
