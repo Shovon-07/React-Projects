@@ -1,26 +1,26 @@
-.contactForm {
+.form {
   margin: 20px 0;
 }
-.contactForm,
-.contactFormBox {
+.form,
+.formBox {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.contactFormBox {
+.formBox {
   width: 50%;
   /* box-shadow: 2px 2px 10px var(--dark-1); */
   background: var(--dark-1);
   padding: 30px 0;
   border-radius: 12px;
 }
-.contactForm .inputBox {
+.form .inputBox {
   width: 80%;
   margin: 15px 0;
   text-align: center;
 }
-.contactForm div input {
+.form div input {
   width: 100%;
   background: transparent;
   font-size: 20px;
@@ -30,8 +30,13 @@
   outline: none;
   color: var(--light-1);
 }
-.contactForm .button {
+.form .button {
   border: none;
   width: 30%;
   padding: 10px;
+}
+.form .errMsg {
+  color: rgb(253, 45, 45);
+  margin-top: 10px;
+  display: inline-block;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 //___ CSS ___//
-import "../assets/css/ContactForm.css";
+import "../assets/css/Form.css";
 
 const Contact = () => {
   const [name, setName] = useState("Shovon");
@@ -21,8 +21,8 @@ const Contact = () => {
   return (
     <>
       <section className="container">
-        <form className="contactForm">
-          <div className="contactFormBox">
+        <form className="form">
+          <div className="formBox">
             <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
               Contact
             </h1>
