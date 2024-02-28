@@ -6,14 +6,24 @@ import "./assets/css/app.css";
 
 //___ Components ___//
 import Header from "./Components/Header";
-import Hero from "./Components/Hero";
+import Footer from "./Components/Footer";
+
+//___ Pages ___//
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <>
       <div>
         <Header />
-        <Hero />
+        <Home />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Footer />
       </div>
     </>
   );

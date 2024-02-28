@@ -14,9 +14,9 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between items-center py-[20px] px-[30px] text-[15px] font-semibold shadow-lg relative">
+    <div className="flex justify-between items-center py-[20px] px-[30px] text-[15px] font-semibold shadow-lg relative z-[1000]">
       <div>
-        <p className="text-2xl">
+        <p className="text-2xl cursor-pointer">
           Shopping <span className="text-[var(--main)]">Mart</span>
         </p>
       </div>
@@ -32,7 +32,7 @@ const Header = () => {
       </div>
 
       {sideNav ? (
-        <div className="flex items-center justify-center w-[200px] absolute top-0 right-0 h-[100vh] backdrop-blur-xl">
+        <div className="flex items-center justify-center w-[200px] fixed top-0 right-0 h-[100vh] bg-[var(--light-1)]">
           <RxCross1
             size={25}
             className="absolute top-3 right-2 cursor-pointer"
