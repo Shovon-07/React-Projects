@@ -1,4 +1,6 @@
 import React from "react";
+
+//___ Icons ___//
 import { SkypeOutlined } from "@ant-design/icons";
 
 export default function Logo() {

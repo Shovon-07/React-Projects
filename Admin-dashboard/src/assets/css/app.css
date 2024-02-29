@@ -15,6 +15,8 @@
   --btn-gradient: linear-gradient(-7deg, #52026a, #d8048b);
   --box-gradient: linear-gradient(-35deg, #52026a, #fe09a5);
 
+  --box-shadow: 1px 1px 10px var(--dark-1);
+
   --trans: 0.5s all;
   --font-family: "Ubuntu", sans-serif;
 }
@@ -79,6 +81,7 @@ a {
 }
 .title {
   color: var(--light-2);
+  cursor: default;
 }
 .d-flex {
   display: flex;

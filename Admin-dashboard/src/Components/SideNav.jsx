@@ -6,12 +6,6 @@ const SideNav = (props) => {
 
   const togglerBtn = () => {
     SideBarRef.classList.toggle("active");
-    if (SideBarRef.classList.contains("active")) {
-      props.navVal = 1;
-    } else {
-      props.navVal = 0;
-    }
-    console.log(props.navVal);
   };
   return (
     <div className="sideNav" ref={(SideBar) => (SideBarRef = SideBar)}>

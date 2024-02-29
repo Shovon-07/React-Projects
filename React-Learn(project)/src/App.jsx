@@ -9,11 +9,18 @@ import Dashboard from "./Pages/Dashboard";
 //___ Pages ___//
 import Auth from "./Pages/Auth";
 
+//___ Context ___//
+import { ContextDataFunc } from "./Context/ContextData";
+
 function App() {
   return (
     <>
       <Auth />
-      <Dashboard />
+
+      {/* Context */}
+      <ContextDataFunc>
+        <Dashboard />
+      </ContextDataFunc>
     </>
   );
 }

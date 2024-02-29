@@ -10,6 +10,7 @@ import "./assets/css/Sidenav.css";
 //___ Components ___//
 
 //___ Pages ___//
+import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
 import Brands from "./Pages/Brands";
 import Category from "./Pages/Category";
@@ -19,12 +20,12 @@ import Customers from "./Pages/Customers";
 import NotFound from "./Pages/NotFound";
 
 function App() {
-  let navValue = 0;
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboard navVal={navValue} />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/brands" element={<Brands />} />
           <Route path="/category" element={<Category />} />
           <Route path="/category/:id" element={<Category />} />

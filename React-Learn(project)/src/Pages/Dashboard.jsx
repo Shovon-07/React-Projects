@@ -13,8 +13,9 @@ import TempRemote from "../Components/TempRemote";
 import Header from "../Components/Header";
 import Products from "../Components/Products";
 import Contact from "../Components/Contact";
+import ContextChild from "../Components/ContextChild";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
   const productsData = [
     { title: "Mens", price: "50$", img: Laptop },
     { title: "Womens", price: "10$", img: Perfume },
@@ -45,6 +46,9 @@ const Dashboard = () => {
 
       <TempRemote />
       <Contact />
+
+      {/* <ContextChild ContData={props.ContextData} /> */}
+      <ContextChild />
     </>
   );
 };
