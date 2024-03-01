@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 //___ CSS ___//
@@ -11,28 +11,62 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { MdOutlineEmail } from "react-icons/md";
 
 const Login = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  let passInputField = useRef();
+
+  // Get input value
+  const handleInput = (e) => {
+    setFormData({ ...formData, [e.target.name]: [e.target.value] });
+  };
+
+  // Show & hide password
+  const showHidePass = () => {
+    // passInputField.style.backgroundColor = "red";
+    if (passInputField.type === "password") {
+      passInputField.type = "text";
+    } else {
+      passInputField.type = "password";
+    }
+  };
+
+  const login = () => {
+    // alert("login");
+  };
+
   return (
     <div className="form-container">
       <div className="form">
         <h4 className="title">SIGN IN</h4>
         <div className="inputBox">
           <MdOutlineEmail size={20} className="leftIcon" />
-          <input type="text" placeholder="Enter your email" />
+          <input
+            type="text"
+            name="email"
+            placeholder="Enter your email"
+            onChange={handleInput}
+          />
         </div>
         <div className="inputBox">
           <RiLockPasswordLine size={20} className="leftIcon" />
-          <input type="password" placeholder="Enter your password" />
-          <div className="eye d-flex-full">
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            ref={(passInput) => (passInputField = passInput)}
+            onChange={handleInput}
+          />
+          <div className="eye d-flex-full" onClick={showHidePass}>
             <FaRegEyeSlash size={20} className="eyeClose" />
             <FiEye size={20} className="eyeOpen" />
           </div>
         </div>
         <div className="buttonDiv">
-          {/* <button type="submit" className="button" id="login">
-            <NavLink to={"/dashboard"}>NEXT</NavLink>
-          </button> */}
           <NavLink to={"/dashboard"}>
-            <button type="submit" className="button">
+            <button type="submit" className="button" onClick={login}>
               NEXT
             </button>
           </NavLink>
