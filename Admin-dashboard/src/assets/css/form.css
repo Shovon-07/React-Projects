@@ -27,7 +27,7 @@
   margin-right: 15px;
 }
 .form-container .form input {
-  background: var(--light);
+  background: transparent;
   border: none;
   outline: none;
   font-size: 18px;

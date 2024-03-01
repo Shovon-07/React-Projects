@@ -7,6 +7,10 @@
   overflow-x: hidden;
   overflow-y: scroll;
   transition: var(--trans);
+  z-index: 1000;
+}
+.sideNav::-webkit-scrollbar {
+  display: none;
 }
 .sideNav.active {
   width: 250px;
@@ -23,9 +27,6 @@
   text-transform: uppercase;
   cursor: default;
   z-index: 1;
-}
-.sideNav .menu {
-  margin-top: 25px;
 }
 .sideNav .task {
   color: var(--light-3);
@@ -73,14 +74,33 @@
   width: 80%;
   background: var(--main);
   border-radius: 8px;
-  text-align: center;
   margin-top: 50px;
+  justify-content: start;
+  padding: 5px 10px;
 }
-.sideNav .bottom a {
+/* .sideNav .bottom a {
   color: var(--light);
   width: 100%;
   padding: 10px 0;
   display: inline-block;
+} */
+.sideNav .bottom .userPic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.sideNav .bottom .userName {
+  color: var(--dark-1);
+  font-weight: bold;
+  cursor: default;
+  text-transform: capitalize;
+}
+.sideNav .bottom .role {
+  color: var(--light-3);
+  font-size: 13px;
+  margin-top: 2px;
+  text-transform: lowercase;
 }
 
 .toggler {

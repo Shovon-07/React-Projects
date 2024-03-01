@@ -1,5 +1,6 @@
 /*________________ Variables start ________________*/
 :root {
+  --dark: #0c0c0c;
   --dark-1: #222;
   --dark-2: #292929;
 
@@ -7,21 +8,38 @@
   --light-2: #cfcfcf;
   --light-3: #6d6d6d;
 
-  --main: #fc3883;
+  --main: #fded03;
+  /* --main: #f8f005; */
   --blue: #7f69ff;
   --dark-blue: #001529;
   --green: rgb(4, 170, 4);
+  --light-yellow: #fdec0333;
 
   --btn-gradient: linear-gradient(-7deg, #52026a, #d8048b);
   --box-gradient: linear-gradient(-35deg, #52026a, #fe09a5);
 
-  --box-shadow: 1px 1px 10px var(--dark-1);
+  --box-shadow: 1px 1px 10px var(--dark);
 
   --trans: 0.5s all;
   --font-family: "Ubuntu", sans-serif;
 }
 /* Change Theme */
 body.light {
+  --light: #0c0c0c;
+  --light-1: #222;
+  --light-2: #292929;
+
+  --dark-1: #e4e4e4;
+  --dark-2: #dadada;
+  --dark-3: #6d6d6d;
+
+  --main: #fded03;
+  /* --main: #f8f005; */
+  --blue: #7f69ff;
+  --dark-blue: #001529;
+  --green: rgb(4, 170, 4);
+
+  --box-shadow: 1px 1px 10px var(--dark);
 }
 /*________________ Variables end ________________*/
 
@@ -50,11 +68,18 @@ body {
   background: var(--dark-2);
   color: var(--light-1);
 }
-.content {
-  width: 100%;
-  max-width: 1500px;
+.main-panel {
   margin-left: 250px;
-  padding: 20px;
+}
+.container {
+  width: 95%;
+  max-width: 2000px;
+  margin: 0 auto;
+  /* padding: 0 50px; */
+}
+section {
+  position: absolute;
+  margin-top: 100px;
 }
 li {
   list-style: none;
@@ -117,11 +142,11 @@ p {
 
 ::-webkit-scrollbar-track {
   /*	background: linear-gradient(165deg, rgba(0,0,0,0.9360119047619048) 0%, rgba(0,0,0,0.5662640056022409) 100%);*/
-  background: var(--dark-80);
+  background: var(--light-1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--dark-50);
+  background: var(--main);
 }
 /*________________ custome scroll bar end ________________*/
 

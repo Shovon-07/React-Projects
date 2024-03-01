@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 
+//___ Images ___//
+import UserPic from "../assets/images/web-page.jpg";
+
 const SideNav = (props) => {
   let SideBarRef = useRef();
 
@@ -16,7 +19,7 @@ const SideNav = (props) => {
         <p className="task">Inventory</p>
         <li>
           <NavLink
-            to={"/"}
+            to={"/dashboard"}
             className={({ isActive }) =>
               isActive ? "activeLink" : "pendingLink"
             }
@@ -107,12 +110,18 @@ const SideNav = (props) => {
           </NavLink>
         </li>
       </ul>
-      <div className="bottom">
-        <a href="" className="button">
+      <div className="bottom d-flex-full">
+        {/* <a href="" className="button">
           <i className="fa-solid fa-gear leftIcon"></i> Settings
-        </a>
+        </a> */}
+        <img src={UserPic} alt="" className="userPic" />
+        <div>
+          <h3 className="userName">Shovon</h3>
+          <p className="role">
+            <span>@</span>Admin
+          </p>
+        </div>
       </div>
-      {/* ref={(toggler) => (togglerBtn = toggler)} */}
       <div className="toggler" onClick={togglerBtn}>
         <i className="fa-solid fa-bars"></i>
       </div>

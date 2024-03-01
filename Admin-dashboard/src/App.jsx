@@ -8,6 +8,7 @@ import "./assets/css/app.css";
 import "./assets/css/Sidenav.css";
 
 //___ Components ___//
+import SideNav from "./Components/SideNav";
 
 //___ Pages ___//
 import Login from "./Pages/Login";

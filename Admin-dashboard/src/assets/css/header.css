@@ -1,0 +1,94 @@
+.header {
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.header .container,
+.header .headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .container {
+  padding: 15px 0;
+}
+.header .searchBox {
+  flex-basis: 75%;
+  position: relative;
+  border-radius: 50px;
+  border: 1px solid var(--light-3);
+}
+.header .searchBox .searchIcon {
+  position: absolute;
+  left: 2%;
+  top: 20%;
+  font-weight: bold;
+}
+.header .searchBox input {
+  width: 100%;
+  padding: 10px 0 10px 55px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: var(--light-1);
+  background: transparent;
+}
+
+.header .headerRight .icons {
+  cursor: pointer;
+  margin-left: 20px;
+}
+.header .headerRight .icons:hover {
+  color: var(--main);
+}
+.header .headerRight .profileBox {
+  position: relative;
+  width: 150px;
+}
+.header .headerRight .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+}
+.header .headerRight .profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid var(--main);
+}
+.header .headerRight .profile .userName {
+  text-transform: uppercase;
+}
+.header .headerRight .profileBox .dropdown {
+  background: var(--light);
+  position: absolute;
+  right: 0;
+  margin-top: 5px;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  transform: scale(1);
+  transition: var(--trans);
+}
+.header .headerRight .profileBox ul li a {
+  width: 100%;
+  color: var(--dark);
+  padding: 10px 5px 10px 0;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+}
+.header .headerRight .profileBox ul a:hover {
+  color: var(--main);
+  background: #fb056529;
+  border-left: 3px solid var(--main);
+  padding: 10px 5px 10px 0;
+}
+.header .headerRight .profileBox ul li .leftIcon {
+  font-size: 14px;
+  margin-right: 8px !important;
+}
