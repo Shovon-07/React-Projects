@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 
 //___ CSS ___//
 import "../assets/css/table.css";

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 //___ Components ___//
 import SideNav from "../Components/SideNav";
@@ -6,6 +7,22 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
 export default function Products() {
+  const [products, setProducts] = useState([]);
+  const [errMsg, setErrMsg] = useState();
+
+  const fetchData = async () => {
+    try {
+      let res = await axios.get("https://fakestoreapi.com/products");
+      setProducts(res.data);
+    } catch (err) {
+      setErrMsg(err.message);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const createProductPopUp = () => {
     alert("createProductPopUp()");
   };
@@ -14,6 +31,7 @@ export default function Products() {
     <>
       <SideNav />
       <Header />
+
       <div className="main-panel">
         <div className="container">
           <section className="section">
@@ -40,7 +58,33 @@ export default function Products() {
                   </tr>
                 </thead>
                 <tbody id="tableData">
-                  <tr>
+                  {products.map((items, index) => {
+                    return (
+                      <tr key={index}>
+                        <td>{index + 1}</td>
+                        <td>{items.title}</td>
+                        <td>{items.price}</td>
+                        <td>{items.rating.count}</td>
+                        <td>
+                          <img
+                            src={items.image}
+                            alt=""
+                            style={{ width: "40px", height: "40px" }}
+                          />
+                        </td>
+                        <td>
+                          <button data-id="${item['id']}" className="edite">
+                            Edite
+                          </button>
+                          <span className="btnDevider">|</span>
+                          <button data-id="${item['id']}" className="delete">
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                  {/* <tr>
                     <td>1</td>
                     <td>shovon</td>
                     <td>20000</td>
@@ -71,9 +115,10 @@ export default function Products() {
                         Delete
                       </button>
                     </td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </table>
+              <h4 style={{ textAlign: "center" }}>{errMsg}</h4>
             </div>
           </section>
         </div>

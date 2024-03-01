@@ -2,16 +2,18 @@ import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 //___ CSS ___//
-import "../assets/css/form.css";
+import "../../assets/css/form.css";
 
 //___ Icons ___//
+import { FaRegUser } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { FiEye } from "react-icons/fi";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { MdOutlineEmail } from "react-icons/md";
 
-const Login = () => {
+const SignUp = () => {
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     password: "",
   });
@@ -33,18 +35,27 @@ const Login = () => {
     }
   };
 
-  const login = () => {
+  const signUp = () => {
     // alert("login");
   };
 
   return (
     <div className="form-container">
       <div className="form">
-        <h4 className="title">SIGN IN</h4>
+        <h4 className="title">SIGN UP</h4>
+        <div className="inputBox">
+          <FaRegUser size={18} className="leftIcon" />
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            onChange={handleInput}
+          />
+        </div>
         <div className="inputBox">
           <MdOutlineEmail size={20} className="leftIcon" />
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="Enter your email"
             onChange={handleInput}
@@ -66,7 +77,7 @@ const Login = () => {
         </div>
         <div className="buttonDiv">
           <NavLink to={"/dashboard"}>
-            <button type="submit" className="button" onClick={login}>
+            <button type="submit" className="button" onClick={signUp}>
               NEXT
             </button>
           </NavLink>
@@ -79,4 +90,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

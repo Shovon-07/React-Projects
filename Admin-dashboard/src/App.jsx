@@ -10,7 +10,8 @@ import "./assets/css/Sidenav.css";
 //___ Components ___//
 
 //___ Pages ___//
-import Login from "./Pages/Login";
+import Login from "./Pages/Auth/Login";
+import SignUp from "./Pages/Auth/SignUp";
 import Dashboard from "./Pages/Dashboard";
 import Brands from "./Pages/Brands";
 import Category from "./Pages/Category";
@@ -25,6 +26,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/brands" element={<Brands />} />
           <Route path="/category" element={<Category />} />
