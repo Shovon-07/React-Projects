@@ -8,8 +8,10 @@
   --light-2: #cfcfcf;
   --light-3: #6d6d6d;
 
-  --main: #fded03;
+  /* --main: #fded03; */
   /* --main: #f8f005; */
+  /* --main: #00a1ff; */
+  --main: #fdab03;
   --blue: #7f69ff;
   --dark-blue: #001529;
   --green: rgb(4, 170, 4);
@@ -20,7 +22,7 @@
 
   --box-shadow: 1px 1px 10px var(--dark);
 
-  --trans: 0.5s all;
+  --trans: 0.2s all;
   --font-family: "Ubuntu", sans-serif;
 }
 /* Change Theme */
@@ -75,11 +77,9 @@ body {
   width: 95%;
   max-width: 2000px;
   margin: 0 auto;
-  /* padding: 0 50px; */
 }
-section {
-  position: absolute;
-  margin-top: 100px;
+.section {
+  margin: 30px 0 100px 0;
 }
 li {
   list-style: none;
@@ -107,6 +107,7 @@ a {
 .title {
   color: var(--light-2);
   cursor: default;
+  margin-bottom: 20px;
 }
 .d-flex {
   display: flex;

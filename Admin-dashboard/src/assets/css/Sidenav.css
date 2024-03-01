@@ -37,6 +37,7 @@
   display: inline-block;
   font-size: 15px;
   width: 100%;
+  transition: var(--trans);
   cursor: pointer;
 }
 .activeLink {
