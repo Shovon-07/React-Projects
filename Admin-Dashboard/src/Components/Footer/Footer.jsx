@@ -1,9 +1,13 @@
 import React from "react";
 
+//___ CSS ___//
+import "./Footer.scss";
+
 const Footer = () => {
   return (
-    <div>
-      <h1 className="Footer">Footer</h1>
+    <div className="Footer">
+      <span>Shopping Mart</span>
+      <span>Shovon's admin dashboard</span>
     </div>
   );
 };

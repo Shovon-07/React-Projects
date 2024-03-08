@@ -15,6 +15,7 @@ import Home from "./Pages/Home/Home";
 import Brand from "./Pages/Brand/Brand";
 import Category from "./Pages/Category/Category";
 import Product from "./Pages/Product/Product";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 function App() {
   const Layout = () => {
@@ -38,9 +39,14 @@ function App() {
     {
       path: "/",
       element: <Layout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/profile",
           element: <Home />,
         },
         {
