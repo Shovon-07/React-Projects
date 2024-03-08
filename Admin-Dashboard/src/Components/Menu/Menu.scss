@@ -1,6 +1,13 @@
 @import "../../Styles/Variables.scss";
 
 .Menu {
+  // width: 250px;
+  // height: 100vh;
+  // position: fixed;
+  // left: 0;
+  // top: 0;
+  margin-top: 20px;
+
   .item {
     display: flex;
     flex-direction: column;
@@ -11,6 +18,7 @@
       font-size: 12px;
       font-weight: bold;
       color: $light-white;
+      text-transform: uppercase;
     }
 
     .listItem {
@@ -22,6 +30,15 @@
 
       &:hover {
         background: $soft-bg;
+      }
+
+      .icon {
+        width: 15px;
+        height: 15px;
+      }
+
+      .listItemTitle {
+        font-size: 14px;
       }
     }
   }

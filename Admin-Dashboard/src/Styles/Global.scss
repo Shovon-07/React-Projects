@@ -26,8 +26,24 @@
 .contentContainer {
   padding: 5px 20px;
   width: 100%;
+  margin-top: 20px;
 }
 a {
   text-decoration: none;
   color: $main-color;
 }
+
+/*________________ custome scroll bar start ________________*/
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: $dark-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main-color;
+}
+/*________________ custome scroll bar end ________________*/

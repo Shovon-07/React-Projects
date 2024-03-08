@@ -3,10 +3,23 @@ import React from "react";
 //___ CSS ___//
 import "./Home.scss";
 
+//___ Components ___//
+import TopBox from "../../Components/TopBox/TopBox";
+
 const Home = () => {
   return (
-    <div>
-      <h1 className="home">Home</h1>
+    <div className="Home">
+      <div className="box box-1">
+        <TopBox />
+      </div>
+      <div className="box box-2">Box 2</div>
+      <div className="box box-3">Box 3</div>
+      <div className="box box-4">Box 4</div>
+      <div className="box box-5">Box 5</div>
+      <div className="box box-6">Box 6</div>
+      <div className="box box-7">Box 7</div>
+      <div className="box box-8">Box 8</div>
+      <div className="box box-9">Box 9</div>
     </div>
   );
 };
