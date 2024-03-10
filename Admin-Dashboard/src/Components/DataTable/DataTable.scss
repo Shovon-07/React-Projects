@@ -3,6 +3,14 @@
 .DataTable {
   .dataGrid {
     background: $main-color;
-    padding: 20px;
+    padding: 5px 20px;
+
+    .MuiDataGrid-toolbarContainer {
+      flex-direction: row-reverse;
+    }
+
+    .MuiDataGrid-columnHeadersInner {
+      background: $dark-bg;
+    }
   }
 }
