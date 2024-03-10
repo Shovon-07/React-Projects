@@ -10,6 +10,7 @@
   box-shadow: $shadow;
   position: sticky;
   top: 0;
+  z-index: 1000;
 
   .logo {
     display: flex;
@@ -38,6 +39,7 @@
 
     .notification {
       position: relative;
+      cursor: pointer;
 
       span {
         background-color: red;
