@@ -1,2 +1,27 @@
+@import "../../Styles/Variables.scss";
+
 .Customer {
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      background: transparent;
+      outline: none;
+      border: 1px solid $main-color;
+      padding: 5px 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+      color: $main-color;
+      font-size: 18px;
+      cursor: pointer;
+      transition: $trans;
+
+      &:hover {
+        background: $main-color;
+        color: $dark-bg;
+      }
+    }
+  }
 }

@@ -12,9 +12,9 @@ import Footer from "./Components/Footer/Footer";
 //___ Pages ___//
 import Login from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
-import Product from "./Pages/Product/Product";
+import Product from "./Pages/Product/Product.tsx";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
-import Customer from "./Pages/Customer/Customer";
+import Customer from "./Pages/Customer/Customer.tsx";
 import Orders from "./Pages/Orders/Orders";
 
 function App() {
@@ -28,10 +28,10 @@ function App() {
           </div>
           <div className="contentContainer">
             <Outlet />
-            {/* <Footer /> */}
+            <Footer />
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   };

@@ -23,8 +23,8 @@ const NavBar = () => {
       </div>
       <div className="icons">
         <img src={search} alt="" className="icon" />
-        <img src={app} alt="" className="icon" />
-        <img src={view} alt="" className="icon" />
+        <img src={app} alt="" className="icon hideablIcon" />
+        <img src={view} alt="" className="icon hideablIcon" />
         <div className="notification">
           <img src={notification} alt="" className="icon" />
           <span>1</span>
@@ -33,7 +33,7 @@ const NavBar = () => {
           <img src={UserImg} alt="" />
           <span>Shovon</span>
         </div>
-        <img src={settings} alt="" className="icon" />
+        <img src={settings} alt="" className="icon hideablIcon" />
       </div>
     </div>
   );

@@ -11,6 +11,27 @@
 
     .MuiDataGrid-columnHeadersInner {
       background: $dark-bg;
+      color: $main-color;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .action {
+      display: flex;
+      align-content: center;
+      gap: 15px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
     }
   }
 }
