@@ -1,37 +1,32 @@
 import { useState } from "react";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
-//___ CSS ___//
-import "./Styles/Global.scss";
+//___ Css ___//
+import "./Styles/App.scss";
 
 //___ Components ___//
-import NavBar from "./Components/NavBar/NavBar";
-import Menu from "./Components/Menu/Menu";
-import Footer from "./Components/Footer/Footer";
+import Header from "./Components/Header/Header";
+import SideNav from "./Components/SideNav/SideNav";
 
 //___ Pages ___//
 import Login from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
-import Product from "./Pages/Product/Product.tsx";
+import Profile from "./Pages/Profile/Profile";
+import Products from "./Pages/Products/Products";
+import Customers from "./Pages/Customers/Customers";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
-import Customer from "./Pages/Customer/Customer.tsx";
-import Orders from "./Pages/Orders/Orders";
 
 function App() {
   const Layout = () => {
     return (
-      <div className="main">
-        <NavBar />
-        <div className="container">
-          <div className="menuContainer">
-            <Menu />
-          </div>
-          <div className="contentContainer">
-            <Outlet />
-            <Footer />
-          </div>
+      <div className="container">
+        <Header />
+        <div className="sideNavContainer">
+          <SideNav />
         </div>
-        {/* <Footer /> */}
+        <div className="contentContainer">
+          <Outlet />
+        </div>
       </div>
     );
   };
@@ -39,34 +34,19 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
+      element: <Login />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/dashboard",
       element: <Layout />,
       errorElement: <ErrorPage />,
       children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "/profile",
-          element: <Home />,
-        },
-        {
-          path: "/customers",
-          element: <Customer />,
-        },
-        {
-          path: "/products",
-          element: <Product />,
-        },
-        {
-          path: "/orders",
-          element: <Orders />,
-        },
+        { path: "/dashboard", element: <Home /> },
+        { path: "/dashboard/profile", element: <Profile /> },
+        { path: "/dashboard/products", element: <Products /> },
+        { path: "/dashboard/customers", element: <Customers /> },
       ],
-    },
-    {
-      path: "/login",
-      element: <Login />,
     },
   ]);
 

@@ -1,0 +1,87 @@
+@import "../../Styles/Variable.scss";
+
+.Header {
+  padding: 10px 30px;
+  justify-content: space-between;
+  background: $dark-2;
+  box-shadow: $shadow;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  .logo {
+    cursor: default;
+
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  .icons {
+    gap: 20px;
+
+    img {
+      cursor: pointer;
+    }
+
+    .notification {
+      position: relative;
+      cursor: pointer;
+
+      img {
+      }
+
+      span {
+        background: #f10404;
+        color: #eeeeee;
+        padding: 3px;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: bold;
+        position: absolute;
+        top: -9px;
+        right: -15px;
+      }
+    }
+
+    .profile {
+      margin-left: 5px;
+      position: relative;
+      cursor: pointer;
+
+      img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+      span {
+        text-transform: capitalize;
+        font-weight: 500;
+      }
+
+      .dropDown {
+        background-color: $dark-2;
+        box-shadow: $shadow;
+        position: absolute;
+        top: 110%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+
+        .dropDownItem {
+          padding: 10px 30px;
+          gap: 8px;
+
+          &:hover {
+            background: $dark-3;
+          }
+        }
+      }
+
+      .hideDropdown {
+        display: none;
+      }
+    }
+  }
+}
