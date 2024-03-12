@@ -10,6 +10,7 @@ import SideNav from "./Components/SideNav/SideNav";
 
 //___ Pages ___//
 import Login from "./Pages/Login/Login";
+import SignUp from "./Pages/SignUp/SignUp";
 import Home from "./Pages/Home/Home";
 import Profile from "./Pages/Profile/Profile";
 import Products from "./Pages/Products/Products";
@@ -35,6 +36,11 @@ function App() {
     {
       path: "/",
       element: <Login />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/signup",
+      element: <SignUp />,
       errorElement: <ErrorPage />,
     },
     {
