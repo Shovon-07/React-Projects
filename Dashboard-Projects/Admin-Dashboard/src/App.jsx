@@ -15,6 +15,7 @@ import Home from "./Pages/Home/Home";
 import Profile from "./Pages/Profile/Profile";
 import Products from "./Pages/Products/Products";
 import Customers from "./Pages/Customers/Customers";
+import Footer from "./Components/Footer/Footer";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         </div>
         <div className="contentContainer">
           <Outlet />
+          <Footer />
         </div>
       </div>
     );

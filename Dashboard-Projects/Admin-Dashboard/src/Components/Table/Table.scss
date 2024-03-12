@@ -1,0 +1,41 @@
+@import "../../Styles/Variable.scss";
+
+.Table {
+  .title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+  }
+
+  .MuiBox-root {
+    .MuiDataGrid-root {
+      background: $dark-2;
+      color: $light-1;
+      border: none;
+
+      .MuiDataGrid-columnHeaders {
+        background: $dark-1;
+        border: 1px solid $light-1;
+
+        // .MuiDataGrid-columnHeadersInner {
+        //   width: 100%;
+        // }
+
+        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+          color: $light-1;
+        }
+      }
+
+      .MuiDataGrid-virtualScroller {
+        border: 1px solid $light-1;
+
+        .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+          color: $light-1;
+        }
+      }
+    }
+    .MuiTablePagination-root {
+      color: $light-1;
+    }
+  }
+}
