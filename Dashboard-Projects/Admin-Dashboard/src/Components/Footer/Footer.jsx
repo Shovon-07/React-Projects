@@ -8,7 +8,7 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <div className="Footer d-flex">
+    <footer className="Footer d-flex">
       <div className="left">
         <h3>Shoppint Mart</h3>
       </div>
@@ -23,7 +23,7 @@ const Footer = () => {
           <FaLinkedinIn />
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

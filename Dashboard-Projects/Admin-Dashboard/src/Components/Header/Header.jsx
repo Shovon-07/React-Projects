@@ -27,11 +27,13 @@ const Header = () => {
       </div>
       <div className="icons d-flex">
         <img src="/images/icons/search.svg" alt="" width={24} />
-        <NavLink to="/">
+        <NavLink to="/dashboard">
           <img src="/images/icons/app.svg" alt="" width={22} />
         </NavLink>
         <img src="/images/icons/expand.svg" alt="" width={19} />
-        <img src="/images/icons/setting.svg" alt="" width={19} />
+        <NavLink to="/dashboard/settings">
+          <img src="/images/icons/setting.svg" alt="" width={19} />
+        </NavLink>
         <div className="notification d-flex">
           <img src="/images/icons/notifications.svg" alt="" width={25} />
           <span className="d-flex">10</span>
@@ -47,7 +49,7 @@ const Header = () => {
             <NavLink to="/profile" className="dropDownItem d-flex">
               <FaRegUser /> Profile
             </NavLink>
-            <NavLink to="/settings" className="dropDownItem d-flex">
+            <NavLink to="/" className="dropDownItem d-flex">
               <IoSettingsOutline /> Settings
             </NavLink>
           </ul>

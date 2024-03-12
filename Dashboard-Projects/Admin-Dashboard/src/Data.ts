@@ -102,7 +102,7 @@ export const Menus = [
       {
         id: 1,
         title: "Settings",
-        url: "/",
+        url: "/dashboard/settings",
         icon: "/images/icons/setting.svg",
       },
       {
