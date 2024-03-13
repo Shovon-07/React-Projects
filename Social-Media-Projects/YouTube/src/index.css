@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+img {
+  cursor: pointer;
+}
+.flex-div {
+  display: flex;
+  align-items: center;
+}
+
+/*___ Scroll bar ___*/
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(151, 151, 151);
+}
+::-webkit-scrollbar-track {
+  background: #cecccc;
+}
