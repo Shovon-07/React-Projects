@@ -17,46 +17,16 @@ const Form = ({ title, url, inputFields, loginOrSingupUrl, loginOrSingup }) => {
 
   return (
     <div className="FormContainer d-flex">
-      {/* <form className="d-flex" onSubmit={handleForm}>
-        <h3>{title}</h3>
-        <div className="inputBox">
-          <input type="text" placeholder="Enter your name" />
-        </div>
-        <div className="inputBox">
-          <input type="email" placeholder="Enter your email" />
-        </div>
-        <div className="inputBox d-flex">
-          <input
-            type="password"
-            placeholder="Enter your password"
-            ref={(passInp) => (passwordInput = passInp)}
-          />
-          <div className="showHide d-flex" onClick={handleShowHide}>
-            <FaEye size={20} className={showHide == false ? "d-none" : ""} />
-            <FaEyeSlash
-              size={20}
-              className={showHide == true ? "d-none" : ""}
-            />
-          </div>
-        </div>
-        <div>
-          <NavLink to="/dashboard" className="button">
-            next
-          </NavLink>
-        </div>
-        <div className="form-bottom d-flex">
-          <NavLink to={loginOrSingupUrl}>{loginOrSingup}</NavLink>
-          <span>|</span>
-          <NavLink to="forgot-password">Forgot password</NavLink>
-        </div>
-      </form> */}
-
       <form className="d-flex" onSubmit={handleForm}>
         <h3>{title}</h3>
         {inputFields.map((items, index) => {
           return (
             <div className={items.className} key={index}>
-              <input type={items.type} placeholder={items.placeholder} />
+              <input
+                type={items.type}
+                name={items.field}
+                placeholder={items.placeholder}
+              />
 
               <div
                 className={`showHide d-flex ${
@@ -86,8 +56,9 @@ const Form = ({ title, url, inputFields, loginOrSingupUrl, loginOrSingup }) => {
         })}
         <div>
           <NavLink to={url} className="button">
-            next
+            <button type="submit">next</button>
           </NavLink>
+          {/* <button type="submit">next</button> */}
         </div>
         <div className="form-bottom d-flex">
           <NavLink to={loginOrSingupUrl}>{loginOrSingup}</NavLink>
