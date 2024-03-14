@@ -41,23 +41,45 @@
       }
     }
 
-    button {
+    .button {
       text-transform: uppercase;
       background: transparent;
       outline: none;
       border: 1px solid $light-3;
       color: $light-1;
       padding: 10px 30px;
-      margin-top: 30px;
+      margin-top: 20px;
       font-weight: 700;
       font-size: 16px;
       letter-spacing: 2px;
       transition: $trans;
       cursor: pointer;
+      display: inline-block;
 
       &:hover {
         background: $light-2;
         color: $dark-2;
+      }
+    }
+
+    .form-bottom {
+      width: 100%;
+      justify-content: flex-end;
+      margin-top: 20px;
+
+      a {
+        font-size: 14px;
+        transition: $trans;
+        color: $light-2;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+
+      span {
+        margin: 0 10px;
+        color: $light-2;
       }
     }
   }

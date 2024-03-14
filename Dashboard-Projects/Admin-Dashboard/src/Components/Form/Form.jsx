@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { React, useState } from "react";
 
 //___ Icons ___//
 import { FaEye } from "react-icons/fa";
@@ -8,19 +8,8 @@ import { FaEyeSlash } from "react-icons/fa6";
 import "./Form.scss";
 import { NavLink } from "react-router-dom";
 
-const Form = () => {
+const Form = ({ title, url, inputFields, loginOrSingupUrl, loginOrSingup }) => {
   const [showHide, setShowHide] = useState(false);
-  let passwordInput = useRef();
-
-  const handleShowHide = () => {
-    if (showHide == false) {
-      setShowHide(true);
-      passwordInput.type = "text";
-    } else if (showHide == true) {
-      setShowHide(false);
-      passwordInput.type = "password";
-    }
-  };
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -28,8 +17,8 @@ const Form = () => {
 
   return (
     <div className="FormContainer d-flex">
-      <form className="d-flex" onSubmit={handleForm}>
-        <h3>sign in</h3>
+      {/* <form className="d-flex" onSubmit={handleForm}>
+        <h3>{title}</h3>
         <div className="inputBox">
           <input type="text" placeholder="Enter your name" />
         </div>
@@ -51,9 +40,59 @@ const Form = () => {
           </div>
         </div>
         <div>
-          <NavLink to="/dashboard">
-            <button type="submit"> confirm</button>
+          <NavLink to="/dashboard" className="button">
+            next
           </NavLink>
+        </div>
+        <div className="form-bottom d-flex">
+          <NavLink to={loginOrSingupUrl}>{loginOrSingup}</NavLink>
+          <span>|</span>
+          <NavLink to="forgot-password">Forgot password</NavLink>
+        </div>
+      </form> */}
+
+      <form className="d-flex" onSubmit={handleForm}>
+        <h3>{title}</h3>
+        {inputFields.map((items, index) => {
+          return (
+            <div className={items.className} key={index}>
+              <input type={items.type} placeholder={items.placeholder} />
+
+              <div
+                className={`showHide d-flex ${
+                  items.field !== "password" ? "d-none" : ""
+                }`}
+                onClick={() => {
+                  if (showHide == false) {
+                    setShowHide(true);
+                    items.type = "text";
+                  } else if (showHide == true) {
+                    setShowHide(false);
+                    items.type = "password";
+                  }
+                }}
+              >
+                <FaEye
+                  size={20}
+                  className={showHide == false ? "d-none" : ""}
+                />
+                <FaEyeSlash
+                  size={20}
+                  className={showHide == true ? "d-none" : ""}
+                />
+              </div>
+            </div>
+          );
+        })}
+        <div>
+          <NavLink to={url} className="button">
+            next
+          </NavLink>
+        </div>
+        <div className="form-bottom d-flex">
+          <NavLink to={loginOrSingupUrl}>{loginOrSingup}</NavLink>
+          <span>|</span>
+          <NavLink to="forgot-password">Forgot password</NavLink>
         </div>
       </form>
     </div>
