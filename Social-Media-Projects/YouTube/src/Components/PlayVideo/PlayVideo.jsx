@@ -12,10 +12,16 @@ import user_profile from "../../assets/user_profile.jpg";
 //___ Css ___//
 import "./PlayVideo.css";
 
-const PlayVideo = () => {
+const PlayVideo = ({ videoId }) => {
   return (
     <div className="play-video">
-      <video src={video1} controls autoPlay muted></video>
+      {/* <video src={video1} controls autoPlay muted></video> */}
+      <iframe
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
       <h2>
         Create YouTube Clone Using React JS | Build Complete Website Like
         YouTube In React JS 2024
@@ -46,7 +52,7 @@ const PlayVideo = () => {
         </div>
         <button>Subscribe</button>
       </div>
-      <div className="vie-description">
+      <div className="vid-description">
         <p>This a great learning chanel</p>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam illum

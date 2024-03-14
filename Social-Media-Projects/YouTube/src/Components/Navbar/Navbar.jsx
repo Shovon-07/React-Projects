@@ -11,6 +11,7 @@ import uploade_icon from "../../assets/upload.png";
 import more_icon from "../../assets/more.png";
 import notification_icon from "../../assets/notification.png";
 import profile_icon from "../../assets/jack.png";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ setSidebar }) => {
   return (
@@ -22,7 +23,9 @@ const Navbar = ({ setSidebar }) => {
           onClick={() => setSidebar((prev) => (prev === false ? true : false))}
           className="menu_icon"
         />
-        <img src={logo} alt="" className="logo" />
+        <Link to="/">
+          <img src={logo} alt="" className="logo" />
+        </Link>
       </div>
 
       <div className="nav-middle flex-div">
