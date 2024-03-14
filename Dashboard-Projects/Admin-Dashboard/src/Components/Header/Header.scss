@@ -19,7 +19,7 @@
   }
 
   .icons {
-    gap: 25px;
+    gap: 0 25px;
 
     img {
       cursor: pointer;
@@ -30,6 +30,8 @@
       cursor: pointer;
 
       img {
+        width: 25px;
+        height: 25px;
       }
 
       span {
@@ -49,39 +51,44 @@
       margin-left: 5px;
       position: relative;
       cursor: pointer;
+      z-index: 997;
 
       img {
-        width: 35px;
-        height: 35px;
+        width: 25px;
+        height: auto;
         border-radius: 50%;
       }
       span {
         text-transform: capitalize;
         font-weight: 500;
       }
+    }
+    .dropDown {
+      background-color: $dark-2;
+      box-shadow: $shadow;
+      position: absolute;
+      top: 46px;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      transition: $trans;
 
-      .dropDown {
-        background-color: $dark-2;
-        box-shadow: $shadow;
-        position: absolute;
-        top: 110%;
-        right: 0;
-        display: flex;
-        flex-direction: column;
+      // opacity: 0;
+      // z-index: -1;
 
-        .dropDownItem {
-          padding: 10px 30px;
-          gap: 8px;
+      .dropDownItem {
+        padding: 10px 30px;
+        gap: 8px;
 
-          &:hover {
-            background: $dark-3;
-          }
+        &:hover {
+          background: $dark-3;
         }
       }
-
-      .hideDropdown {
-        display: none;
-      }
+    }
+    .showDropdown {
+      display: flex;
+      // opacity: 1;
+      // z-index: 1000;
     }
   }
 }

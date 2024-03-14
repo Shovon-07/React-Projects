@@ -3,8 +3,18 @@
 .Table {
   .title {
     font-size: 20px;
-    margin-bottom: 15px;
     text-transform: capitalize;
+  }
+  .addBtn {
+    background: $btnGradient;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    cursor: pointer;
   }
 
   .MuiBox-root {

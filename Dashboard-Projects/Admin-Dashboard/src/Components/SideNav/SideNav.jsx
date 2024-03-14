@@ -21,7 +21,7 @@ const SideNav = () => {
                 <NavLink
                   to={menus.url}
                   key={menus.id}
-                  className={({ isActive }) => (isActive ? "isActive" : "")}
+                  // className={({ isActive }) => (isActive ? "isActive" : "")}
                 >
                   {/* <AiFillHome className="icon" /> */}
                   <img src={menus.icon} alt="" className="icon" />
@@ -32,33 +32,6 @@ const SideNav = () => {
           </div>
         );
       })}
-      {/* <div className="itemContainer d-flex">
-        <p className="title">Main</p>
-        <NavLink to="/" className="item d-flex">
-          <AiFillHome className="icon" />
-          <span className="navTitle">Home</span>
-        </NavLink>
-        <NavLink to="/profile" className="item d-flex">
-          <FaUser className="icon" />
-          <span className="navTitle">Profile</span>
-        </NavLink>
-      </div>
-
-      <div className="itemContainer d-flex">
-        <p className="title">Product</p>
-        <NavLink to="/brands" className="item d-flex">
-          <TbBrandAdobe className="icon" />
-          <span className="navTitle">Brands</span>
-        </NavLink>
-        <NavLink to="/categories" className="item d-flex">
-          <FaListUl className="icon" />
-          <span className="navTitle">Categories</span>
-        </NavLink>
-        <NavLink to="products" className="item d-flex">
-          <FaShoppingCart className="icon" />
-          <span className="navTitle">Products</span>
-        </NavLink>
-      </div> */}
     </div>
   );
 };

@@ -31,7 +31,13 @@ const Table = (props) => {
 
   return (
     <div className="Table">
-      <h3 className="title">{props.slug}</h3>
+      <div
+        className="d-flex"
+        style={{ marginBottom: "20px", justifyContent: "space-between" }}
+      >
+        <h3 className="title">{props.slug}</h3>
+        <button className="addBtn">Add new {props.slug}</button>
+      </div>
       <Box sx={{ width: "100%" }}>
         <DataGrid
           rows={props.rows}
