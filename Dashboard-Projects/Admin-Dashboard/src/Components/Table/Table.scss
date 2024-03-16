@@ -6,15 +6,33 @@
     text-transform: capitalize;
   }
   .addBtn {
-    background: $btnGradient;
-    border: 0;
+    // background: $btnGradient;
+    // border: 0;
+    // outline: 0;
+    // color: #fff;
+    // font-size: 14px;
+    // font-weight: 600;
+    // padding: 10px;
+    // border-radius: 8px;
+    // text-transform: capitalize;
+    // cursor: pointer;
+
+    background: transparent;
+    border: 1px solid $light-2;
     outline: 0;
-    color: #fff;
-    font-size: 15px;
-    padding: 10px;
+    color: $light-1;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
     border-radius: 8px;
     text-transform: capitalize;
     cursor: pointer;
+    transition: $trans;
+
+    &:hover {
+      background: $light-1;
+      color: $dark-2;
+    }
   }
 
   .MuiBox-root {
@@ -29,6 +47,7 @@
         .css-1eed5fa-MuiInputBase-root-MuiInput-root,
         .css-dwjt6a-MuiButtonBase-root-MuiIconButton-root {
           color: $light-1;
+          border-bottom: 1px solid $light-1;
         }
       }
 

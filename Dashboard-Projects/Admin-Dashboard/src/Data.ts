@@ -36,7 +36,7 @@ export const Menus = [
       {
         id: 3,
         title: "Orders",
-        url: "/orders",
+        url: "/dashboard/orders",
         icon: "/images/icons/order.svg",
       },
       {

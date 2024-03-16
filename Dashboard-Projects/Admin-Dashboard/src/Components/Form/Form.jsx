@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 //___ Icons ___//
 import { FaEye } from "react-icons/fa";
@@ -6,7 +7,6 @@ import { FaEyeSlash } from "react-icons/fa6";
 
 //___ CSS ___//
 import "./Form.scss";
-import { NavLink } from "react-router-dom";
 
 const Form = ({ title, url, inputFields, loginOrSingupUrl, loginOrSingup }) => {
   const [showHide, setShowHide] = useState(false);

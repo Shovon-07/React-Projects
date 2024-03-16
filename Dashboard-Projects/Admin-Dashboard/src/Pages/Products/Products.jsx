@@ -110,7 +110,7 @@ const Products = () => {
 
   return (
     <div className="Products">
-      <Table slug={"Products"} rows={rows} columns={columns} />
+      <Table slug={"Product"} rows={rows} columns={columns} />
 
       {/* <button onClick={getData}>Get Data</button> */}
     </div>

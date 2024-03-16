@@ -14,8 +14,9 @@ import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/SignUp/SignUp";
 import Home from "./Pages/Home/Home";
 import Profile from "./Pages/Profile/Profile";
-import Products from "./Pages/Products/Products";
 import Customers from "./Pages/Customers/Customers";
+import Products from "./Pages/Products/Products";
+import Orders from "./Pages/Orders/Orders";
 import Settings from "./Pages/Settings/Settings";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
@@ -54,8 +55,9 @@ function App() {
         // Side nav menu
         { path: "/dashboard", element: <Home /> },
         { path: "/dashboard/profile", element: <Profile /> },
-        { path: "/dashboard/products", element: <Products /> },
         { path: "/dashboard/customers", element: <Customers /> },
+        { path: "/dashboard/products", element: <Products /> },
+        { path: "/dashboard/orders", element: <Orders /> },
 
         // Header menu
         { path: "/dashboard/settings", element: <Settings /> },

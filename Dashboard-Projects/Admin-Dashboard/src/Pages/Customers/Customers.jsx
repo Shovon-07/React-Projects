@@ -14,22 +14,26 @@ const Customers = () => {
       field: "name",
       headerName: "Name",
       width: 150,
+      inputType: "text",
     },
     {
       field: "email",
       headerName: "Email",
       width: 150,
+      inputType: "email",
     },
     {
       field: "phone",
       headerName: "Phone",
       width: 150,
+      inputType: "number",
     },
     {
       field: "address",
       headerName: "Address",
       type: "string",
       width: 200,
+      inputType: "text",
     },
     {
       field: "fullName",
@@ -110,7 +114,7 @@ const Customers = () => {
 
   return (
     <div className="Customers">
-      <Table slug={"Customers"} rows={rows} columns={columns} />
+      <Table slug={"Customer"} rows={rows} columns={columns} />
 
       {/* <button onClick={getData}>Get Data</button> */}
     </div>

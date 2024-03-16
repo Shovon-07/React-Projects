@@ -1,33 +1,13 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import ModalPage from "../Modal/ModalPage";
 
 //___ Css ___//
 import "./Table.scss";
 
 const Table = (props) => {
-  // const actionColumn: GridColDef = {
-  //   field: "action",
-  //   headerName: "Actions",
-  //   width: 200,
-  //   renderCell: (params) => {
-  //     return (
-  //       <div className="action">
-  //         <Link to={`/${props.slug}/${params.row.id}`}>
-  //           <img src="/images/view.svg" alt="" />
-  //         </Link>
-  //         <div
-  //           className="delete"
-  //           onClick={() => {
-  //             handleDelete(params.row.id);
-  //           }}
-  //         >
-  //           <img src="/images/delete.svg" alt="" />
-  //         </div>
-  //       </div>
-  //     );
-  //   },
-  // };
+  const { slug, columns, rows } = props;
 
   return (
     <div className="Table">
@@ -35,13 +15,13 @@ const Table = (props) => {
         className="d-flex"
         style={{ marginBottom: "20px", justifyContent: "space-between" }}
       >
-        <h3 className="title">{props.slug}</h3>
-        <button className="addBtn">Add new {props.slug}</button>
+        <h3 className="title">{slug + "s"}</h3>
+        <ModalPage slug={slug} inputFields={columns} />
       </div>
       <Box sx={{ width: "100%" }}>
         <DataGrid
-          rows={props.rows}
-          columns={[...props.columns]}
+          rows={rows}
+          columns={[...columns]}
           initialState={{
             pagination: {
               paginationModel: {
