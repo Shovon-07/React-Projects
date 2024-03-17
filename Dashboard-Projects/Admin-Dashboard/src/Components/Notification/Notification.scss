@@ -6,6 +6,7 @@
   .notification-item {
     width: 100%;
     padding: 10px 20px;
+    align-items: flex-start;
     gap: 20px;
 
     &:hover {
@@ -18,7 +19,11 @@
     }
     h4 {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
+    }
+    p {
+      font-size: 13px;
+      margin-top: 7px;
     }
   }
 }

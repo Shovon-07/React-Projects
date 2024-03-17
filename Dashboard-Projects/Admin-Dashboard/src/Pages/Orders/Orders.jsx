@@ -11,6 +11,7 @@ import DeleteIcon from "/images/icons/delete.svg";
 
 //___ Components ___//
 import Loader from "../../Components/Loader/Loader";
+import TableData from "../../Components/TableData/TableData";
 
 const Orders = () => {
   const [search, setSearch] = useState("");
@@ -48,7 +49,6 @@ const Orders = () => {
       let res = await axios.get("https://fakestoreapi.com/products");
       setOrderData(res.data);
       setfilteredOrderData(res.data);
-      console.log(res.data);
     } catch (error) {
       console.log(error);
     }
@@ -67,30 +67,16 @@ const Orders = () => {
 
   return (
     <div className="Orders">
-      {orderData == "" ? <Loader /> : ""}
-      <DataTable
-        columns={columns}
-        data={filteredOrderData}
-        title="Orders"
-        pagination
-        fixedHeader
-        fixedHeaderScrollHeight="400px"
-        selectableRows
-        selectableRowsHighlight
-        highlightOnHover
-        subHeader
-        subHeaderComponent={
-          <input
-            type="text"
-            placeholder="Search here"
-            value={search}
-            onChange={(e) => {
-              setSearch(e.target.value);
-              console.log(search);
-            }}
-          />
-        }
-      />
+      {orderData == "" ? (
+        <Loader />
+      ) : (
+        <TableData
+          columns={columns}
+          rows={filteredOrderData}
+          searchData={search}
+          setSearchData={setSearch}
+        />
+      )}
     </div>
   );
 };

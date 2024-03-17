@@ -114,3 +114,55 @@ export const Menus = [
     ],
   },
 ];
+
+// Notificition Data
+export const notificationData = [
+  {
+    notificationImg: "/images/users/web-page.jpg",
+    notificationTitle: "I'll buy a I phone 10x mobile",
+    notificationMsg:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
+  },
+  {
+    notificationImg: "/images/icons/noavatar.png",
+    notificationTitle: "I'll buy a Rols Royce",
+    notificationMsg:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
+  },
+  {
+    notificationImg: "/images/icons/calendar.svg",
+    notificationTitle: "I'll buy a Rols Royce",
+    notificationMsg:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
+  },
+  {
+    notificationImg: "/images/icons/chart.svg",
+    notificationTitle: "I'll buy a I pad",
+    notificationMsg:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
+  },
+  {
+    notificationImg: "/images/users/web-page.jpg",
+    notificationTitle: "I'll buy a I phone 10x mobile",
+    notificationMsg:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
+  },
+  {
+    notificationImg: "/images/icons/noavatar.png",
+    notificationTitle: "I'll buy a Rols Royce",
+    notificationMsg:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
+  },
+  {
+    notificationImg: "/images/icons/calendar.svg",
+    notificationTitle: "I'll buy a Rols Royce",
+    notificationMsg:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
+  },
+  {
+    notificationImg: "/images/icons/chart.svg",
+    notificationTitle: "I'll buy a I pad",
+    notificationMsg:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
+  },
+];

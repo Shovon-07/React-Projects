@@ -37,10 +37,14 @@
       span {
         background: #f10404;
         color: #eeeeee;
-        padding: 3px;
+        /* padding: 3px; */
+        width: 80%;
+        height: 80%;
         border-radius: 50%;
         font-size: 12px;
         font-weight: bold;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         top: -9px;
         right: -15px;

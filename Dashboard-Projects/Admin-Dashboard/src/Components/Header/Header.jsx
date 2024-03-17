@@ -9,6 +9,9 @@ import { FaAngleDown } from "react-icons/fa6";
 //___ Css ___//
 import "./Header.scss";
 
+//___ Data ___//
+import { notificationData } from "../../Data";
+
 //___ Components ___//
 import Notification from "../Notification/Notification";
 
@@ -57,7 +60,8 @@ const Header = () => {
           onClick={handleNotificationDropDown}
         >
           <img src="/images/icons/notifications.svg" alt="" />
-          <span className="d-flex">10</span>
+          {/* <span className="d-flex">10</span> */}
+          <span className="d-flex">{notificationData.length}</span>
           <ul
             className={`dropDown ${
               notificationDropDown == true ? "showDropdown" : ""
