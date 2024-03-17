@@ -9,64 +9,73 @@ import "./TableData.scss";
 import EditeIcon from "/images/icons/view.svg";
 import DeleteIcon from "/images/icons/delete.svg";
 
-const TableData = ({ columns, rows, searchData, setSearchData }) => {
-  // const [search, setSearch] = useState("");
-  // const [orderData, setOrderData] = useState([]);
-  // const [filteredOrderData, setfilteredOrderData] = useState([]);
+//___ Components ___//
 
-  // const columns = [
-  //   { name: "Title", sortable: true, selector: (row) => row.title },
-  //   { name: "Category", selector: (row) => row.category },
-  //   { name: "Price", selector: (row) => row.price },
-  //   { name: "Rating", selector: (row) => row.rating.count },
-  //   {
-  //     name: "Action",
-  //     cell: (row) => (
-  //       <div className="d-flex" style={{ gap: "10px" }}>
-  //         <img
-  //           src={EditeIcon}
-  //           alt=""
-  //           style={{ cursor: "pointer" }}
-  //           onClick={() => alert(row.id)}
-  //         />
-  //         <img
-  //           src={DeleteIcon}
-  //           alt=""
-  //           style={{ cursor: "pointer" }}
-  //           onClick={() => alert(row.id)}
-  //         />
-  //       </div>
-  //     ),
-  //   },
-  // ];
+const TableData = (props) => {
+  // Props
+  const { api, tableTitle } = props;
 
-  // const getOrderData = async () => {
-  //   try {
-  //     let res = await axios.get("https://fakestoreapi.com/products");
-  //     setOrderData(res.data);
-  //     setfilteredOrderData(res.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+  // State
+  const [apiData, setApiData] = useState([]);
+  const [searchData, setSearchData] = useState("");
+  const [filteredApiData, setFilteredApiData] = useState([]);
 
-  // useEffect(() => {
-  //   getOrderData();
-  // }, []);
+  const getApiData = async () => {
+    try {
+      let res = await axios.get(api);
+      setApiData(res.data);
+      setFilteredApiData(res.data);
+      // console.log(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  // useEffect(() => {
-  //   const result = orderData.filter((filteredOrder) => {
-  //     return filteredOrder.title.toLowerCase().match(search.toLowerCase());
-  //   });
-  //   setfilteredOrderData(result);
-  // }, [search]);
+  const columns = [
+    { name: "Title", sortable: true, selector: (row) => row.title },
+    { name: "Category", selector: (row) => row.category },
+    { name: "Price", selector: (row) => row.price },
+    { name: "Rating", selector: (row) => row.rating.count },
+    {
+      name: "Action",
+      cell: (row) => (
+        <div className="d-flex" style={{ gap: "10px" }}>
+          <img
+            src={EditeIcon}
+            alt=""
+            style={{ cursor: "pointer" }}
+            onClick={() => alert(row.id)}
+          />
+          <img
+            src={DeleteIcon}
+            alt=""
+            style={{ cursor: "pointer" }}
+            onClick={() => alert(row.id)}
+          />
+        </div>
+      ),
+    },
+  ];
+
+  useEffect(() => {
+    getApiData();
+  }, []);
+
+  useEffect(() => {
+    const result = apiData.filter((filteredApiData) => {
+      return filteredApiData.title
+        .toLowerCase()
+        .match(searchData.toLowerCase());
+    });
+    setFilteredApiData(result);
+  }, [searchData]);
 
   return (
     <div className="TableData">
       <DataTable
         columns={columns}
-        data={rows}
-        title="Orders"
+        data={filteredApiData}
+        title={tableTitle}
         pagination
         fixedHeader
         fixedHeaderScrollHeight="400px"

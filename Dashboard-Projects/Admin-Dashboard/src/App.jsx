@@ -17,6 +17,7 @@ import Profile from "./Pages/Profile/Profile";
 import Customers from "./Pages/Customers/Customers";
 import Products from "./Pages/Products/Products";
 import Orders from "./Pages/Orders/Orders";
+import Posts from "./Pages/Posts/Posts";
 import Settings from "./Pages/Settings/Settings";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
@@ -58,6 +59,7 @@ function App() {
         { path: "/dashboard/customers", element: <Customers /> },
         { path: "/dashboard/products", element: <Products /> },
         { path: "/dashboard/orders", element: <Orders /> },
+        { path: "/dashboard/posts", element: <Posts /> },
 
         // Header menu
         { path: "/dashboard/settings", element: <Settings /> },

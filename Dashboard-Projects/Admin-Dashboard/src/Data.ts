@@ -42,7 +42,7 @@ export const Menus = [
       {
         id: 4,
         title: "Posts",
-        url: "/posts",
+        url: "/dashboard/posts",
         icon: "/images/icons/post.svg",
       },
     ],
@@ -116,7 +116,7 @@ export const Menus = [
 ];
 
 // Notificition Data
-export const notificationData = [
+const notificationData = [
   {
     notificationImg: "/images/users/web-page.jpg",
     notificationTitle: "I'll buy a I phone 10x mobile",
@@ -156,6 +156,18 @@ export const notificationData = [
   {
     notificationImg: "/images/icons/calendar.svg",
     notificationTitle: "I'll buy a Rols Royce",
+    notificationMsg:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
+  },
+  {
+    notificationImg: "/images/icons/chart.svg",
+    notificationTitle: "I'll buy a I pad",
+    notificationMsg:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
+  },
+  {
+    notificationImg: "/images/users/web-page.jpg",
+    notificationTitle: "I'll buy a I phone 10x mobile",
     notificationMsg:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
   },
@@ -166,3 +178,7 @@ export const notificationData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis hic itaque eaque quisquam quis accusamus consequuntur inventore molestias quia.",
   },
 ];
+// const notificationDataLength =
+//   notificationData.length * notificationData.length;
+const notificationDataLength = notificationData.length;
+export { notificationData, notificationDataLength };

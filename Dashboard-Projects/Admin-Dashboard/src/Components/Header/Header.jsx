@@ -10,7 +10,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import "./Header.scss";
 
 //___ Data ___//
-import { notificationData } from "../../Data";
+import { notificationDataLength } from "../../Data";
 
 //___ Components ___//
 import Notification from "../Notification/Notification";
@@ -60,13 +60,17 @@ const Header = () => {
           onClick={handleNotificationDropDown}
         >
           <img src="/images/icons/notifications.svg" alt="" />
-          {/* <span className="d-flex">10</span> */}
-          <span className="d-flex">{notificationData.length}</span>
+          <span
+            className={`d-flex ${
+              notificationDataLength >= 100 ? "font-8" : ""
+            }`}
+          >
+            {notificationDataLength}
+          </span>
           <ul
             className={`dropDown ${
               notificationDropDown == true ? "showDropdown" : ""
             }`}
-            style={{ width: "350px" }}
           >
             <Notification />
           </ul>
@@ -82,12 +86,11 @@ const Header = () => {
             className={`dropDown ${
               activeDropDown == true ? "showDropdown" : ""
             }`}
-            style={{ width: "150px" }}
           >
-            <NavLink to="/profile" className="dropDownItem d-flex">
+            <NavLink to="/dashboard/profile" className="dropDownItem d-flex">
               <FaRegUser /> Profile
             </NavLink>
-            <NavLink to="/" className="dropDownItem d-flex">
+            <NavLink to="" className="dropDownItem d-flex">
               <IoSettingsOutline /> Settings
             </NavLink>
           </ul>

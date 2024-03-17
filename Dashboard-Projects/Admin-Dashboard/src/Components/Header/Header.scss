@@ -42,12 +42,21 @@
         height: 80%;
         border-radius: 50%;
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 700;
         align-items: center;
         justify-content: center;
         position: absolute;
         top: -9px;
         right: -15px;
+      }
+      .font-8 {
+        font-size: 8px;
+        font-weight: 700;
+      }
+      .dropDown {
+        width: 350px;
+        height: 350px;
+        overflow-y: scroll;
       }
     }
 
@@ -66,7 +75,11 @@
         text-transform: capitalize;
         font-weight: 500;
       }
+      .dropDown {
+        width: 150px;
+      }
     }
+
     .dropDown {
       background-color: $dark-2;
       box-shadow: $shadow;
