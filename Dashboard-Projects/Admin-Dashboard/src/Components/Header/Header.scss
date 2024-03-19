@@ -10,9 +10,14 @@
   z-index: 999;
 
   .logo {
-    cursor: default;
+    justify-content: center;
 
+    .toggler {
+      margin-right: 15px;
+      cursor: pointer;
+    }
     img {
+      cursor: default;
       width: 100px;
       height: auto;
     }
@@ -74,6 +79,7 @@
       span {
         text-transform: capitalize;
         font-weight: 500;
+        margin-left: 5px;
       }
       .dropDown {
         width: 150px;

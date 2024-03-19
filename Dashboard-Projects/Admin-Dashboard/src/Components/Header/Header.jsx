@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaAngleDown } from "react-icons/fa6";
+import { HiMenuAlt2 } from "react-icons/hi";
 
 //___ Css ___//
 import "./Header.scss";
@@ -15,7 +16,7 @@ import { notificationDataLength } from "../../Data";
 //___ Components ___//
 import Notification from "../Notification/Notification";
 
-const Header = () => {
+const Header = ({ setSideNavToggler }) => {
   const [notificationDropDown, setNotificationDropDown] = useState(false);
   const [activeDropDown, setActiveDropDown] = useState(false);
 
@@ -41,7 +42,14 @@ const Header = () => {
 
   return (
     <div className="Header d-flex">
-      <div className="logo">
+      <div className="logo d-flex">
+        <HiMenuAlt2
+          size={25}
+          onClick={() =>
+            setSideNavToggler((prev) => (prev === false ? true : false))
+          }
+          className="toggler"
+        />
         <img src="/images/icons/Admin_blue.png" alt="" />
       </div>
       <div className="icons d-flex">

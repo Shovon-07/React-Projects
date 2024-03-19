@@ -13,10 +13,10 @@
   left: 0;
   z-index: 998;
 
-  @include lg {
-    width: 45px;
-    padding: 80px 0 20px 0;
-  }
+  // @include lg {
+  //   width: 45px;
+  //   padding: 80px 0 20px 0;
+  // }
 
   .itemContainer {
     flex-direction: column;
@@ -29,9 +29,9 @@
       margin: 20px 0 8px 10px;
       text-transform: capitalize;
 
-      @include lg {
-        display: none;
-      }
+      // @include lg {
+      //   display: none;
+      // }
     }
     a {
       width: 100%;
@@ -45,9 +45,9 @@
         background: $dark-soft;
       }
 
-      @include lg {
-        padding: 15px 12px;
-      }
+      // @include lg {
+      //   padding: 15px 12px;
+      // }
 
       .icon {
         // width: 20px;
@@ -57,13 +57,37 @@
       span {
         font-size: 14px;
 
-        @include lg {
-          display: none;
-        }
+        // @include lg {
+        //   display: none;
+        // }
       }
     }
     .isActive {
       background: $dark-soft;
+    }
+  }
+}
+
+// Small sidenav
+.SideNav {
+  &.smallSideNav {
+    width: 50px;
+    padding: 80px 0 20px 0;
+
+    .title {
+      display: none;
+    }
+    a {
+      padding: 15px 12px;
+
+      .icon {
+        width: 18px;
+        height: auto;
+      }
+
+      span {
+        display: none;
+      }
     }
   }
 }

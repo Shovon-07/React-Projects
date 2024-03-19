@@ -11,6 +11,12 @@ import "./Feed.css";
 const Feed = ({ category }) => {
   const [data, setData] = useState([]);
 
+  // const [count, setCount] = useState(1);
+
+  // useEffect(() => {
+  //   count < 100 ? setCount((prev) => prev + 1) : count;
+  // });
+
   const fetchData = async () => {
     const video_list_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
     await fetch(video_list_url)

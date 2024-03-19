@@ -31,8 +31,13 @@ body {
     margin-bottom: 30px;
   }
 
-  @include lg {
+  // @include lg {
+  //   margin-left: 50px;
+  // }
+
+  &.bigContentContainer {
     margin-left: 50px;
+    transition: 1s all ease;
   }
 }
 a {

@@ -13,10 +13,10 @@ import DeleteIcon from "/images/icons/delete.svg";
 
 const TableData = (props) => {
   // Props
-  const { api, tableTitle } = props;
+  const { api, tableTitle, apiData, setApiData } = props;
 
   // State
-  const [apiData, setApiData] = useState([]);
+  // const [apiData, setApiData] = useState([]);
   const [searchData, setSearchData] = useState("");
   const [filteredApiData, setFilteredApiData] = useState([]);
 

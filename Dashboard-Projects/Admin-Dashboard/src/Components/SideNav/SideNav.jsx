@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 //___ Icons ___//
@@ -9,9 +9,17 @@ import "./SideNav.scss";
 //___ Data ___//
 import { Menus } from "../../Data";
 
-const SideNav = () => {
+const SideNav = (props) => {
+  const { sideNavToggler } = props;
+
+  // const [count, setCount] = useState(1);
+
+  // useEffect(() => {
+  //   count <= 200 ? setCount((prev) => prev + 1) : count;
+  // });
+
   return (
-    <div className="SideNav">
+    <div className={`SideNav ${sideNavToggler == true ? "smallSideNav" : ""}`}>
       {Menus.map((items) => {
         return (
           <div className="itemContainer d-flex" key={items.id}>

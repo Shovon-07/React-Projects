@@ -22,14 +22,20 @@ import Settings from "./Pages/Settings/Settings";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 function App() {
+  const [sideNavToggler, setSideNavToggler] = useState(true);
+
   const Layout = () => {
     return (
       <div className="container">
-        <Header />
+        <Header setSideNavToggler={setSideNavToggler} />
         <div className="sideNavContainer">
-          <SideNav />
+          <SideNav sideNavToggler={sideNavToggler} />
         </div>
-        <div className="contentContainer">
+        <div
+          className={`contentContainer ${
+            sideNavToggler == true ? "bigContentContainer" : ""
+          }`}
+        >
           <Outlet />
           <Footer />
         </div>
