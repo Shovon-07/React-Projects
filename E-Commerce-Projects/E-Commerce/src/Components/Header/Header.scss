@@ -1,0 +1,281 @@
+@import "../../Styles/Variable.scss";
+@import "../../Styles/Responsive.scss";
+
+.Header {
+  color: $light-1;
+  background: $main-color;
+  box-shadow: $shadow;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 998;
+  .headerContainer {
+    .firstHeader {
+      padding-bottom: 10px;
+      div {
+        justify-content: space-between;
+        .menus {
+          gap: 20px;
+          @include sm {
+            gap: 10px;
+          }
+          li {
+            a {
+              font-size: 0.8rem;
+              color: $light-1;
+              padding: 8px 0;
+              @include sm {
+                font-size: 0.5rem;
+              }
+              &:hover {
+                color: $light-2;
+              }
+            }
+            &:last-child {
+              .dropDownBox {
+                right: -80%;
+                @include sm {
+                  right: -60%;
+                  width: 200px !important;
+                }
+              }
+            }
+          }
+        }
+        .appBtn {
+          background: $dark-soft;
+          padding: 3px 8px;
+          border-radius: 5px;
+          cursor: pointer;
+          justify-content: center;
+          gap: 10px;
+          img {
+            width: 20px;
+            height: auto;
+            @include sm {
+              width: 15px;
+            }
+          }
+          p {
+            font-size: 13px;
+            @include sm {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+      .additionalSecondHeader {
+        display: none;
+        margin-top: 6px;
+        @include md {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .logo {
+          img {
+            cursor: default;
+            width: 70px;
+            height: auto;
+          }
+        }
+        .toggler {
+          cursor: pointer;
+        }
+      }
+    }
+    .secondHeader {
+      padding-bottom: 15px;
+      justify-content: space-between;
+      transition: $trans;
+      @include md {
+        flex-direction: column-reverse;
+        background: $dark-1;
+        position: absolute;
+        right: -250px;
+        height: 100vh;
+        padding: 20px 0;
+      }
+      .logo {
+        flex-basis: 10%;
+        margin-right: 10px;
+        img {
+          cursor: default;
+          width: 100px;
+          height: auto;
+          @include md {
+            display: none;
+          }
+        }
+      }
+      .searchBox {
+        flex-basis: 70%;
+        @include md {
+          width: 90%;
+        }
+        .searchItem {
+          width: 100%;
+          background: #fff;
+          border-radius: 50px;
+          position: relative;
+          input {
+            width: 95%;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 0;
+            outline: 0;
+            font-size: 1rem;
+            letter-spacing: 0.05rem;
+          }
+          .searchBtn {
+            color: $main-color;
+            background: $main-color-light;
+            width: 50px;
+            height: 100%;
+            font-weight: bold;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            justify-content: center;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+        }
+      }
+      .menus {
+        flex-basis: 20%;
+        justify-content: end;
+        padding-left: 25px;
+        gap: 20px;
+        @include md {
+          flex-direction: column;
+          margin-bottom: 30px;
+        }
+        li {
+          cursor: pointer;
+          font-size: 0.85rem;
+          &:hover a {
+            color: $light-2;
+          }
+          @include md {
+            font-size: 16px;
+          }
+          a {
+            font-size: 14px;
+            color: $light-1;
+            font-weight: 500;
+            padding: 5px 0;
+            @include md {
+              font-size: 16px;
+            }
+            .icon {
+              margin-right: 5px;
+            }
+          }
+          .angle {
+            margin: 2px 0 0 2px;
+          }
+          &:hover .angle {
+            transform: rotate(180deg);
+          }
+        }
+        .country {
+          .dropDownBox {
+            top: 34px;
+            right: -40%;
+            .corner {
+              right: 25%;
+            }
+            .dropDownItem {
+              color: $light-3;
+              img {
+                width: 20px;
+                height: auto;
+              }
+            }
+          }
+        }
+        .cart {
+          position: relative;
+          cursor: pointer;
+          span {
+            background: #fff;
+            color: #f85606;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -12px;
+            right: -15px;
+          }
+          .font-8 {
+            font-size: 8px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    //___ Drop down ___//
+    .dropDownParent {
+      position: relative;
+      .dropDownBox {
+        background: $light-1;
+        display: none;
+        opacity: 0;
+        position: absolute;
+        top: 26px;
+        // right: -80%;
+        box-shadow: $shadow;
+        border-radius: 8px;
+        transition: $trans;
+        z-index: 999;
+
+        .dropDownItem {
+          color: $light-3;
+          width: 100%;
+          padding: 10px 15px;
+          font-size: 14px;
+          gap: 10px;
+          z-index: 999;
+          &:hover {
+            color: $main-color;
+          }
+          .icon {
+            font-size: 20px;
+          }
+          &:hover {
+            background: $main-color-light;
+          }
+        }
+        .corner {
+          width: 0;
+          height: 0;
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-bottom: 15px solid $light-1;
+          position: absolute;
+          top: -10px;
+          right: 28%;
+          z-index: -1;
+        }
+      }
+      &:hover .dropDownBox {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.active .secondHeader {
+    padding-bottom: 15px;
+    justify-content: space-between;
+    right: 0px;
+    height: 100vh;
+    // height: auto;
+  }
+}

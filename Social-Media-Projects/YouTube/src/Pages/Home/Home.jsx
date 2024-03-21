@@ -9,6 +9,7 @@ import Feed from "../../Components/Feed/Feed";
 
 const Home = ({ sidebar }) => {
   const [category, setCategory] = useState(0);
+
   return (
     <>
       <Sidebar

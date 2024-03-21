@@ -45,9 +45,9 @@ const Header = ({ setSideNavToggler }) => {
       <div className="logo d-flex">
         <HiMenuAlt2
           size={25}
-          onClick={() =>
-            setSideNavToggler((prev) => (prev === false ? true : false))
-          }
+          onClick={() => {
+            setSideNavToggler((prev) => (prev === false ? true : false));
+          }}
           className="toggler"
         />
         <img src="/images/icons/Admin_blue.png" alt="" />

@@ -1,0 +1,14 @@
+//___ React icons ___//
+
+=> User
+> import { FaRegUser } from "react-icons/fa";
+> import { FaUserAlt } from "react-icons/fa";
+
+=> Cart
+> import { FaCartShopping } from "react-icons/fa6";
+
+=> Search
+> import { IoSearch } from "react-icons/io5";
+
+=> Truck
+> import { FaTruckFast } from "react-icons/fa6";

@@ -5,14 +5,16 @@
 
 <!-- In app.jsx -->
 <Routes>
-  {/* Public routes */}
-  <Route element={<AuthLayout />}>
-    <Route path="/sign-in" element={<SignIn />} />
-    <Route path="/sign-up" element={<SignUp />} />
-  </Route>
-
-  {/* Private routes */}
-  <Route element={<RootLayout />}>
-    <Route index element={<Home />} />
+  <Route>
+  	<Route path="/" element={<Home />} />
+  	<Route path="/sign-in" element={<SignIn />} />
+  	<Route path="/sign-up/:id" element={<SignUp />} />
+  	<Route path="*" element={<ErrorPage />} />
   </Route>
 </Routes>
+
+//___ useParams ___//
+import { useParams } from "react-router-dom";
+
+const {id}=useParams();
+__ Its get all id from route
