@@ -9,7 +9,7 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <footer className="Footer d-flex">
-      <div className="container d-flex">
+      <div className="footerContainer d-flex">
         <div className="left">
           <h3>Shoppint Mart</h3>
         </div>

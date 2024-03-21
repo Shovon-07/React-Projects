@@ -1,10 +1,11 @@
 @import "../../Styles/Variable.scss";
 
 .Footer {
-  justify-content: space-between;
-  border-top: 1px solid #6d6d6d;
-  padding: 20px 0;
+  background: $dark-2;
   margin-top: 50px;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
 
   .left {
     h3 {

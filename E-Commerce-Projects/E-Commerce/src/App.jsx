@@ -8,6 +8,8 @@ import "./Styles/App.scss";
 
 //___ Images ___//
 
+//___ Data ___//
+
 //___ Components ___//
 // import Header from "./Components/Header/Header";
 

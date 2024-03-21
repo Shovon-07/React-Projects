@@ -95,7 +95,7 @@ const Header = (props) => {
           </div>
           <div className="searchBox">
             <div className="searchItem">
-              <input type="text" placeholder="Search hear" />
+              <input type="text" placeholder="Search here" />
               <div className="searchBtn d-flex">
                 <IoSearch size={20} />
               </div>

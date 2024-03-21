@@ -3,9 +3,13 @@ import React, { useEffect, useState } from "react";
 //___ Css ___//
 import "./Home.scss";
 
+//___ Data ___//
+import { categories } from "../../Data";
+
 //___ Components ___//
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
+import Carousel from "../../Components/Carousel/Carousel";
 
 const Home = (props) => {
   const { color, setColor } = props;
@@ -18,9 +22,24 @@ const Home = (props) => {
   return (
     <>
       <Header setColor={setColor} />
-      <div className={`Home container ${color == true ? "color" : ""}`}>
-        <h1>Home</h1>
-        <h3>
+      <div className="Home container">
+        <div className="grid">
+          <div className="left">
+            <div className="categories">
+              {categories.map((items) => {
+                return (
+                  <li>
+                    <span>{items.title}</span>
+                  </li>
+                );
+              })}
+            </div>
+          </div>
+          <div className="right">
+            <Carousel />
+          </div>
+        </div>
+        {/* <h3>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
           voluptatem rem animi ex esse dolore molestias, laboriosam maiores quod
           tenetur? Ad deserunt dolorum aliquam atque distinctio voluptatum, hic
@@ -472,7 +491,7 @@ const Home = (props) => {
           libero labore dolores magnam debitis esse, eos dolore eaque
           dignissimos velit eveniet impedit enim est temporibus sint reiciendis
           consequuntur sunt! Dignissimos, vitae.
-        </h3>
+        </h3> */}
       </div>
       <Footer />
     </>
