@@ -59,7 +59,7 @@ export const productCard = [
   necessitatibus eos? Itaque, explicabo nam`,
     price: 67212,
     discount: 50,
-    ratting: 3.5,
+    ratting: 5,
   },
   {
     id: 2,
@@ -70,7 +70,7 @@ export const productCard = [
   necessitatibus eos? Itaque, explicabo nam`,
     price: 480,
     discount: 10,
-    ratting: 3.5,
+    ratting: 2,
   },
   {
     id: 3,
@@ -81,7 +81,7 @@ export const productCard = [
   necessitatibus eos? Itaque, explicabo nam`,
     price: 550,
     discount: 20,
-    ratting: 3.5,
+    ratting: 4,
   },
   {
     id: 4,
@@ -92,6 +92,138 @@ export const productCard = [
   necessitatibus eos? Itaque, explicabo nam.`,
     price: 40,
     discount: 60,
-    ratting: 3.5,
+    ratting: 1,
+  },
+  {
+    id: 5,
+    img: "/images/product-1.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam`,
+    price: 67212,
+    discount: 50,
+    ratting: 5,
+  },
+  {
+    id: 6,
+    img: "/images/product-2.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam`,
+    price: 480,
+    discount: 10,
+    ratting: 2,
+  },
+  {
+    id: 7,
+    img: "/images/product-3.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam`,
+    price: 550,
+    discount: 20,
+    ratting: 4,
+  },
+  {
+    id: 8,
+    img: "/images/product-4.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam.`,
+    price: 40,
+    discount: 60,
+    ratting: 1,
+  },
+  {
+    id: 9,
+    img: "/images/product-1.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam`,
+    price: 67212,
+    discount: 50,
+    ratting: 5,
+  },
+  {
+    id: 10,
+    img: "/images/product-2.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam`,
+    price: 480,
+    discount: 10,
+    ratting: 2,
+  },
+  {
+    id: 11,
+    img: "/images/product-3.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam`,
+    price: 550,
+    discount: 20,
+    ratting: 4,
+  },
+  {
+    id: 12,
+    img: "/images/product-4.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam.`,
+    price: 40,
+    discount: 60,
+    ratting: 1,
+  },
+  {
+    id: 13,
+    img: "/images/product-1.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam`,
+    price: 67212,
+    discount: 50,
+    ratting: 5,
+  },
+  {
+    id: 14,
+    img: "/images/product-2.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam`,
+    price: 480,
+    discount: 10,
+    ratting: 2,
+  },
+  {
+    id: 15,
+    img: "/images/product-3.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam`,
+    price: 550,
+    discount: 20,
+    ratting: 4,
+  },
+  {
+    id: 16,
+    img: "/images/product-4.jpg",
+    title: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+  rerum dolorem cum! Consequuntur nulla perspiciatis commodi,
+  architecto vero numquam illo sit cupiditate ad, esse ea
+  necessitatibus eos? Itaque, explicabo nam.`,
+    price: 40,
+    discount: 60,
+    ratting: 1,
   },
 ];

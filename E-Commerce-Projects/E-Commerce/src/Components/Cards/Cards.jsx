@@ -26,7 +26,7 @@ const Cards = () => {
       {productCard.map((items) => {
         return (
           <div className="card" key={items.id}>
-            <Link>
+            <Link to={`/view-product/${items.id}`}>
               <div className="img">
                 <img src={items.img} alt="" />
               </div>
@@ -48,7 +48,7 @@ const Cards = () => {
                   <p>-{items.discount}%</p>
                 </div>
                 <div className="ratting">
-                  <RattingComponent />
+                  <RattingComponent value={items.ratting} />
                 </div>
               </div>
             </Link>
