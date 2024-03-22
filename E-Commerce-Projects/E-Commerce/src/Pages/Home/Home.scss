@@ -2,23 +2,27 @@
 
 .Home {
   .grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
     .left,
     .right {
       border-radius: 8px;
       border: $border;
-      height: 100%;
-      // height: 400px;
+      overflow: hidden;
+      height: 362px;
     }
     .left {
-      // overflow-y: scroll;
+      flex-basis: 20%;
       .categories {
         li {
-          padding: 10px;
+          padding: 8px 20px;
           cursor: pointer;
           transition: $trans;
+          span {
+            font-size: 14px;
+          }
           &:hover {
             background: $main-color-light;
             span {
@@ -29,6 +33,13 @@
       }
     }
     .right {
+      // width: 200px;
+      flex-basis: 80%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      img {
+        height: 362px;
+      }
     }
   }
 }

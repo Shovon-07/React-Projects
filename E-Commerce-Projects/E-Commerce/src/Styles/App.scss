@@ -13,6 +13,7 @@
 }
 body {
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 .main {
@@ -20,7 +21,7 @@ body {
   height: 100%;
   color: $dark-2;
   font-family: "Inter", sans-serif;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 .container,
 .headerContainer,
@@ -32,6 +33,9 @@ body {
 }
 .container {
   margin-top: 100px;
+}
+.content {
+  margin-bottom: 30px;
 }
 .color {
   color: red;

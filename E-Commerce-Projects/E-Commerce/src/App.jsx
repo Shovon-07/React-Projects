@@ -11,7 +11,6 @@ import "./Styles/App.scss";
 //___ Data ___//
 
 //___ Components ___//
-// import Header from "./Components/Header/Header";
 
 //___ Pages ___//
 import Login from "./Pages/Login/Login";
@@ -59,10 +58,8 @@ function App() {
 
       <div className="main">
         <Routes>
-          <Route
-            path="/"
-            element={<Home color={color} setColor={setColor} />}
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>

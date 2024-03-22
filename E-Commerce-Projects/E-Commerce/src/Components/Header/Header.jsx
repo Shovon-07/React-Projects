@@ -16,6 +16,7 @@ import { HiMenu } from "react-icons/hi";
 import "./Header.scss";
 
 //___ Images ___//
+import Logo from "/images/logo.png";
 import LogoSky from "/images/logo-sky.png";
 import BdFlag from "/images/bd.svg";
 import UsFlag from "/images/us.svg";
@@ -79,7 +80,7 @@ const Header = (props) => {
           </div>
           <div className="additionalSecondHeader">
             <div className="logo d-flex">
-              <img src="/images/logo.png" alt="" />
+              <img src={Logo} alt="" />
             </div>
             <div
               className="toggler"
@@ -91,7 +92,7 @@ const Header = (props) => {
         </div>
         <div className="secondHeader d-flex">
           <div className="logo d-flex">
-            <img src="/images/logo.png" alt="" />
+            <img src={Logo} alt="" />
           </div>
           <div className="searchBox">
             <div className="searchItem">
