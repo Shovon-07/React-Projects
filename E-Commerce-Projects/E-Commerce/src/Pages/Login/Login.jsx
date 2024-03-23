@@ -13,19 +13,13 @@ const Login = () => {
     {
       field: "name",
       type: "text",
-      placeholder: "Enter your name",
-      className: "inputBox",
-    },
-    {
-      field: "email",
-      type: "email",
-      placeholder: "Enter your email",
+      placeholder: "Please enter your phone number or email",
       className: "inputBox",
     },
     {
       field: "password",
       type: "password",
-      placeholder: "Enter your password",
+      placeholder: "Please enter your password",
       className: "inputBox d-flex",
     },
   ];

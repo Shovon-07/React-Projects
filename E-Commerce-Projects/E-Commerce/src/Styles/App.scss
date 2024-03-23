@@ -35,7 +35,7 @@ body {
   margin-top: 100px;
 }
 .content {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .color {
   color: red;
@@ -64,6 +64,14 @@ li {
 .angleRotate {
   transition: $trans;
   transform: rotate(-180deg);
+}
+
+// Colors
+.blue {
+  background: $blue;
+}
+.red {
+  background: $red;
 }
 
 /*________________ custome scroll bar start ________________*/
