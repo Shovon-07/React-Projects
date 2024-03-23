@@ -22,7 +22,7 @@ const Home = (props) => {
 
   return (
     <>
-      <Header setColor={setColor} />
+      <Header />
       <div className="Home container">
         <div className="content">
           <div className="grid">

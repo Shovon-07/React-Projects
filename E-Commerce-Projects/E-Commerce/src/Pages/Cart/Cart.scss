@@ -1,0 +1,27 @@
+@import "../../Styles/Variable.scss";
+
+.Cart {
+  .content {
+    gap: 20px;
+    .left {
+      flex-basis: 60%;
+      border-radius: 8px;
+      border: $border;
+      overflow: hidden;
+      padding: 8px 20px;
+      .allSelect {
+        font-size: 14px;
+        input {
+          margin-right: 10px;
+        }
+      }
+    }
+    .right {
+      flex-basis: 40%;
+      border-radius: 8px;
+      border: $border;
+      overflow: hidden;
+      padding: 8px 20px;
+    }
+  }
+}

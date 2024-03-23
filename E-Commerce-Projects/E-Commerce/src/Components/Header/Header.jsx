@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //___ Icons ___//
 import { FaUserAlt, FaHeadphonesAlt } from "react-icons/fa";
@@ -42,33 +42,33 @@ const Header = (props) => {
             <div>
               <div className="menus d-flex">
                 <li>
-                  <NavLink>Become a Seller</NavLink>
+                  <Link>Become a Seller</Link>
                 </li>
                 <li>
-                  <NavLink>Daraz Donates</NavLink>
+                  <Link>Daraz Donates</Link>
                 </li>
                 <li className="dropDownParent">
-                  <NavLink>Help & Support</NavLink>
+                  <Link>Help & Support</Link>
                   <div className="dropDownBox" style={{ width: "400px" }}>
                     <div className="corner"></div>
-                    <NavLink className="d-flex dropDownItem">
+                    <Link className="d-flex dropDownItem">
                       <FaUserAlt className="icon" />
                       Help Center
-                    </NavLink>
-                    <NavLink className="d-flex dropDownItem">
+                    </Link>
+                    <Link className="d-flex dropDownItem">
                       <FaHeadphonesAlt className="icon" />
                       Chat with Us
-                    </NavLink>
-                    <NavLink className="d-flex dropDownItem">
+                    </Link>
+                    <Link className="d-flex dropDownItem">
                       <FaCartShopping className="icon" /> Order
-                    </NavLink>
-                    <NavLink className="d-flex dropDownItem">
+                    </Link>
+                    <Link className="d-flex dropDownItem">
                       <FaTruckFast className="icon" /> Shipping & Delivery
-                    </NavLink>
-                    <NavLink className="d-flex dropDownItem">
+                    </Link>
+                    <Link className="d-flex dropDownItem">
                       <FaShield className="icon" /> CCMS- Central Complain
                       Management System
-                    </NavLink>
+                    </Link>
                   </div>
                 </li>
               </div>
@@ -104,37 +104,37 @@ const Header = (props) => {
           </div>
           <div className="menus d-flex">
             <li>
-              <NavLink to="/login" className="d-flex">
+              <Link to="/login" className="d-flex">
                 <FaUserAlt className="icon" size={17} />
                 <p>Login</p>
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/signup" className="d-flex">
+              <Link to="/signup" className="d-flex">
                 <p>Signup</p>
-              </NavLink>
+              </Link>
             </li>
             <li className="country dropDownParent d-flex">
-              <NavLink className="">
+              <Link className="">
                 <IoEarth className="icon" size={20} />
-              </NavLink>
+              </Link>
               <p>BD</p>
               <FaAngleDown className="angle" />
               <div className="dropDownBox" style={{ width: "120px" }}>
                 <div className="corner"></div>
-                <NavLink className="d-flex dropDownItem">
+                <Link className="d-flex dropDownItem">
                   <img src={BdFlag} alt="" /> BD
-                </NavLink>
-                <NavLink className="d-flex dropDownItem">
+                </Link>
+                <Link className="d-flex dropDownItem">
                   <img src={UsFlag} alt="" /> US
-                </NavLink>
+                </Link>
               </div>
             </li>
             <li>
-              <NavLink className="d-flex cart">
+              <Link to="/cart" className="d-flex cart">
                 <FaCartShopping className="icon" size={20} />
                 <span className="d-flex">10</span>
-              </NavLink>
+              </Link>
             </li>
           </div>
         </div>

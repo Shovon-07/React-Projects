@@ -13,9 +13,10 @@ import "./Styles/App.scss";
 //___ Components ___//
 
 //___ Pages ___//
+import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
-import Home from "./Pages/Home/Home";
+import Cart from "./Pages/Cart/Cart";
 import Profile from "./Pages/Profile/Profile";
 import Products from "./Pages/Products/Products";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
@@ -62,6 +63,8 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </div>
     </>
