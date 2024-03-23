@@ -4,6 +4,9 @@ import React from "react";
 import "./Signup.scss";
 
 //___ Components ___//
+import Header from "../../Components/Header/Header";
+import Form from "../../Components/Form/Form";
+import Footer from "../../Components/Footer/Footer";
 
 const Signup = () => {
   const inputField = [
@@ -35,7 +38,21 @@ const Signup = () => {
 
   return (
     <>
-      <h1>Signup</h1>
+      <Header />
+      <div className="Singup container">
+        <Form
+          mainTitle="Create your Daraz Account"
+          mainRightTitle={`Already member?`}
+          title="Sign up"
+          url="/signup"
+          inputFields={inputField}
+          loginOrSingupUrl="/login"
+          loginOrSingup="Login"
+          privaciyPolicy="By clicking “SIGN UP”, I agree to Daraz's Terms of Use and
+          Privacy Policy"
+        />
+      </div>
+      <Footer />
     </>
   );
 };

@@ -18,7 +18,7 @@
         text-align: start;
       }
       p {
-        font-size: 13px;
+        font-size: 14px;
         a {
           color: $light-blue;
           font-weight: 500;
@@ -90,9 +90,13 @@
             background: $btn-hover-color;
           }
         }
-        // .fbLogin,.gLogin {
-
-        // }
+        .privaciyPolicy {
+          font-size: 12px;
+          margin: 15px 0;
+          input {
+            margin-right: 10px;
+          }
+        }
       }
     }
   }

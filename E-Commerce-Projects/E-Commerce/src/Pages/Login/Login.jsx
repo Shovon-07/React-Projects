@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 //___ CSS ___//
 import "./Login.scss";
@@ -27,13 +28,16 @@ const Login = () => {
   return (
     <>
       <Header />
-      <div className="Home container">
+      <div className="Login container">
         <Form
+          mainTitle="Welcome to Daraz !"
+          mainRightTitle={`New member?`}
           title="Login"
           url="/login"
           inputFields={inputField}
-          loginOrSingupUrl="/singup"
-          loginOrSingup="Sing up"
+          loginOrSingupUrl="/signup"
+          loginOrSingup="Register"
+          resetPass="Reset Your Password"
         />
         {/* <h3>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
