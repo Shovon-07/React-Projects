@@ -11,6 +11,9 @@
   background: $dark-2;
   color: $main-color;
 }
+::placeholder {
+  color: $light-3;
+}
 body {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
@@ -32,7 +35,7 @@ body {
   margin: 0 auto;
 }
 .container {
-  margin-top: 100px;
+  margin-top: 110px;
 }
 .content {
   margin-bottom: 50px;
@@ -45,6 +48,9 @@ a {
 }
 li {
   list-style: none;
+}
+button {
+  cursor: pointer;
 }
 
 // Additional
@@ -64,6 +70,9 @@ li {
 .angleRotate {
   transition: $trans;
   transform: rotate(-180deg);
+}
+.gap-10 {
+  gap: 10px;
 }
 
 // Colors
