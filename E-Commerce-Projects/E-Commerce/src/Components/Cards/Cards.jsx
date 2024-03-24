@@ -7,7 +7,7 @@ import { FaBangladeshiTakaSign, FaAngleDown } from "react-icons/fa6";
 import "./Cards.scss";
 
 //___ Data ___//
-import { productCard } from "../../Data";
+import { productsData } from "../../Data";
 
 //___ Components ___//
 import RattingComponent from "../RattingComponent/RattingComponent";
@@ -15,7 +15,7 @@ import RattingComponent from "../RattingComponent/RattingComponent";
 const Cards = () => {
   const [numberOfElement, setNumberOfElement] = useState(12);
 
-  const slicedData = productCard.slice(0, numberOfElement);
+  const slicedData = productsData.slice(0, numberOfElement);
   const loadMore = () => {
     setNumberOfElement((prev) => prev * 2);
   };
@@ -28,7 +28,7 @@ const Cards = () => {
           {slicedData.map((items) => {
             return (
               <div className="card" key={items.id}>
-                <Link to={`/Product/${items.id}`}>
+                <Link to={`/product/${items.id}`}>
                   <div className="img">
                     <img src={items.img} alt="" />
                   </div>
