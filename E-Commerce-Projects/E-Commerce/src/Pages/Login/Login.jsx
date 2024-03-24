@@ -28,7 +28,7 @@ const Login = () => {
   return (
     <>
       <Header />
-      <div className="Login container">
+      <div className="Login">
         <Form
           mainTitle="Welcome to Daraz !"
           mainRightTitle={`New member?`}

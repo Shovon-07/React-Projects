@@ -39,7 +39,7 @@ const Signup = () => {
   return (
     <>
       <Header />
-      <div className="Singup container">
+      <div className="Singup">
         <Form
           mainTitle="Create your Daraz Account"
           mainRightTitle={`Already member?`}

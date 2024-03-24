@@ -28,7 +28,7 @@ const Cards = () => {
           {slicedData.map((items) => {
             return (
               <div className="card" key={items.id}>
-                <Link to={`/view-product/${items.id}`}>
+                <Link to={`/Product/${items.id}`}>
                   <div className="img">
                     <img src={items.img} alt="" />
                   </div>

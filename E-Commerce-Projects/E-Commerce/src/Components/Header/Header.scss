@@ -109,7 +109,7 @@
         }
       }
       .searchBox {
-        flex-basis: 70%;
+        flex-basis: 75%;
         @include md {
           width: 90%;
         }
@@ -144,10 +144,9 @@
         }
       }
       .menus {
-        flex-basis: 20%;
-        justify-content: end;
+        flex-basis: 25%;
+        justify-content: space-between;
         padding-left: 25px;
-        gap: 20px;
         @include md {
           flex-direction: column;
           margin-bottom: 30px;
@@ -171,6 +170,15 @@
             }
             .icon {
               margin-right: 5px;
+            }
+          }
+          .userImg {
+            width: 40px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 8px;
+            @include xl {
+              width: 30px;
             }
           }
           .angle {

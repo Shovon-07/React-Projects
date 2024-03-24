@@ -20,6 +20,7 @@ import Logo from "/images/logo.png";
 import LogoSky from "/images/logo-sky.png";
 import BdFlag from "/images/bd.svg";
 import UsFlag from "/images/us.svg";
+import UserImg from "/images/users/web-page.jpg";
 
 //___ Data ___//
 // import { notificationDataLength } from "../../Data";
@@ -33,6 +34,7 @@ const Header = (props) => {
 
   // States
   const [toggler, setToggler] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
     <div className={`Header ${toggler == true ? "active" : ""}`}>
@@ -102,15 +104,22 @@ const Header = (props) => {
               </div>
             </div>
           </div>
-          <div className="menus d-flex">
+          <div className="menus d-flex gap-10">
             <li>
-              <Link to="/login" className="d-flex">
-                <FaUserAlt className="icon" size={17} />
-                <p>Login</p>
-              </Link>
+              {isAuthenticated == false ? (
+                <Link to="/login" className="d-flex">
+                  <FaUserAlt className="icon" size={17} />
+                  <p>Login</p>
+                </Link>
+              ) : (
+                <div className="d-flex">
+                  <img src={UserImg} alt="" className="userImg" />
+                  <p>Al jubair shovon</p>
+                </div>
+              )}
             </li>
-            <li>
-              <Link to="/signup" className="d-flex">
+            <li className={isAuthenticated == true ? "d-none" : ""}>
+              <Link to="/signup" className="">
                 <p>Signup</p>
               </Link>
             </li>

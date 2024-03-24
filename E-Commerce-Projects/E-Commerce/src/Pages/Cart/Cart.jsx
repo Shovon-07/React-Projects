@@ -85,9 +85,9 @@ const Cart = () => {
                   <img src={Product_1} alt="" />
                 </div>
                 <div>
-                  <p className="title">
+                  <Link className="title d-flex">
                     {title.length > 80 ? title.substr(0, 80) + "..." : title}
-                  </p>
+                  </Link>
                   <p className="details d-flex gap-10">
                     <span>No Brand,</span>
                     <span>Color Family: White,</span>
@@ -143,12 +143,12 @@ const Cart = () => {
               </div>
               <div className="itemBottom d-flex gap-10">
                 <div>
-                  <img src={Product_1} alt="" />
+                  <img src={Product_2} alt="" />
                 </div>
                 <div>
-                  <p className="title">
+                  <Link className="title d-flex">
                     {title.length > 80 ? title.substr(0, 80) + "..." : title}
-                  </p>
+                  </Link>
                   <p className="details d-flex gap-10">
                     <span>No Brand,</span>
                     <span>Color Family: White,</span>

@@ -32,7 +32,7 @@ const Form = (props) => {
   };
 
   return (
-    <div className="FormContainer d-flex">
+    <div className="FormContainer container d-flex">
       <div className="formCard">
         <div className="titleBar d-flex">
           <h3>{mainTitle}</h3>
