@@ -27,10 +27,96 @@
     .middle {
       width: 45%;
       height: 100%;
+      .productTitle {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .rate {
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .brand {
+        span {
+          color: $dark-2;
+          font-size: 12px;
+          margin-top: 8px;
+        }
+      }
+      .price {
+        margin: 20px 0;
+        h3 {
+          font-weight: 500;
+          font-size: 30px;
+          color: $main-color;
+          margin-bottom: 5px;
+        }
+        .discount {
+          font-size: 14px;
+        }
+      }
+      .Quentity {
+        margin: 0 0 30px 0;
+        span {
+          margin-right: 20px;
+        }
+        input {
+          border: $border;
+          outline: none;
+          text-align: center;
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+          margin: 0 10px;
+        }
+        button {
+          width: 30px;
+          height: 40px;
+          font-size: 20px;
+          border: $border;
+          outline: none;
+        }
+      }
+      .buy,
+      .cart {
+        width: 50%;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 8px 0;
+        border: none;
+        outline: none;
+        transition: $trans;
+        color: $light-1;
+      }
+      .buy {
+        background: $light-blue;
+        &:hover {
+          background: $blue;
+        }
+      }
+      .cart {
+        background: $red;
+        &:hover {
+          background: $btn-hover-color;
+        }
+      }
     }
     .right {
       width: 30%;
       height: 100%;
+      .topTitle {
+        font-size: 14px;
+        justify-content: space-between;
+        margin: 0 0 !important;
+      }
+      div {
+        margin: 25px 0;
+      }
+      .location {
+        justify-content: space-between;
+        p {
+          font-size: 13px;
+        }
+      }
     }
   }
 }

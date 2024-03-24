@@ -47,11 +47,13 @@ body {
 }
 a {
   text-decoration: none;
+  color: $light-blue;
 }
 li {
   list-style: none;
 }
-button {
+button,
+.cursor {
   cursor: pointer;
 }
 
@@ -75,6 +77,12 @@ button {
 }
 .gap-10 {
   gap: 10px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.flex-start {
+  align-items: flex-start;
 }
 
 // Colors

@@ -21,3 +21,25 @@
 > import { FaEye } from "react-icons/fa";
 > import { RiEyeCloseLine } from "react-icons/ri";
 > import { FaEyeSlash } from "react-icons/fa6";
+
+=> Share
+> import { FaRegShareSquare } from "react-icons/fa";
+> import { IoMdShare } from "react-icons/io";
+
+=> Love
+> import { CiHeart } from "react-icons/ci";
+
+=> Money
+> import { FaBangladeshiTakaSign } from "react-icons/fa6";
+
+=> Exclamation
+> import { AiOutlineExclamationCircle } from "react-icons/ai";
+
+=> Location
+> import { IoLocationOutline } from "react-icons/io5";
+
+=> Time
+> import { IoMdTimer } from "react-icons/io";
+
+=> Shield
+> import { IoShieldOutline } from "react-icons/io5";

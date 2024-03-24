@@ -60,11 +60,6 @@ export const productsData = [
     price: 500,
     discount: 50,
     ratting: 5,
-    images: [
-      { img: "/images/product-1.jpg" },
-      { img: "/images/product-2.jpg" },
-      { img: "/images/product-3.jpg" },
-    ],
   },
   {
     id: 2,
@@ -76,11 +71,6 @@ export const productsData = [
     price: 480,
     discount: 10,
     ratting: 2,
-    images: [
-      { img: "/images/product-1.jpg" },
-      { img: "/images/product-2.jpg" },
-      { img: "/images/product-3.jpg" },
-    ],
   },
   {
     id: 3,
