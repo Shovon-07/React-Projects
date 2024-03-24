@@ -1,4 +1,27 @@
 @import "../../Styles/Variable.scss";
 
 .ProductView {
+  .content {
+    justify-content: space-between;
+    align-items: flex-start;
+    .left {
+      width: 25%;
+      height: 100%;
+      .slider-container {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .middle {
+      width: 45%;
+      height: 100%;
+    }
+    .right {
+      width: 30%;
+      height: 100%;
+    }
+  }
 }
