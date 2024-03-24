@@ -43,12 +43,11 @@
           }
         }
         .appBtn {
-          background: $dark-soft;
+          background: $dark-1;
           padding: 3px 8px;
           border-radius: 5px;
           cursor: pointer;
           justify-content: center;
-          gap: 10px;
           img {
             width: 20px;
             height: auto;
@@ -248,7 +247,6 @@
           width: 100%;
           padding: 10px 15px;
           font-size: 14px;
-          gap: 10px;
           z-index: 999;
           &:hover {
             color: $main-color;

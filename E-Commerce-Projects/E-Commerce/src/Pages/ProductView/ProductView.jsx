@@ -29,7 +29,7 @@ import RattingComponent from "../../Components/RattingComponent/RattingComponent
 const ProductView = () => {
   const { id } = useParams();
 
-  const [quentity, setQuentity] = useState(2);
+  const [quentity, setQuentity] = useState(1);
 
   const handleChange = (e) => {
     setQuentity(e.target.value);
@@ -78,8 +78,8 @@ const ProductView = () => {
                 </div>
               </div>
               <div className="d-flex gap-10">
-                <IoMdShare size={25} className="cursor" />
-                <CiHeart size={30} className="cursor" />
+                <IoMdShare size={25} className="cursor icon" />
+                <CiHeart size={30} className="cursor icon" />
               </div>
             </div>
             <div className="price">
@@ -104,8 +104,8 @@ const ProductView = () => {
               </button>
             </div>
             <div className="d-flex gap-10">
-              <button className="buy">Buy Now</button>
-              <button className="cart">Add to Cart</button>
+              <button className="buy button">Buy Now</button>
+              <button className="cart button">Add to Cart</button>
             </div>
           </div>
           <div className="right">
@@ -113,44 +113,49 @@ const ProductView = () => {
               <p>Delivery</p>
               <AiOutlineExclamationCircle className="cursor" />
             </div>
-            <div className="location d-flex flex-start">
-              <p
+            <div className="location d-flex flex-start rightSection">
+              <div
                 className="d-flex gap-10 flex-start"
                 style={{ flexBasis: "80%" }}
               >
                 <IoLocationOutline size={30} />{" "}
                 <p>Dhaka, Dhaka North, Banani Road No. 12 - 19</p>
-              </p>
-              <p style={{ textAlign: "end", flexBasis: "20%" }}>
+              </div>
+              <div style={{ textAlign: "end", flexBasis: "20%" }}>
                 <Link>CHANGE</Link>
-              </p>
+              </div>
             </div>
-            <div className="deleveryCharge d-flex flex-start">
-              <p
+            <div className="deleveryCharge d-flex flex-start rightSection">
+              <div
                 className="d-flex gap-10 flex-start"
                 style={{ flexBasis: "80%" }}
               >
                 <GoRocket size={30} />
                 <p> Standard Delivery 29 Mar - 3 Apr 5 - 10 day(s)</p>
-              </p>
-              <p style={{ textAlign: "end", flexBasis: "20%" }}>
+              </div>
+              <div style={{ textAlign: "end", flexBasis: "20%" }}>
                 <FaBangladeshiTakaSign /> 50
-              </p>
+              </div>
             </div>
-            <div className="d-flex gap-10 flex-start">
-              <BsCash /> <p>Cash on Delivery Available</p>
+            <div className="d-flex gap-10 flex-start  rightSection">
+              <BsCash size={22} /> <p>Cash on Delivery Available</p>
             </div>
             <div className="topTitle d-flex">
               <p>Services</p>
               <AiOutlineExclamationCircle className="cursor" />
             </div>
-            <div>
-              <IoMdTimer />
-              <p>7 Day Return</p>
-              <p>Change of mind applicable</p>
+            <div className="d-flex gap-10 flex-start rightSection">
+              <div>
+                <IoMdTimer size={22} />
+              </div>
+              <div>
+                <p>7 Day Return</p>
+                <p>Change of mind applicable</p>
+              </div>
             </div>
-            <div>
-              <IoShieldOutline /> Warranty not available
+            <div className="d-flex gap-10 flex-start  rightSection">
+              <IoShieldOutline size={22} />
+              <p>Warranty not available</p>
             </div>
           </div>
         </div>

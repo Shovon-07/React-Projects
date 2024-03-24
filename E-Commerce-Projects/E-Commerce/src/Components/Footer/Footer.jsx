@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 //___ Images ___//
-import Logo from "/images/logo.png";
+import Logo from "/images/icons/Admin_light_blue.png";
 import BdFlag from "/images/bd.svg";
 import UsaFlag from "/images/us.svg";
 
@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <div className="Footer">
       <div className="footerContainer">
-        <div className="topFooter d-flex">
+        <div className="topFooter d-flex flex-start">
           <div>
             <img src={Logo} alt="" className="logo" />
             <p>@ 2024 shovon software Pvt. Ltd</p>
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           <div className="footerColumn">
-            <h2 className="title">We delever to :</h2>
+            <h2 className="title">We delever to </h2>
             <Link className="links">
               <img src={BdFlag} alt="" /> Bangladesh
             </Link>
@@ -56,12 +56,8 @@ const Footer = () => {
 
       <div className="footerBottom">
         <div className="footerContainer">
-          <p className="flex justify-center items-center">
-            <span className="text-2xl mr-2">&#169;</span> All right reserved by{" "}
-            <span className="text-[var(--main)] ml-2 cursor-default">
-              DARAZ
-            </span>
-          </p>
+          <span className="">&#169;</span> All right reserved by{" "}
+          <span className="">DARAZ</span>
         </div>
       </div>
     </div>

@@ -5,7 +5,6 @@
   background: $main-color;
   margin-top: auto;
   .topFooter {
-    align-items: flex-start;
     justify-content: space-between;
     color: $light-1;
     padding-top: 20px;
@@ -17,12 +16,12 @@
     .footerColumn {
       .title {
         color: $light-2;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
       .links {
         display: flex;
         align-items: center;
-        margin-bottom: 8px;
+        margin-bottom: 15px;
         color: #fff;
         &:hover {
           color: $light-2;
@@ -36,7 +35,7 @@
   }
   .footerBottom {
     color: $light-1;
-    background: #722803;
+    background: #020020;
     padding: 10px 0;
     text-align: center;
   }

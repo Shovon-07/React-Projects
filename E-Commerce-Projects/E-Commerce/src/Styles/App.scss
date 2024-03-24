@@ -8,8 +8,8 @@
   box-sizing: border-box;
 }
 ::selection {
-  background: $dark-2;
-  color: $main-color;
+  background: $main-color;
+  color: $light-1;
 }
 ::placeholder {
   color: $light-3;
@@ -48,11 +48,28 @@ body {
 a {
   text-decoration: none;
   color: $light-blue;
+  transition: $trans;
+  &:hover {
+    color: $blue;
+  }
 }
 li {
   list-style: none;
 }
-button,
+.button {
+  background: $light-blue;
+  color: $light-1;
+  border: 0;
+  outline: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $trans;
+  &:hover {
+    background: $blue;
+    color: $light-1;
+  }
+}
 .cursor {
   cursor: pointer;
 }

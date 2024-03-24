@@ -190,7 +190,7 @@ const Cart = () => {
             </div>
             <div className="voucher d-flex">
               <input type="text" placeholder="Enter voucher code" />
-              <button>APPLY</button>
+              <button className="button">APPLY</button>
             </div>
             <div className="d-flex total">
               <p>Total</p>
@@ -198,7 +198,7 @@ const Cart = () => {
                 <FaBangladeshiTakaSign className="icon" /> 0
               </p>
             </div>
-            <button className="checkout">Checkout</button>
+            <button className="checkout button">Checkout</button>
             {/* <div></div> */}
           </div>
         </div>

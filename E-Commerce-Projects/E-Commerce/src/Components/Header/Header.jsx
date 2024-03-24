@@ -16,8 +16,8 @@ import { HiMenu } from "react-icons/hi";
 import "./Header.scss";
 
 //___ Images ___//
-import Logo from "/images/logo.png";
-import LogoSky from "/images/logo-sky.png";
+import Logo from "/images/icons/Admin_light_blue.png";
+// import LogoSky from "/images/logo-sky.png";
 import BdFlag from "/images/bd.svg";
 import UsFlag from "/images/us.svg";
 import UserImg from "/images/users/web-page.jpg";
@@ -53,21 +53,21 @@ const Header = (props) => {
                   <Link>Help & Support</Link>
                   <div className="dropDownBox" style={{ width: "400px" }}>
                     <div className="corner"></div>
-                    <Link className="d-flex dropDownItem">
+                    <Link className="d-flex gap-10 dropDownItem">
                       <FaUserAlt className="icon" />
                       Help Center
                     </Link>
-                    <Link className="d-flex dropDownItem">
+                    <Link className="d-flex gap-10 dropDownItem">
                       <FaHeadphonesAlt className="icon" />
                       Chat with Us
                     </Link>
-                    <Link className="d-flex dropDownItem">
+                    <Link className="d-flex gap-10 dropDownItem">
                       <FaCartShopping className="icon" /> Order
                     </Link>
-                    <Link className="d-flex dropDownItem">
+                    <Link className="d-flex gap-10 dropDownItem">
                       <FaTruckFast className="icon" /> Shipping & Delivery
                     </Link>
-                    <Link className="d-flex dropDownItem">
+                    <Link className="d-flex gap-10 dropDownItem">
                       <FaShield className="icon" /> CCMS- Central Complain
                       Management System
                     </Link>
@@ -75,8 +75,8 @@ const Header = (props) => {
                 </li>
               </div>
             </div>
-            <div className="appBtn d-flex">
-              <img src={LogoSky} alt="" />
+            <div className="appBtn d-flex gap-10">
+              <img src={UsFlag} alt="" />
               <p>Save More on App</p>
             </div>
           </div>
@@ -131,10 +131,10 @@ const Header = (props) => {
               <FaAngleDown className="angle" />
               <div className="dropDownBox" style={{ width: "120px" }}>
                 <div className="corner"></div>
-                <Link className="d-flex dropDownItem">
+                <Link className="d-flex gap-10 dropDownItem">
                   <img src={BdFlag} alt="" /> BD
                 </Link>
-                <Link className="d-flex dropDownItem">
+                <Link className="d-flex gap-10 dropDownItem">
                   <img src={UsFlag} alt="" /> US
                 </Link>
               </div>

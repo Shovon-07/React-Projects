@@ -19,7 +19,6 @@
       p {
         font-size: 14px;
         a {
-          color: $light-blue;
           font-weight: 500;
         }
       }
@@ -31,7 +30,6 @@
       height: 100%;
       justify-content: space-between;
       padding: 30px;
-      gap: 20px;
       .left {
         flex-basis: 55%;
         .inputBox {
@@ -60,7 +58,6 @@
         .resetPass {
           text-align: right;
           a {
-            color: $light-blue;
             font-weight: 500;
             font-size: 12px;
           }
@@ -69,12 +66,7 @@
       .right {
         flex-basis: 35%;
         .button {
-          text-transform: uppercase;
-          color: $light-1;
-          outline: none;
-          border: none;
           padding: 10px 0;
-          font-weight: 700;
           font-size: 16px;
           letter-spacing: 2px;
           transition: $trans;
@@ -82,9 +74,27 @@
           cursor: pointer;
           justify-content: center;
           gap: 15px;
+          // &:nth-child(3) {
+          //   &:hover {
+          //     color: $light-1;
+          //     background: $main-color;
+          //   }
+          // }
+          // &:nth-child(4) {
+          //   &:hover {
+          //     color: $light-1;
+          //     background: $btn-hover-color;
+          //   }
+          // }
         }
         [type="submit"] {
           background: $btn-color;
+          &:hover {
+            background: $btn-hover-color;
+          }
+        }
+        .google {
+          background: $red;
           &:hover {
             background: $btn-hover-color;
           }

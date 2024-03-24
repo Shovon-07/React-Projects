@@ -14,8 +14,7 @@
 > import { FaTruckFast } from "react-icons/fa6";
 
 => Social media
-> import { FaFacebookF } from "react-icons/fa";
-> import { FaGooglePlusG } from "react-icons/fa";
+> import { FaFacebook, FaTwitter, FaLinkedinIn, FaGooglePlusG } from "react-icons/fa";
 
 => Eye
 > import { FaEye } from "react-icons/fa";

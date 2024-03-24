@@ -40,7 +40,7 @@ const Form = (props) => {
             {mainRightTitle} <Link to={loginOrSingupUrl}>{loginOrSingup}</Link>
           </p>
         </div>
-        <form className="d-flex" onSubmit={handleForm}>
+        <form className="d-flex gap-20" onSubmit={handleForm}>
           <div className="left">
             {inputFields.map((items, index) => {
               return (
@@ -100,13 +100,13 @@ const Form = (props) => {
             <p style={{ fontSize: "12px", margin: "10px 0" }}>
               Or, {title} with
             </p>
-            <Link to="" className="button d-flex blue">
+            <Link to="" className="button d-flex facebook">
               <FaFacebookF size={20} className="icon" />
               Facebook
             </Link>
             <Link
               to=""
-              className="button d-flex red"
+              className="button d-flex google"
               style={{ marginTop: "20px" }}
             >
               <FaGooglePlusG size={30} className="icon" />

@@ -34,6 +34,11 @@
       .rate {
         align-items: flex-start;
         justify-content: space-between;
+        .icon {
+          &:hover {
+            color: $btn-color;
+          }
+        }
       }
       .brand {
         span {
@@ -47,7 +52,7 @@
         h3 {
           font-weight: 500;
           font-size: 30px;
-          color: $main-color;
+          color: $btn-color;
           margin-bottom: 5px;
         }
         .discount {
@@ -72,8 +77,6 @@
           width: 30px;
           height: 40px;
           font-size: 20px;
-          border: $border;
-          outline: none;
         }
       }
       .buy,
@@ -85,7 +88,6 @@
         border: none;
         outline: none;
         transition: $trans;
-        color: $light-1;
       }
       .buy {
         background: $light-blue;
@@ -94,7 +96,7 @@
         }
       }
       .cart {
-        background: $red;
+        background: $btn-color;
         &:hover {
           background: $btn-hover-color;
         }
@@ -106,14 +108,14 @@
       .topTitle {
         font-size: 14px;
         justify-content: space-between;
-        margin: 0 0 !important;
+        margin-bottom: 15px;
       }
-      div {
-        margin: 25px 0;
+      .rightSection {
+        margin-bottom: 30px;
       }
       .location {
         justify-content: space-between;
-        p {
+        a {
           font-size: 13px;
         }
       }
