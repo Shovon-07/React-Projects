@@ -143,7 +143,7 @@ const Cart = () => {
               </div>
               <div className="itemBottom d-flex gap-10">
                 <div>
-                  <img src={Product_2} alt="" />
+                  <img src={Product_1} alt="" />
                 </div>
                 <div>
                   <p className="title">
@@ -157,10 +157,10 @@ const Cart = () => {
                 </div>
                 <div className="Price">
                   <p>
-                    <FaBangladeshiTakaSign className="icon" /> 600
+                    <FaBangladeshiTakaSign className="icon" /> 511
                   </p>
                   <p>
-                    <FaBangladeshiTakaSign className="icon" /> <s>800</s>
+                    <FaBangladeshiTakaSign className="icon" /> <s>700</s>
                   </p>
                   <p>-20%</p>
                   <p className="d-flex gap-10">
@@ -173,7 +173,9 @@ const Cart = () => {
                     -
                   </button>
                   <input type="text" value={quentity} onChange={handleChange} />
-                  <button className="plus" onClick={handlePlus}></button>
+                  <button className="plus" onClick={handlePlus}>
+                    +
+                  </button>
                 </div>
               </div>
             </div>
