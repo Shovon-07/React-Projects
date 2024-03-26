@@ -8,11 +8,14 @@ import "./Styles/App.scss";
 //___ Components ___//
 
 //___ Pages ___//
+// Auth
+import AuthApp from "./Pages/Auth/AuthApp";
+import Login from "./Pages/Auth/Login/Login";
+import Signup from "./Pages/Auth/Signup/Signup";
+
 import App from "./App";
 import Home from "./Pages/Home/Home";
 import Products from "./Pages/Products/Products";
-import Login from "./Pages/Login/Login";
-import Signup from "./Pages/Signup/Signup";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
@@ -26,12 +29,13 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/signup",
-    element: <Signup />,
+    path: "/",
+    element: <AuthApp />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: "/login", element: <Login /> },
+      { path: "/signup", element: <Signup /> },
+    ],
   },
 ]);
 
