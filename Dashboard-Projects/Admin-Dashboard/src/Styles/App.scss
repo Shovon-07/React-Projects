@@ -9,40 +9,49 @@
 }
 ::selection {
   background: $main-color;
-  color: $dark-3;
-}
-body {
-  font-family: "Inter", sans-serif;
-  background: $dark-2;
   color: $light-1;
 }
-.container {
-  width: 100%;
-  height: 100%;
-  max-width: 1500px;
+::placeholder {
+  color: $light-3;
 }
-.contentContainer {
-  padding: 30px 30px 0 30px;
-  margin-left: 200px;
-
-  .content {
+#root {
+}
+body {
+  // overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  background: $dark-1;
+  color: $light-1;
+}
+.main {
+  .container {
     width: 100%;
     height: 100%;
-    margin-bottom: 30px;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+    .contentContainer {
+      padding-left: 200px;
+      transition: $trans;
+      &.bigContainer {
+        padding-left: 50px;
+      }
+    }
   }
+}
 
-  // @include lg {
-  //   margin-left: 50px;
-  // }
-
-  &.bigContentContainer {
-    margin-left: 50px;
-    transition: 1s all ease;
-  }
+.color {
+  color: red;
 }
 a {
   text-decoration: none;
-  color: $light-1;
+  color: $light-blue;
+  transition: $trans;
+  &:hover {
+    color: $blue;
+  }
+}
+li {
+  list-style: none;
 }
 
 // Additional
@@ -53,12 +62,46 @@ a {
 .d-none {
   display: none;
 }
+.gap-10 {
+  gap: 10px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.flex-start {
+  align-items: flex-start;
+}
+.button {
+  background: $light-blue;
+  color: $light-1;
+  border: 0;
+  outline: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $trans;
+  &:hover {
+    background: $blue;
+    color: $light-1;
+  }
+}
+.cursor {
+  cursor: pointer;
+}
 .angle {
   transition: $trans;
 }
 .angleRotate {
   transition: $trans;
   transform: rotate(-180deg);
+}
+
+// Colors
+.blue {
+  background: $blue;
+}
+.red {
+  background: $red;
 }
 
 /*________________ custome scroll bar start ________________*/
@@ -68,10 +111,10 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: $dark-3;
+  background: $light-3;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $main-color;
+  background: $light-1;
 }
 /*________________ custome scroll bar end ________________*/

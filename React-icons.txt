@@ -45,3 +45,9 @@
 
 => Shield
 > import { IoShieldOutline } from "react-icons/io5";
+
+=> Plus
+> import { FaPlus } from "react-icons/fa6";
+
+=> Minus
+> import { FaMinus } from "react-icons/fa6";
