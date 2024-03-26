@@ -41,15 +41,13 @@ const Signup = () => {
       <Header />
       <div className="Singup">
         <Form
-          mainTitle="Create your Daraz Account"
+          mainTitle="Create your Company Account"
           mainRightTitle={`Already member?`}
           title="Sign up"
           url="/signup"
           inputFields={inputField}
           loginOrSingupUrl="/login"
           loginOrSingup="Login"
-          privaciyPolicy="By clicking “SIGN UP”, I agree to Daraz's Terms of Use and
-          Privacy Policy"
         />
       </div>
       <Footer />

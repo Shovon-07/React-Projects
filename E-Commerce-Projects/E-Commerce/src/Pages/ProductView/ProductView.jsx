@@ -25,6 +25,7 @@ import { productsData } from "../../Data";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import RattingComponent from "../../Components/RattingComponent/RattingComponent";
+import Reviews from "../../Components/Reviews/Reviews";
 
 const ProductView = () => {
   const { id } = useParams();
@@ -95,11 +96,11 @@ const ProductView = () => {
             </div>
             <div className="Quentity">
               <span>Quentity</span>
-              <button className="minus" onClick={handleMinus}>
+              <button className="minus cursor" onClick={handleMinus}>
                 -
               </button>
               <input type="text" value={quentity} onChange={handleChange} />
-              <button className="plus" onClick={handlePlus}>
+              <button className="plus cursor" onClick={handlePlus}>
                 +
               </button>
             </div>
@@ -157,8 +158,23 @@ const ProductView = () => {
               <IoShieldOutline size={22} />
               <p>Warranty not available</p>
             </div>
+            <div className="sellerPoint d-flex gap-10 flex-start rightSection">
+              <div>
+                <p>Positive Seller Ratings</p>
+                <p className="percent">78%</p>
+              </div>
+              <div>
+                <p>Ship on Time</p>
+                <p className="percent">100%</p>
+              </div>
+              <div>
+                <p>Chat Response Rate</p>
+                <p className="percent">65%</p>
+              </div>
+            </div>
           </div>
         </div>
+        <Reviews />
       </div>
       <Footer />
     </>

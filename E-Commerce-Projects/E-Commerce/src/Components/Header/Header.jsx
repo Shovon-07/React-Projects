@@ -16,7 +16,7 @@ import { HiMenu } from "react-icons/hi";
 import "./Header.scss";
 
 //___ Images ___//
-import Logo from "/images/icons/Admin_light_blue.png";
+import Logo from "/images/icons/Company_orrange.png";
 // import LogoSky from "/images/logo-sky.png";
 import BdFlag from "/images/bd.svg";
 import UsFlag from "/images/us.svg";
@@ -47,7 +47,7 @@ const Header = (props) => {
                   <Link>Become a Seller</Link>
                 </li>
                 <li>
-                  <Link>Daraz Donates</Link>
+                  <Link>Donates</Link>
                 </li>
                 <li className="dropDownParent">
                   <Link>Help & Support</Link>

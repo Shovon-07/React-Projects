@@ -30,7 +30,7 @@ const Login = () => {
       <Header />
       <div className="Login">
         <Form
-          mainTitle="Welcome to Daraz !"
+          mainTitle="Welcome to Company !"
           mainRightTitle={`New member?`}
           title="Login"
           url="/login"

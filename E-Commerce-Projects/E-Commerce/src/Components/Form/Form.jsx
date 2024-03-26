@@ -20,7 +20,6 @@ const Form = (props) => {
     inputFields,
     loginOrSingupUrl,
     loginOrSingup,
-    privaciyPolicy,
     resetPass,
   } = props;
 
@@ -91,7 +90,7 @@ const Form = (props) => {
             {title === "Sign up" ? (
               <p className="privaciyPolicy">
                 <input type="checkbox" /> By clicking “SIGN UP”, I agree to
-                Daraz's <Link to="/terms">Terms of Use</Link> and{" "}
+                Company's <Link to="/terms">Terms of Use</Link> and{" "}
                 <Link to="/policy">Privacy Policy</Link>
               </p>
             ) : (

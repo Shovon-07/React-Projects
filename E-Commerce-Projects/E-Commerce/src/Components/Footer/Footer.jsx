@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 //___ Images ___//
-import Logo from "/images/icons/Admin_light_blue.png";
+import Logo from "/images/icons/Company_orrange.png";
 import BdFlag from "/images/bd.svg";
 import UsaFlag from "/images/us.svg";
 
@@ -57,7 +57,7 @@ const Footer = () => {
       <div className="footerBottom">
         <div className="footerContainer">
           <span className="">&#169;</span> All right reserved by{" "}
-          <span className="">DARAZ</span>
+          <span className="">COMPANY</span>
         </div>
       </div>
     </div>
