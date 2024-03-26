@@ -18,3 +18,4 @@ import { useParams } from "react-router-dom";
 
 const {id}=useParams();
 __ Its get all id from route
+

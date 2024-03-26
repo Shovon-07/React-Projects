@@ -1,0 +1,16 @@
+@import "../../Styles/Variable.scss";
+
+.Header {
+  background: $dark-1;
+  box-shadow: $shadow;
+  position: sticky;
+  top: 0;
+  z-index: 997;
+  .container {
+    justify-content: space-between;
+    padding: 10px 30px;
+    .toggler {
+      font-size: 30px;
+    }
+  }
+}

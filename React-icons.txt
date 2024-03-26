@@ -1,5 +1,8 @@
 //___ React icons ___//
 
+=> Menu
+> import { HiMenuAlt2 } from "react-icons/hi";
+
 => User
 > import { FaRegUser } from "react-icons/fa";
 > import { FaUserAlt } from "react-icons/fa";

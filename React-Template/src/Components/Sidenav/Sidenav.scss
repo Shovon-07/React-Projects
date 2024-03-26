@@ -1,0 +1,19 @@
+@import "../../Styles/Variable.scss";
+
+.Sidenav {
+  width: 200px;
+  height: 100vh;
+  background: $dark-1;
+  padding-top: 70px;
+  border-right: 1px solid $light-3;
+  transition: $trans;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 996;
+  &.smallSideNav {
+    width: 50px;
+  }
+}
