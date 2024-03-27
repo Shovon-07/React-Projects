@@ -5,7 +5,7 @@ import "./Reviews.scss";
 
 //___ Components ___//
 import RattingComponent from "../RattingComponent/RattingComponent";
-import DataTable from "../ApplicationTable/ApplicationTable";
+// import DataTable from "../ApplicationTable/ApplicationTable";
 
 const Reviews = () => {
   return (

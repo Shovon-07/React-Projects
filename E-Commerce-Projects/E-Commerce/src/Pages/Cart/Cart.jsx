@@ -27,18 +27,27 @@ const Cart = () => {
   Earum dolor aut sunt a, autem eius consequatur quisquam
   consequuntur voluptate`);
 
-  const [quentity, setQuentity] = useState(2);
+  const [quentity, setQuentity] = useState({
+    product_1: "5",
+    product_2: "2",
+  });
 
   const handleChange = (e) => {
-    setQuentity(e.target.value);
+    setQuentity((prev) => {
+      return {
+        ...quentity,
+        [e.target.name]: e.target.value,
+      };
+    });
   };
 
   const handleMinus = () => {
-    setQuentity((prev) => prev - 1);
+    // setQuentity((prev) => prev - 1);
+    alert("sex");
   };
 
   const handlePlus = () => {
-    setQuentity((prev) => prev + 1);
+    setQuentity(...quentity);
   };
 
   return (
@@ -108,11 +117,16 @@ const Cart = () => {
                   </p>
                 </div>
                 <div className="Quentity">
-                  <button className="minus" onClick={handleMinus}>
+                  <button className="minus cursor" onClick={handleMinus}>
                     -
                   </button>
-                  <input type="text" value={quentity} onChange={handleChange} />
-                  <button className="plus" onClick={handlePlus}>
+                  <input
+                    type="text"
+                    name="product_1"
+                    value={quentity.product_1}
+                    onChange={handleChange}
+                  />
+                  <button className="plus cursor" onClick={handlePlus}>
                     +
                   </button>
                 </div>
@@ -169,11 +183,16 @@ const Cart = () => {
                   </p>
                 </div>
                 <div className="Quentity">
-                  <button className="minus" onClick={handleMinus}>
+                  <button className="minus cursor" onClick={handleMinus}>
                     -
                   </button>
-                  <input type="text" value={quentity} onChange={handleChange} />
-                  <button className="plus" onClick={handlePlus}>
+                  <input
+                    type="text"
+                    name="product_2"
+                    value={quentity.product_2}
+                    onChange={handleChange}
+                  />
+                  <button className="plus cursor" onClick={handlePlus}>
                     +
                   </button>
                 </div>
