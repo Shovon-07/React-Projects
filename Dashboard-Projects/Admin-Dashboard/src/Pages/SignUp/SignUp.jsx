@@ -1,12 +1,12 @@
 import React from "react";
 
 //___ CSS ___//
-import "./Login.scss";
+import "./SignUp.scss";
 
 //___ Components ___//
 import Form from "../../Components/Form/Form";
 
-const Login = () => {
+const SignUp = () => {
   const inputField = [
     {
       field: "name",
@@ -21,24 +21,30 @@ const Login = () => {
       className: "inputBox",
     },
     {
-      field: "password",
+      field: "signUpPassword",
       type: "password",
-      placeholder: "Enter your password",
-      className: "inputBox d-flex",
+      placeholder: "Enter a unique password",
+      className: "inputBox",
+    },
+    {
+      field: "confirmSignUpPassword",
+      type: "password",
+      placeholder: "Retype password",
+      className: "inputBox",
     },
   ];
 
   return (
     <>
       <Form
-        title={"Sign in"}
+        title={"Sign up"}
         inputFields={inputField}
-        url={"/dashboard"}
-        loginOrSingupUrl={"/signup"}
-        loginOrSingup={"Sign up"}
+        url={"/signup"}
+        loginOrSingupUrl={"/"}
+        loginOrSingup={"Sign in"}
       />
     </>
   );
 };
 
-export default Login;
+export default SignUp;

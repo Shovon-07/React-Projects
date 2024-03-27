@@ -1,0 +1,29 @@
+@import "../../Styles/Variable.scss";
+
+.Notification {
+  flex-direction: column;
+
+  .notification-item {
+    width: 100%;
+    padding: 10px 20px;
+    align-items: flex-start;
+    gap: 20px;
+
+    &:hover {
+      background: $dark-3;
+    }
+
+    img {
+      width: 30px;
+      border-radius: 50%;
+    }
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 13px;
+      margin-top: 7px;
+    }
+  }
+}

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 //___ Components ___//
-import Header from "./Components/Header/Header";
+import Header from "./Components/Header1/Header";
 import Sidenav from "./Components/Sidenav/Sidenav";
 
 function App() {
