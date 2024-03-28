@@ -1,49 +1,58 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import DataTable from "react-data-table-component";
 
 //___ Css ___//
 import "./TableData.scss";
 
 //___ Images ___//
-// import EditeIcon from "/images/icons/view.svg";
-// import DeleteIcon from "/images/icons/delete.svg";
+import EditeIcon from "/images/icons/view.svg";
+import DeleteIcon from "/images/icons/delete.svg";
 
 //___ Components ___//
+import Loader from "../Loader/Loader";
 
 const TableData = (props) => {
   // Props
   const {
     api,
     tableTitle,
-    apiData,
-    columns,
-    searchData,
-    setSearchData,
-    filteredApiData,
-    setFilteredApiData,
+    columnsField,
+    // apiData,
+    // columns,
+    // searchData,
+    // setSearchData,
+    // filteredApiData,
+    // setFilteredApiData,
   } = props;
 
-  // State
-  // const [apiData, setApiData] = useState([]);
-  // const [searchData, setSearchData] = useState("");
-  // const [filteredApiData, setFilteredApiData] = useState([]);
+  // States
+  const [apiData, setApiData] = useState([]);
+  const [searchData, setSearchData] = useState("");
+  const [filteredApiData, setFilteredApiData] = useState([]);
 
-  // const getApiData = async () => {
-  //   try {
-  //     let res = await axios.get(api);
-  //     setApiData(res.data);
-  //     setFilteredApiData(res.data);
-  //     // console.log(res.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+  const getApiData = async () => {
+    try {
+      let res = await axios.get(api);
+      setApiData(res.data);
+      setApiData(res.data);
+      setFilteredApiData(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   // const columns = [
-  //   { name: "Title", sortable: true, selector: (row) => row.title },
-  //   { name: "Category", selector: (row) => row.category },
-  //   { name: "Price", selector: (row) => row.price },
-  //   { name: "Rating", selector: (row) => row.rating.count },
+  //   { name: "Customer name", sortable: true, selector: (row) => row.title },
+  //   { name: "Contact", selector: (row) => row.category },
+  //   { name: "Material", selector: (row) => row.price },
+  //   { name: "Neck type", selector: (row) => row.price },
+  //   { name: "hand type", selector: (row) => row.price },
+  //   { name: "button type", selector: (row) => row.price },
+  //   { name: "Dress type", selector: (row) => row.price },
+  //   { name: "meters bought", selector: (row) => row.price },
+  //   { name: "total price", selector: (row) => row.price },
+  //   { name: "deadline", selector: (row) => row.rating.count },
   //   {
   //     name: "Action",
   //     cell: (row) => (
@@ -65,10 +74,20 @@ const TableData = (props) => {
   //   },
   // ];
 
-  // useEffect(() => {
-  //   setSearchData(apiData);
-  //   setFilteredApiData(apiData);
-  // }, []);
+  let columns = [];
+
+  columnsField.map((columnsItem) => {
+    columns.push({
+      name: columnsItem.name,
+      selector: (row) => columnsItem.field,
+    });
+    return columns;
+  });
+
+  useEffect(() => {
+    getApiData();
+    console.log(columnsField[0].field);
+  }, []);
 
   useEffect(() => {
     const result = apiData.filter((filteredApiData) => {
@@ -81,6 +100,8 @@ const TableData = (props) => {
 
   return (
     <div className="TableData">
+      {/* <Loader /> */}
+      {apiData == "" ? <Loader /> : ""}
       <DataTable
         columns={columns}
         data={filteredApiData}
