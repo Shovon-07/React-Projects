@@ -8,8 +8,8 @@
   box-sizing: border-box;
 }
 ::selection {
-  // background: $main-color;
-  // color: $light-1;
+  background: $main-color;
+  color: $light-1;
 }
 ::placeholder {
   color: $dark-3;
@@ -36,6 +36,9 @@ body {
   height: 100%;
   max-width: 2000px;
   margin: 0 auto;
+}
+.container {
+  padding: 10px 0 50px 0;
 }
 a {
   text-decoration: none;
@@ -97,16 +100,16 @@ li {
 // Colors
 
 /*________________ custome scroll bar start ________________*/
-::-webkit-scrollbar {
-  width: 1px;
-  height: 2px;
-}
+// ::-webkit-scrollbar {
+//   width: 1px;
+//   height: 5px;
+// }
 
-::-webkit-scrollbar-track {
-  background: $dark-2;
-}
+// ::-webkit-scrollbar-track {
+//   background: $dark-2;
+// }
 
-::-webkit-scrollbar-thumb {
-  // background: $main-color;
-}
+// ::-webkit-scrollbar-thumb {
+//   // background: $main-color;
+// }
 /*________________ custome scroll bar end ________________*/

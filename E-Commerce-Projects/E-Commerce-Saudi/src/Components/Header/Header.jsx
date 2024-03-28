@@ -49,14 +49,6 @@ const Header = () => {
               to="/"
               className={({ isActive }) => (isActive ? "isActive" : "")}
             >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/customize"
-              className={({ isActive }) => (isActive ? "isActive" : "")}
-            >
               Customize
             </NavLink>
           </li>

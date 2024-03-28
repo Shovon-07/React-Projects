@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <Home /> },
-      { path: "/customize", element: <Customize /> },
+      // { path: "/", element: <Home /> },
+      { path: "/", element: <Customize /> },
       { path: "/update-inventory", element: <UpdateInventory /> },
       { path: "/sell", element: <Sell /> },
       { path: "/pending-orders", element: <PendingOrders /> },
