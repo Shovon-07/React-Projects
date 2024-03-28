@@ -10,11 +10,6 @@ import "./Home.scss";
 import Header from "../../Components/Header/Header";
 
 const Home = () => {
-  // const [count, setCount] = useState(0);
-  // useEffect(() => {
-  //   count < 500 ? setCount((prev) => prev + 1) : count;
-  // });
-
   return (
     <>
       <h1>Home</h1>

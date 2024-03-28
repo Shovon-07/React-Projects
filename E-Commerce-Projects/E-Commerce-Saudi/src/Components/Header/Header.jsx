@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 //___ Icons ___//
+import { HiMenuAlt3 } from "react-icons/hi";
 
 //___ Css ___//
 import "./Header.scss";
@@ -19,28 +20,77 @@ const Header = () => {
   // Props
 
   // States
+  const [navToggler, setNavToggler] = useState(0);
+
+  const handleNavToggler = () => {
+    setNavToggler((prev) => (prev === 0 ? 1 : 0));
+  };
+
+  // Testing
+  // const [count, setCount] = useState(0);
+  // useEffect(() => {
+  //   setCount((prev) => (prev < 200 ? prev + 1 : prev));
+  // });
 
   return (
     <header>
-      <div className="container d-flex">
-        <div className="logo">
-          <img src={Logo} alt="" />
+      <div className={`container d-flex ${navToggler === 0 ? "" : "active"}`}>
+        <div className="left">
+          <div className="logo">
+            <img src={Logo} alt="" />
+          </div>
+          <div className="toggler cursor">
+            <HiMenuAlt3 onClick={handleNavToggler} />
+          </div>
         </div>
         <div className="menus d-flex gap-30">
           <li>
-            <Link to="/customize">Customize</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/update-inventory">Update Inventory</Link>
+            <NavLink
+              to="/customize"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              Customize
+            </NavLink>
           </li>
           <li>
-            <Link to="/sell">Sell</Link>
+            <NavLink
+              to="/update-inventory"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              Update Inventory
+            </NavLink>
           </li>
           <li>
-            <Link to="/pending-orders">Pending Orders</Link>
+            <NavLink
+              to="/sell"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              Sell
+            </NavLink>
           </li>
           <li>
-            <Link to="/History">History</Link>
+            <NavLink
+              to="/pending-orders"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              Pending Orders
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/History"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              History
+            </NavLink>
           </li>
         </div>
       </div>
