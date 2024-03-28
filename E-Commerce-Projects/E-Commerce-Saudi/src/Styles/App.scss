@@ -16,7 +16,7 @@
 }
 body {
   font-family: "Inter", sans-serif;
-  // background: $body-bg;
+  background: $body-bg;
 }
 
 .main {
@@ -77,13 +77,6 @@ li {
 .d-none {
   display: none;
 }
-.angle {
-  transition: $trans;
-}
-.angleRotate {
-  transition: $trans;
-  transform: rotate(-180deg);
-}
 .gap-10 {
   gap: 10px;
 }
@@ -95,6 +88,13 @@ li {
 }
 .flex-start {
   align-items: flex-start;
+}
+.angle {
+  transition: $trans;
+}
+.angleRotate {
+  transition: $trans;
+  transform: rotate(-180deg);
 }
 
 // Colors

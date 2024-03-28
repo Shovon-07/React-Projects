@@ -100,7 +100,6 @@ const TableData = (props) => {
 
   return (
     <div className="TableData">
-      {/* <Loader /> */}
       {apiData == "" ? <Loader /> : ""}
       <DataTable
         columns={columns}
