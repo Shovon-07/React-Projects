@@ -75,18 +75,18 @@ const TableData = (props) => {
   // ];
 
   let columns = [];
-
   columnsField.map((columnsItem) => {
+    let fields = columnsItem.field;
+    // JSON.parse({ field: "title" });
     columns.push({
       name: columnsItem.name,
-      selector: (row) => columnsItem.field,
+      selector: (row) => row.title,
     });
-    return columns;
   });
 
   useEffect(() => {
     getApiData();
-    console.log(columnsField[0].field);
+    // console.log(columnsField[2].field);
   }, []);
 
   useEffect(() => {

@@ -34,15 +34,15 @@ const Customize = () => {
 
   const columnsField = [
     { name: "Customer name", field: "title" },
-    { name: "Contact", field: "title" },
-    { name: "Material", field: "category" },
+    { name: "Contact", field: "category" },
+    { name: "Material", field: "description" },
     { name: "Neck type", field: "price" },
-    { name: "hand type", field: "price" },
-    { name: "button type", field: "price" },
-    { name: "Dress type", field: "price" },
-    { name: "meters bought", field: "price" },
-    { name: "total price", field: "price" },
-    { name: "deadline", field: "1 day" },
+    // { name: "hand type", field: "price" },
+    // { name: "button type", field: "price" },
+    // { name: "Dress type", field: "price" },
+    // { name: "meters bought", field: "price" },
+    // { name: "total price", field: "price" },
+    // { name: "deadline", field: "1 day" },
     // {
     //   name: "Action",
     //   cell: (row) => (
