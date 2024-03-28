@@ -33,7 +33,7 @@ const Header = () => {
   // });
 
   return (
-    <header>
+    <header className="Header">
       <div className={`container d-flex ${navToggler === 0 ? "" : "active"}`}>
         <div className="left">
           <div className="logo">

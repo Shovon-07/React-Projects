@@ -9,25 +9,33 @@ import "./Invoice.scss";
 const Invoice = () => {
   return (
     <>
-      <div className="Invoice d-flex flex-start gap-20">
-        <div className="left">
-          <div className="first d-flex flex-start gap-20">
-            <div>
-              <img src={Logo} alt="" className="logo" />
-              <p>
-                Office 149, 450 South Brand Brooklyn San Diego County, CA 91905,
-                USA
-              </p>
-              <p>+1 (123) 456 7891, +44 (876) 543 2198</p>
-            </div>
-            <div>
-              <div className="d-flex ">
-                <h2>Invoice #</h2> <input type="text" value={1233} disabled />
+      <div className="Invoice">
+        <div className="invoiceSection first d-flex flex-start gap-20">
+          <div className="left">
+            <div className="firstTop d-flex gap-20">
+              <div className="left">
+                <img src={Logo} alt="" className="logo" />
+                <p>
+                  Office 149, 450 South Brand Brooklyn San Diego County, CA
+                  91905, USA
+                </p>
+                <p>+1 (123) 456 7891, +44 (876) 543 2198</p>
               </div>
+              <div className="right d-flex">2</div>
             </div>
           </div>
+          <div className="right">2</div>
         </div>
-        <div className="right">2</div>
+
+        <div className="invoiceSection second d-flex gap-20">
+          <div className="left">
+            <div className="firstTop d-flex gap-20">
+              <div className="left">1</div>
+              <div className="right d-flex">2</div>
+            </div>
+          </div>
+          <div className="right">2</div>
+        </div>
       </div>
     </>
   );
