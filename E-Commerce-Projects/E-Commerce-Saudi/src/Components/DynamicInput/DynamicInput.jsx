@@ -73,8 +73,9 @@ const DynamicInput = () => {
     setSectionCounter([...sectionCounter, 1]);
   };
 
-  const handelRemoveSection = (sectionCounter) => {
-    alert(sectionCounter);
+  const handelRemoveSection = (index) => {
+    alert(index);
+    // setSectionCounter(sectionCounter.filter(() => index.sectionCounter));
     // const removed = sectionCounter.filter((sectionCounter) => {
     //   sectionCounter !== index;
     // });
@@ -83,7 +84,6 @@ const DynamicInput = () => {
 
   return (
     <>
-      {sectionCounter}
       {sectionCounter.map((item, index) => {
         return (
           <div className="DynamicInput d-flex flex-start gap-20" key={index}>
@@ -119,7 +119,7 @@ const DynamicInput = () => {
               <p>$24.00</p>
             </div>
             <div className="cross cursor">
-              <span onClick={() => handelRemoveSection(sectionCounter)}>X</span>
+              <span onClick={() => handelRemoveSection(index)}>X</span>
             </div>
           </div>
         );

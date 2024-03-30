@@ -149,6 +149,79 @@ const Invoice = () => {
           </div>
           <div className="right" style={{ background: "transparent" }}></div>
         </div>
+
+        <div className="invoiceSection first d-flex flex-start gap-20">
+          <div className="left shadow">
+            <div className="firstTop d-flex gap-20">
+              <div className="left">
+                <div className="d-flex gap-20" style={{ marginBottom: "30px" }}>
+                  <p>SALESPERSON:</p>{" "}
+                  <input type="text" placeholder="Edward Crowley" />
+                </div>
+                <input type="text" placeholder="Thanks for your business" />
+              </div>
+              <div className="right d-flex gap-20">
+                <table>
+                  <tbody>
+                    <tr style={{ height: "27px", fontSize: "15px" }}>
+                      <td>Subtotal</td>
+                      <td style={{ width: "20px" }}>:</td>
+                      <td>
+                        <span>$</span> 12,110.55
+                      </td>
+                    </tr>
+                    <tr style={{ height: "27px", fontSize: "15px" }}>
+                      <td>Discount</td>
+                      <td style={{ width: "20px" }}>:</td>
+                      <td>
+                        <span>$</span> 12,110.55
+                      </td>
+                    </tr>
+                    <tr style={{ height: "27px", fontSize: "15px" }}>
+                      <td>Tax</td>
+                      <td style={{ width: "20px" }}>:</td>
+                      <td>
+                        <span>$</span> 12,110.55
+                      </td>
+                    </tr>
+                    <tr
+                      style={{
+                        height: "40px",
+                        fontSize: "20px",
+                      }}
+                    >
+                      <td>Total</td>
+                      <td style={{ width: "20px" }}>:</td>
+                      <td style={{ borderTop: "1px solid #7d7d7d" }}>
+                        <span>$</span> 12,110.55
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div className="right" style={{ background: "transparent" }}></div>
+        </div>
+
+        <div className="invoiceSection first d-flex flex-start gap-20">
+          <div className="left shadow">
+            <div className="firstTop">
+              <div className="left">
+                <p>Note:</p>{" "}
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="3"
+                  style={{ width: "100%", marginTop: "10px" }}
+                  placeholder="Invoice Note"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div className="right" style={{ background: "transparent" }}></div>
+        </div>
       </div>
     </>
   );
