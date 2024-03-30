@@ -61,49 +61,118 @@
 
 // export default DynamicInput;
 
-import React from "react";
+import React, { useState } from "react";
 
 //___ Css ___//
 import "./DynamicInput.scss";
 
 const DynamicInput = () => {
+  const [sectionCounter, setSectionCounter] = useState([1]);
+
+  const handelSectionCounter = () => {
+    setSectionCounter([...sectionCounter, 1]);
+  };
+
+  const handelRemoveSection = (sectionCounter) => {
+    alert(sectionCounter);
+    // const removed = sectionCounter.filter((sectionCounter) => {
+    //   sectionCounter !== index;
+    // });
+    // setSectionCounter(removed);
+  };
+
   return (
-    <div className="DynamicInput d-flex flex-start gap-20">
+    <>
+      {sectionCounter}
+      {sectionCounter.map((item, index) => {
+        return (
+          <div className="DynamicInput d-flex flex-start gap-20" key={index}>
+            <div>
+              <p className="title">Item</p>
+              <select>
+                <option value="" defaultChecked>
+                  Bank account
+                </option>
+                <option value="">Paypal</option>
+                <option value="">Credit/Debit Card</option>
+                <option value="">UPI Transfer</option>
+              </select>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="3"
+                placeholder="Item information"
+              ></textarea>
+            </div>
+            <div>
+              <p className="title">Cost</p>
+              <input type="text" placeholder="00" />
+              <p>Discount: 0% 0% 0%</p>
+            </div>
+            <div>
+              <p className="title">Qty</p>
+              <input type="text" placeholder="1" />
+            </div>
+            <div>
+              <p className="title">Price</p>
+              <p>$24.00</p>
+            </div>
+            <div className="cross cursor">
+              <span onClick={() => handelRemoveSection(sectionCounter)}>X</span>
+            </div>
+          </div>
+        );
+      })}
+      {/* <div className="DynamicInput d-flex flex-start gap-20">
+        <div>
+          <p className="title">Item</p>
+          <select>
+            <option value="" defaultChecked>
+              Bank account
+            </option>
+            <option value="">Paypal</option>
+            <option value="">Credit/Debit Card</option>
+            <option value="">UPI Transfer</option>
+          </select>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="3"
+            placeholder="Item information"
+          ></textarea>
+        </div>
+        <div>
+          <p className="title">Cost</p>
+          <input type="text" placeholder="00" />
+          <p>Discount: 0% 0% 0%</p>
+        </div>
+        <div>
+          <p className="title">Qty</p>
+          <input type="text" placeholder="1" />
+        </div>
+        <div>
+          <p className="title">Price</p>
+          <p>$24.00</p>
+        </div>
+        <div className="cross cursor">
+          <span>X</span>
+        </div>
+      </div> */}
+
       <div>
-        <p className="title">Item</p>
-        <select>
-          <option value="" defaultChecked>
-            Bank account
-          </option>
-          <option value="">Paypal</option>
-          <option value="">Credit/Debit Card</option>
-          <option value="">UPI Transfer</option>
-        </select>
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="3"
-          placeholder="Item information"
-        ></textarea>
+        <button className="button" onClick={handelSectionCounter}>
+          Add Item
+        </button>
       </div>
-      <div>
-        <p className="title">Cost</p>
-        <input type="text" placeholder="00" />
-        <p>Discount: 0% 0% 0%</p>
-      </div>
-      <div>
-        <p className="title">Qty</p>
-        <input type="text" placeholder="1" />
-      </div>
-      <div>
-        <p className="title">Price</p>
-        <p>$24.00</p>
-      </div>
-      <div className="cross cursor">
-        <span>X</span>
-      </div>
-    </div>
+      {/* {(() => {
+        for (let i = 1; i <= 10; i += 1) {
+          const p = <p>sex</p>;
+          return p;
+        }
+      })()} */}
+    </>
   );
 };
 
