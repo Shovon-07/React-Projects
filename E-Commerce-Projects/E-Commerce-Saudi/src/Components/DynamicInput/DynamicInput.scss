@@ -1,0 +1,39 @@
+@import "../../Styles/Variable.scss";
+
+.DynamicInput {
+  padding: 7px 15px;
+  justify-content: space-between;
+  .title {
+    font-size: 17px !important;
+  }
+  select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    border: $border;
+    margin-bottom: 10px;
+    color: $dark-3;
+  }
+  input,
+  textarea {
+    width: 150px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: $border;
+    transition: $trans;
+    &:focus::placeholder {
+      padding-left: 10px;
+      transition: $trans;
+    }
+  }
+  textarea {
+    width: 100%;
+    resize: vertical;
+  }
+  .cross {
+    height: 100%;
+    font-size: 20px;
+  }
+}

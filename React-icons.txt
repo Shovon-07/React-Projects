@@ -33,6 +33,7 @@
 
 => Money
 > import { FaBangladeshiTakaSign } from "react-icons/fa6";
+> import { FiDollarSign } from "react-icons/fi";
 
 => Exclamation
 > import { AiOutlineExclamationCircle } from "react-icons/ai";

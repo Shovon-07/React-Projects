@@ -12,7 +12,8 @@
   color: $light-1;
 }
 ::placeholder {
-  color: $dark-3;
+  color: $placeholder-color;
+  transition: $trans;
 }
 body {
   font-family: "Inter", sans-serif;
@@ -52,17 +53,18 @@ li {
   list-style: none;
 }
 .button {
-  // background: $light-blue;
-  // color: $light-1;
-  border: 0;
+  background: $dark-2;
+  color: $light-1;
+  border: 1px solid $dark-2;
   outline: 0;
-  text-transform: uppercase;
-  font-weight: 600;
+  border-radius: 5px;
+  text-transform: capitalize;
+  // font-weight: 600;
   cursor: pointer;
   transition: $trans;
   &:hover {
-    // background: $blue;
-    color: $light-1;
+    background: transparent;
+    color: $dark-2;
   }
 }
 .cursor {
@@ -95,6 +97,21 @@ li {
 .angleRotate {
   transition: $trans;
   transform: rotate(-180deg);
+}
+.shadow {
+  box-shadow: $shadow;
+}
+input,
+textarea {
+  font-size: 17px;
+  border: $border;
+  outline: none;
+  color: $dark-3;
+}
+input:disabled,
+textarea:disabled {
+  background: $light-3;
+  border: 1px solid $dark-3 !important;
 }
 
 // Colors

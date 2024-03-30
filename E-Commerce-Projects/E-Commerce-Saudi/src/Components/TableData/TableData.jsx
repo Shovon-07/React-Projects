@@ -99,7 +99,7 @@ const TableData = (props) => {
   }, [searchData]);
 
   return (
-    <div className="TableData">
+    <div className="TableData shadow">
       {apiData == "" ? <Loader /> : ""}
       <DataTable
         columns={columns}
