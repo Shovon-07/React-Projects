@@ -4,7 +4,11 @@ import React from "react";
 import "./History.scss";
 
 const History = () => {
-  return <div>History</div>;
+  return (
+    <div className="History">
+      <h1 className="title">History</h1>
+    </div>
+  );
 };
 
 export default History;

@@ -78,10 +78,18 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/History"
+              to="/history"
               className={({ isActive }) => (isActive ? "isActive" : "")}
             >
               History
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/customize-image"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              Customize Image
             </NavLink>
           </li>
         </div>
