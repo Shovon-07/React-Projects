@@ -11,15 +11,33 @@
       height: 450px;
       border: $border;
       margin-top: 15px;
+      justify-content: center;
       position: relative;
+      // background-color: red;
 
       img {
         position: absolute;
       }
 
       .main-img {
-        width: 100%;
-        height: 100%;
+        width: 300px;
+        height: 400px;
+        margin: auto;
+      }
+
+      .pocket {
+        width: 50px;
+        height: auto;
+        top: 86px;
+        right: 135px;
+      }
+
+      .hand {
+        width: 100px;
+        height: auto;
+        top: 180px;
+        right: 27px;
+        transform: rotate(-90deg);
       }
     }
   }
@@ -48,10 +66,10 @@
         .btnChild {
           background: $light-1;
           box-shadow: 1px 1px 5px #cfcfcf, -1px -1px 5px #cfcfcf;
-          width: 400px;
+          width: 408px;
           position: absolute;
           top: 0;
-          left: 163px;
+          left: 150px;
           display: none;
 
           li {
@@ -63,6 +81,7 @@
               height: 100px;
               cursor: pointer;
               transition: $trans;
+              z-index: 100;
               &:hover {
                 transform: scale(1.2);
               }
@@ -70,7 +89,7 @@
           }
         }
 
-        &:focus-within .btnChild {
+        &:hover .btnChild {
           display: flex;
           flex-wrap: wrap;
         }
