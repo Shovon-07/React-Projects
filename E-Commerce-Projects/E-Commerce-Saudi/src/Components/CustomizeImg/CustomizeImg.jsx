@@ -35,7 +35,12 @@ const CustomizeImg = () => {
   // Images
   const [btnImgPreview, setBtnImgPreview] = useState();
   const [nakImgPreview, setNakImgPreview] = useState();
-  const [pktImgPreview, setPktImgPreview] = useState();
+  const [pktImgPreview, setPktImgPreview] = useState({
+    pktImgPrev: null,
+    widthPktImgPrev: null,
+    rightPosPktImgPrev: null,
+    leftPosPktImgPrev: null,
+  });
   const [handImgPreview, setHandImgPreview] = useState({
     hndImgPrev: null,
     widthHndImgPrev: null,
@@ -57,24 +62,6 @@ const CustomizeImg = () => {
     { btnImg: Btn_4 },
     { btnImg: Btn_5 },
     { btnImg: Btn_6 },
-    { btnImg: Btn_1 },
-    { btnImg: Btn_2 },
-    { btnImg: Btn_3 },
-    { btnImg: Btn_4 },
-    { btnImg: Btn_5 },
-    { btnImg: Btn_6 },
-    { btnImg: Btn_1 },
-    { btnImg: Btn_2 },
-    { btnImg: Btn_3 },
-    { btnImg: Btn_4 },
-    { btnImg: Btn_5 },
-    { btnImg: Btn_6 },
-    { btnImg: Btn_1 },
-    { btnImg: Btn_2 },
-    { btnImg: Btn_3 },
-    { btnImg: Btn_4 },
-    { btnImg: Btn_5 },
-    { btnImg: Btn_6 },
   ];
   const nackImg = [
     { nakImg: Nack_1 },
@@ -85,14 +72,10 @@ const CustomizeImg = () => {
     { nakImg: Nack_6 },
   ];
   const pocketImg = [
-    { pktImg: Pocket_1 },
-    { pktImg: Pocket_2 },
-    { pktImg: Pocket_3 },
-    { pktImg: Pocket_4 },
-    { pktImg: Pocket_1 },
-    { pktImg: Pocket_2 },
-    { pktImg: Pocket_3 },
-    { pktImg: Pocket_4 },
+    { pktImg: Pocket_1, width: "50px", right: "74px" },
+    { pktImg: Pocket_2, width: "50px", right: "74px" },
+    { pktImg: Pocket_3, width: "50px", right: "74px" },
+    { pktImg: Pocket_4, width: "50px", right: "74px" },
   ];
   const handImg = [
     { hndImg: Hand_1, width: "97px", right: "-27px", left: "-29px" },
@@ -109,7 +92,13 @@ const CustomizeImg = () => {
     setNakImgPreview(items.nakImg);
   };
   const handelPocketImgPreview = (items) => {
-    setPktImgPreview(items.pktImg);
+    setPktImgPreview({
+      ...pktImgPreview,
+      pktImgPrev: items.pktImg,
+      widthPktImgPrev: items.width,
+      rightPosPktImgPrev: items.right,
+      leftPosPktImgPrev: items.left,
+    });
   };
   const handelHandImgPreview = (items) => {
     setHandImgPreview({
@@ -154,8 +143,12 @@ const CustomizeImg = () => {
           />
           {/* <img src={nakImgPreview} alt="" className="nackImg" /> */}
           <img
-            src={pktImgPreview}
+            src={pktImgPreview.pktImgPrev}
             alt=""
+            style={{
+              width: pktImgPreview.widthPktImgPrev,
+              right: pktImgPreview.rightPosPktImgPrev,
+            }}
             className={`${pktImgPreview == null ? "d-none" : "pocket"}`}
           />
           <img
