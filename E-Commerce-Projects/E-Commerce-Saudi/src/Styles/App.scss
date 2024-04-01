@@ -18,10 +18,18 @@
 body {
   font-family: "Inter", sans-serif;
   background: $body-bg;
+
+  // background-image: url("/images/snow-river.jpg");
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // object-fit: cover;
 }
 
 .main {
   color: $dark-2;
+  // color: $light-1;
   font-family: "Inter", sans-serif;
   width: 100%;
   height: 100%;
@@ -40,6 +48,7 @@ body {
 }
 .container {
   padding: 100px 0 50px 0;
+  // padding: 130px 0 50px 0;
 }
 a {
   text-decoration: none;

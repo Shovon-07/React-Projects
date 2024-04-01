@@ -3,6 +3,7 @@
 .Footer {
   margin-top: auto;
   background: $light-green;
+  // backdrop-filter: blur(15px);
   border-top: 1px solid $light-3;
   .footerContainer {
     padding: 15px 0 10px 0;
