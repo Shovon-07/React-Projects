@@ -2,7 +2,7 @@ import React from "react";
 import Switch from "@mui/material/Switch";
 
 //___ Images ___//
-import Logo from "/images/icons/Company_orrange.png";
+import Logo from "/images/icons/logo.png";
 
 //___ Icons ___//
 import { FiDollarSign } from "react-icons/fi";

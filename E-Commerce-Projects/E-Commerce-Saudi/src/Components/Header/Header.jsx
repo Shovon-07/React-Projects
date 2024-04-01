@@ -8,7 +8,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import "./Header.scss";
 
 //___ Images ___//
-import Logo from "/images/icons/Company_orrange.png";
+import Logo from "/images/icons/logo.png";
 
 //___ Data ___//
 // import { notificationDataLength } from "../../Data";

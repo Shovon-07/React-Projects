@@ -2,17 +2,18 @@
 @import "../../Styles/Responsive.scss";
 
 .Header {
-  background: $light-green;
-  color: $dark-3;
+  background: #e3f9e3;
+  color: #7d7d7d;
   width: 100%;
-  // margin-bottom: 20px;
-  border-bottom: 1px solid $light-3;
-  position: sticky;
+  height: 85px;
+  border-bottom: 1px solid #dddddd;
+  position: fixed;
   top: 0;
   z-index: 998;
   .container {
     justify-content: space-between;
-    padding: 15px 0 10px 0;
+    // padding: 15px 0 10px 0;
+    padding: 0;
     position: relative;
     @include slg {
       display: block;
@@ -25,7 +26,7 @@
     }
     .left {
       img {
-        width: 130px;
+        width: 100px;
         height: auto;
       }
       @include slg {

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 //___ Images ___//
-import Logo from "/images/icons/Company_orrange.png";
-import Main_img from "/images/dress/main-img.jpeg";
+import jubba from "/images/dress/jubba2.png";
 
 import Btn_1 from "/images/dress/button_type/Button curve.png";
 import Btn_2 from "/images/dress/button_type/Buttoned square.png";
@@ -36,7 +35,6 @@ const CustomizeImg = () => {
   const [pktImgPreview, setPktImgPreview] = useState();
   const [handImgPreview, setHandImgPreview] = useState();
 
-  const jubba = "/images/dress/jubba2.png";
   const buttonImg = [
     { btnImg: Btn_1 },
     { btnImg: Btn_2 },
