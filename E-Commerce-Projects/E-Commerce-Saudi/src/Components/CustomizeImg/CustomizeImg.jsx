@@ -33,7 +33,12 @@ import "./CustomizeImg.scss";
 
 const CustomizeImg = () => {
   // Images
-  const [btnImgPreview, setBtnImgPreview] = useState();
+  const [btnImgPreview, setBtnImgPreview] = useState({
+    btnImgPrev: null,
+    widthBtnImgPrev: null,
+    rightPosBtnImgPrev: null,
+    leftPosBtnImgPrev: null,
+  });
   const [nakImgPreview, setNakImgPreview] = useState({
     nakImgPrev: null,
     widthNakImgPrev: null,
@@ -53,19 +58,12 @@ const CustomizeImg = () => {
   });
 
   const buttonImg = [
-    { btnImg: Btn_1 },
-    { btnImg: Btn_2 },
-    { btnImg: Btn_3 },
-    { btnImg: Btn_4 },
-    { btnImg: Btn_5 },
-    { btnImg: Btn_6 },
-
-    { btnImg: Btn_1 },
-    { btnImg: Btn_2 },
-    { btnImg: Btn_3 },
-    { btnImg: Btn_4 },
-    { btnImg: Btn_5 },
-    { btnImg: Btn_6 },
+    { btnImg: Btn_1, width: "15px", right: "139px" },
+    { btnImg: Btn_2, width: "15px", right: "139px" },
+    { btnImg: Btn_3, width: "15px", right: "139px" },
+    { btnImg: Btn_4, width: "15px", right: "139px" },
+    { btnImg: Btn_5, width: "15px", right: "139px" },
+    { btnImg: Btn_6, width: "15px", right: "139px" },
   ];
   const nackImg = [
     { nakImg: Nack_1, width: "80px", right: "111px" },
@@ -90,7 +88,12 @@ const CustomizeImg = () => {
   ];
 
   const handelButtonImgPreview = (items) => {
-    setBtnImgPreview(items.btnImg);
+    setBtnImgPreview({
+      ...btnImgPreview,
+      btnImgPrev: items.btnImg,
+      widthBtnImgPrev: items.width,
+      rightPosBtnImgPrev: items.right,
+    });
   };
   const handelNackImgPreview = (items) => {
     setNakImgPreview({
@@ -126,11 +129,31 @@ const CustomizeImg = () => {
 
   // Reset
   const handelReset = () => {
-    setBtnImgPreview();
-    setNakImgPreview();
-    setPktImgPreview();
-    setHandImgPreview();
     setActiveBtn(1);
+
+    setBtnImgPreview({
+      btnImgPrev: null,
+      widthBtnImgPrev: null,
+      rightPosBtnImgPrev: null,
+      leftPosBtnImgPrev: null,
+    });
+    setNakImgPreview({
+      nakImgPrev: null,
+      widthNakImgPrev: null,
+      rightPosNakImgPrev: null,
+      leftPosNakImgPrev: null,
+    });
+    setPktImgPreview({
+      pktImgPrev: null,
+      widthPktImgPrev: null,
+      rightPosPktImgPrev: null,
+    });
+    setHandImgPreview({
+      hndImgPrev: null,
+      widthHndImgPrev: null,
+      rightPosHndImgPrev: null,
+      leftPosHndImgPrev: null,
+    });
   };
 
   return (
@@ -140,8 +163,12 @@ const CustomizeImg = () => {
         <div className="imageBox d-flex">
           <img src={jubba} alt="" className="main-img" />
           <img
-            src={btnImgPreview}
+            src={btnImgPreview.btnImgPrev}
             alt=""
+            style={{
+              width: btnImgPreview.widthBtnImgPrev,
+              right: btnImgPreview.rightPosBtnImgPrev,
+            }}
             className={`${btnImgPreview == null ? "d-none" : "buttonImg"}`}
           />
           <img
