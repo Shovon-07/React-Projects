@@ -44,14 +44,47 @@ const CustomizeImg = () => {
     { btnImg: Btn_4 },
     { btnImg: Btn_5 },
     { btnImg: Btn_6 },
+
+    { btnImg: Btn_1 },
+    { btnImg: Btn_2 },
+    { btnImg: Btn_3 },
+    { btnImg: Btn_4 },
+    { btnImg: Btn_5 },
+    { btnImg: Btn_6 },
+    { btnImg: Btn_1 },
+    { btnImg: Btn_2 },
+    { btnImg: Btn_3 },
+    { btnImg: Btn_4 },
+    { btnImg: Btn_5 },
+    { btnImg: Btn_6 },
+    { btnImg: Btn_1 },
+    { btnImg: Btn_2 },
+    { btnImg: Btn_3 },
+    { btnImg: Btn_4 },
+    { btnImg: Btn_5 },
+    { btnImg: Btn_6 },
+    { btnImg: Btn_1 },
+    { btnImg: Btn_2 },
+    { btnImg: Btn_3 },
+    { btnImg: Btn_4 },
+    { btnImg: Btn_5 },
+    { btnImg: Btn_6 },
   ];
   const nackImg = [
     { nakImg: Nack_1 },
     { nakImg: Nack_2 },
     { nakImg: Nack_3 },
     { nakImg: Nack_4 },
+    { nakImg: Nack_1 },
+    { nakImg: Nack_2 },
+    { nakImg: Nack_3 },
+    { nakImg: Nack_4 },
   ];
   const pocketImg = [
+    { pktImg: Pocket_1 },
+    { pktImg: Pocket_2 },
+    { pktImg: Pocket_3 },
+    { pktImg: Pocket_4 },
     { pktImg: Pocket_1 },
     { pktImg: Pocket_2 },
     { pktImg: Pocket_3 },
@@ -76,17 +109,20 @@ const CustomizeImg = () => {
   const handelHandImgPreview = (items) => {
     setHandImgPreview(items.hndImg);
   };
-  const handelReset = () => {
-    setBtnImgPreview();
-    setNakImgPreview();
-    setPktImgPreview();
-    setHandImgPreview();
-  };
 
   // Active Button
   const [activeBtn, setActiveBtn] = useState(1);
   const handleBtnChild = (e) => {
     setActiveBtn((prev) => e.target.value);
+  };
+
+  // Reset
+  const handelReset = () => {
+    setBtnImgPreview();
+    setNakImgPreview();
+    setPktImgPreview();
+    setHandImgPreview();
+    setActiveBtn(1);
   };
 
   return (

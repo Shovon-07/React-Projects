@@ -85,16 +85,16 @@
         }
 
         .btnChild {
-          background: $light-1;
+          background: #fff;
           box-shadow: 1px 1px 5px #cfcfcf, -1px -1px 5px #cfcfcf;
-          width: 360px;
+          overflow-x: scroll;
+          width: 480px;
           opacity: 1;
           position: absolute;
           top: 0;
           left: 175px;
-          display: flex;
-          flex-wrap: wrap;
-          transition: $trans;
+          display: -webkit-inline-box;
+          transition: 0.3s all ease;
 
           // .btnChild.active {
           //   display: flex;
@@ -120,7 +120,7 @@
       }
     }
     .resetBtn {
-      margin-top: 40px;
+      margin-top: 100px;
       text-align: end;
       .button {
         font-size: 17px;
