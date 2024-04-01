@@ -34,12 +34,16 @@ import "./CustomizeImg.scss";
 const CustomizeImg = () => {
   // Images
   const [btnImgPreview, setBtnImgPreview] = useState();
-  const [nakImgPreview, setNakImgPreview] = useState();
+  const [nakImgPreview, setNakImgPreview] = useState({
+    nakImgPrev: null,
+    widthNakImgPrev: null,
+    rightPosNakImgPrev: null,
+    leftPosNakImgPrev: null,
+  });
   const [pktImgPreview, setPktImgPreview] = useState({
     pktImgPrev: null,
     widthPktImgPrev: null,
     rightPosPktImgPrev: null,
-    leftPosPktImgPrev: null,
   });
   const [handImgPreview, setHandImgPreview] = useState({
     hndImgPrev: null,
@@ -64,12 +68,12 @@ const CustomizeImg = () => {
     { btnImg: Btn_6 },
   ];
   const nackImg = [
-    { nakImg: Nack_1 },
-    { nakImg: Nack_2 },
-    { nakImg: Nack_3 },
-    { nakImg: Nack_4 },
-    { nakImg: Nack_5 },
-    { nakImg: Nack_6 },
+    { nakImg: Nack_1, width: "80px", right: "111px" },
+    { nakImg: Nack_2, width: "80px", right: "111px" },
+    { nakImg: Nack_3, width: "80px", right: "111px" },
+    { nakImg: Nack_4, width: "80px", right: "111px" },
+    { nakImg: Nack_5, width: "80px", right: "111px" },
+    { nakImg: Nack_6, width: "80px", right: "111px" },
   ];
   const pocketImg = [
     { pktImg: Pocket_1, width: "50px", right: "74px" },
@@ -89,7 +93,12 @@ const CustomizeImg = () => {
     setBtnImgPreview(items.btnImg);
   };
   const handelNackImgPreview = (items) => {
-    setNakImgPreview(items.nakImg);
+    setNakImgPreview({
+      ...nakImgPreview,
+      nakImgPrev: items.nakImg,
+      widthNakImgPrev: items.width,
+      rightPosNakImgPrev: items.right,
+    });
   };
   const handelPocketImgPreview = (items) => {
     setPktImgPreview({
@@ -97,7 +106,6 @@ const CustomizeImg = () => {
       pktImgPrev: items.pktImg,
       widthPktImgPrev: items.width,
       rightPosPktImgPrev: items.right,
-      leftPosPktImgPrev: items.left,
     });
   };
   const handelHandImgPreview = (items) => {
@@ -137,8 +145,12 @@ const CustomizeImg = () => {
             className={`${btnImgPreview == null ? "d-none" : "buttonImg"}`}
           />
           <img
-            src={nakImgPreview}
+            src={nakImgPreview.nakImgPrev}
             alt=""
+            style={{
+              width: nakImgPreview.widthNakImgPrev,
+              right: nakImgPreview.rightPosNakImgPrev,
+            }}
             className={`${nakImgPreview == null ? "d-none" : "nackImg"}`}
           />
           {/* <img src={nakImgPreview} alt="" className="nackImg" /> */}
