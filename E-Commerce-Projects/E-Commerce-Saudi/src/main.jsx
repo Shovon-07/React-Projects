@@ -31,6 +31,7 @@ const router = createBrowserRouter([
       { path: "/pending-orders", element: <PendingOrders /> },
       { path: "/history", element: <History /> },
       { path: "/customize-image", element: <CustomizeImage /> },
+      { path: "/complete-order", element: <h1>complete-order</h1> },
     ],
   },
 ]);

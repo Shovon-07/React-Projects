@@ -58,12 +58,12 @@ const CustomizeImg = () => {
   });
 
   const buttonImg = [
-    { btnImg: Btn_1, width: "15px", right: "139px" },
-    { btnImg: Btn_2, width: "15px", right: "139px" },
-    { btnImg: Btn_3, width: "15px", right: "139px" },
-    { btnImg: Btn_4, width: "15px", right: "139px" },
-    { btnImg: Btn_5, width: "15px", right: "139px" },
-    { btnImg: Btn_6, width: "15px", right: "139px" },
+    { btnImg: Btn_1, width: "16px", right: "139px" },
+    { btnImg: Btn_2, width: "16px", right: "139px" },
+    { btnImg: Btn_3, width: "16px", right: "139px" },
+    { btnImg: Btn_4, width: "16px", right: "139px" },
+    { btnImg: Btn_5, width: "16px", right: "139px" },
+    { btnImg: Btn_6, width: "16px", right: "139px" },
   ];
   const nackImg = [
     { nakImg: Nack_1, width: "80px", right: "111px" },

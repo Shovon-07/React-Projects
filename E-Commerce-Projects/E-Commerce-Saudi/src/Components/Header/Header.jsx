@@ -49,15 +49,15 @@ const Header = () => {
               to="/"
               className={({ isActive }) => (isActive ? "isActive" : "")}
             >
-              Customize
+              Home
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/update-inventory"
+              to="/customize-image"
               className={({ isActive }) => (isActive ? "isActive" : "")}
             >
-              Update Inventory
+              Customize Image
             </NavLink>
           </li>
           <li>
@@ -78,18 +78,26 @@ const Header = () => {
           </li>
           <li>
             <NavLink
+              to="/complete-order"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              Complete order
+            </NavLink>
+          </li>
+          {/* <li>
+            <NavLink
+              to="/update-inventory"
+              className={({ isActive }) => (isActive ? "isActive" : "")}
+            >
+              Update Inventory
+            </NavLink>
+          </li> */}
+          <li>
+            <NavLink
               to="/history"
               className={({ isActive }) => (isActive ? "isActive" : "")}
             >
               History
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/customize-image"
-              className={({ isActive }) => (isActive ? "isActive" : "")}
-            >
-              Customize Image
             </NavLink>
           </li>
         </div>
