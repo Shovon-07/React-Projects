@@ -10,20 +10,23 @@ import Btn_4 from "/images/dress/button_type/Hidden Zipper Curved.png";
 import Btn_5 from "/images/dress/button_type/Hidden zipped square.png";
 import Btn_6 from "/images/dress/button_type/Hidden zipper triangle.png";
 
-import Nack_1 from "/images/dress/neck_type/Curve.png";
-import Nack_2 from "/images/dress/neck_type/French.png";
-import Nack_3 from "/images/dress/neck_type/Royal Opened.jpg";
-import Nack_4 from "/images/dress/neck_type/Royal.jpg";
+import Nack_1 from "/images/dress/neck_type/French.png";
+import Nack_2 from "/images/dress/neck_type/Curve.png";
+import Nack_3 from "/images/dress/neck_type/Royal Opened.png";
+import Nack_4 from "/images/dress/neck_type/Royal.png";
+import Nack_5 from "/images/dress/neck_type/Standard.png";
+import Nack_6 from "/images/dress/neck_type/Standard-2.png";
 
 import Pocket_1 from "/images/dress/pocket_type/Curved standard.jpg";
 import Pocket_2 from "/images/dress/pocket_type/Curved.jpg";
 import Pocket_3 from "/images/dress/pocket_type/Triangle.jpg";
 import Pocket_4 from "/images/dress/pocket_type/Pointed.jpg";
 
-import Hand_1 from "/images/dress/hand_type/Cuffed.png";
-import Hand_2 from "/images/dress/hand_type/Standard Charts.png";
-import Hand_3 from "/images/dress/hand_type/Standard small.png";
-import Hand_4 from "/images/dress/hand_type/Normal Cuffed.png";
+import Hand_1 from "/images/dress/hand_type/Normal Cuffed.png";
+import Hand_2 from "/images/dress/hand_type/Cuffed.png";
+import Hand_3 from "/images/dress/hand_type/Standard Charts.png";
+import Hand_4 from "/images/dress/hand_type/Standard small.png";
+import Hand_5 from "/images/dress/hand_type/Standard.png";
 
 //___ Css ___//
 import "./CustomizeImg.scss";
@@ -33,7 +36,12 @@ const CustomizeImg = () => {
   const [btnImgPreview, setBtnImgPreview] = useState();
   const [nakImgPreview, setNakImgPreview] = useState();
   const [pktImgPreview, setPktImgPreview] = useState();
-  const [handImgPreview, setHandImgPreview] = useState();
+  const [handImgPreview, setHandImgPreview] = useState({
+    hndImgPrev: null,
+    widthHndImgPrev: null,
+    rightPosHndImgPrev: null,
+    leftPosHndImgPrev: null,
+  });
 
   const buttonImg = [
     { btnImg: Btn_1 },
@@ -73,10 +81,8 @@ const CustomizeImg = () => {
     { nakImg: Nack_2 },
     { nakImg: Nack_3 },
     { nakImg: Nack_4 },
-    { nakImg: Nack_1 },
-    { nakImg: Nack_2 },
-    { nakImg: Nack_3 },
-    { nakImg: Nack_4 },
+    { nakImg: Nack_5 },
+    { nakImg: Nack_6 },
   ];
   const pocketImg = [
     { pktImg: Pocket_1 },
@@ -89,10 +95,11 @@ const CustomizeImg = () => {
     { pktImg: Pocket_4 },
   ];
   const handImg = [
-    { hndImg: Hand_1 },
-    { hndImg: Hand_2 },
-    { hndImg: Hand_3 },
-    { hndImg: Hand_4 },
+    { hndImg: Hand_1, width: "97px", right: "-27px", left: "-29px" },
+    { hndImg: Hand_2, width: "97px", right: "-27px", left: "-29px" },
+    { hndImg: Hand_3, width: "98px", right: "-28px", left: "-30px" },
+    { hndImg: Hand_4, width: "99px", right: "-29px", left: "-29px" },
+    { hndImg: Hand_5, width: "102px", right: "-29px", left: "-32px" },
   ];
 
   const handelButtonImgPreview = (items) => {
@@ -105,7 +112,13 @@ const CustomizeImg = () => {
     setPktImgPreview(items.pktImg);
   };
   const handelHandImgPreview = (items) => {
-    setHandImgPreview(items.hndImg);
+    setHandImgPreview({
+      ...handImgPreview,
+      hndImgPrev: items.hndImg,
+      widthHndImgPrev: items.width,
+      rightPosHndImgPrev: items.right,
+      leftPosHndImgPrev: items.left,
+    });
   };
 
   // Active Button
@@ -146,13 +159,21 @@ const CustomizeImg = () => {
             className={`${pktImgPreview == null ? "d-none" : "pocket"}`}
           />
           <img
-            src={handImgPreview}
+            src={handImgPreview.hndImgPrev}
             alt=""
+            style={{
+              width: handImgPreview.widthHndImgPrev,
+              right: handImgPreview.rightPosHndImgPrev,
+            }}
             className={`${handImgPreview == null ? "d-none" : "rightHand"}`}
           />
           <img
-            src={handImgPreview}
+            src={handImgPreview.hndImgPrev}
             alt=""
+            style={{
+              width: handImgPreview.widthHndImgPrev,
+              left: handImgPreview.leftPosHndImgPrev,
+            }}
             className={`${handImgPreview == null ? "d-none" : "leftHand"}`}
           />
         </div>
