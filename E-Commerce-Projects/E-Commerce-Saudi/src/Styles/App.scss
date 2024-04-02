@@ -12,25 +12,16 @@
   color: $light-1;
 }
 ::placeholder {
-  // color: $placeholder-color;
-  color: $light-2;
+  color: $placeholder-color;
   transition: $trans;
 }
 body {
   font-family: "Inter", sans-serif;
-  // background: $body-bg;
-
-  background-image: url("/images/snow-river.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  object-fit: cover;
+  background: $body-bg;
 }
 
 .main {
-  // color: $dark-2;
-  color: $light-1;
+  color: $dark-2;
   font-family: "Inter", sans-serif;
   width: 100%;
   height: 100%;
@@ -48,8 +39,7 @@ body {
   margin: 0 auto;
 }
 .container {
-  // padding: 100px 0 50px 0;
-  padding: 130px 0 50px 0;
+  padding: 110px 0 50px 0;
 }
 a {
   text-decoration: none;
@@ -65,7 +55,7 @@ li {
 .button {
   background: $dark-2;
   color: $light-1;
-  border: 1px solid $dark-2;
+  border: 0;
   outline: 0;
   border-radius: 5px;
   text-transform: capitalize;
@@ -124,6 +114,10 @@ textarea {
   border: $border;
   outline: none;
   color: $dark-3;
+  &:focus::placeholder {
+    padding-left: 10px;
+    transition: $trans;
+  }
 }
 input:disabled,
 textarea:disabled {
@@ -147,3 +141,74 @@ textarea:disabled {
 //   // background: $main-color;
 // }
 /*________________ custome scroll bar end ________________*/
+
+/*________________ Blur effec start ________________*/
+body.blur {
+  background-image: url("/images/snow-river.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: cover;
+
+  ::placeholder {
+    color: $light-3;
+  }
+
+  .main {
+    //___ Header ___//
+    .Header {
+      background: #42424259;
+      backdrop-filter: blur(100px);
+      box-shadow: none;
+      border-bottom: $border;
+      .menus {
+        li {
+          a {
+            color: $light-1;
+          }
+        }
+      }
+    }
+
+    //___ Footer ___//
+    .Footer {
+      background: none;
+      backdrop-filter: blur(15px);
+      border-top: 1px solid $light-3;
+    }
+
+    //___ CustomizeImg ___//
+    .CustomizeImg {
+      .right {
+        background: none;
+        backdrop-filter: blur(15px);
+      }
+    }
+
+    //___ Invoice ___//
+    .Invoice {
+      .invoiceSection {
+        color: $light-1;
+        .left,
+        .right {
+          background: none;
+          backdrop-filter: blur(15px);
+          color: $light-1;
+          input,
+          textarea {
+            color: $light-1;
+          }
+        }
+      }
+    }
+
+    .DynamicInput {
+      select {
+        color: $dark-3;
+      }
+    }
+  }
+}
+
+/*________________ Blur effec end ________________*/

@@ -1,5 +1,5 @@
-import html2canvas from "html2canvas";
 import React from "react";
+import html2canvas from "html2canvas";
 
 //___ Additional utility ___//
 
@@ -13,13 +13,14 @@ const GetScreenShoot = (props) => {
     html2canvas(capture)
       .then((canvas) => {
         image = canvas.toDataURL("image/jpeg/png");
-        console.log(image);
+        // console.log(image);
         document.getElementById(
           "viewCaptured"
         ).innerHTML = `<img src="${image}" alt="" />`;
+        localStorage.setItem("img", image);
         // let a = document.createElement("a");
         // a.href = image;
-        // a.download = "Capture.png";
+        // a.download = "/images/Capture.png";
         // a.click();
       })
       .catch((err) => {

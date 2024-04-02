@@ -13,7 +13,6 @@
       margin-top: 15px;
       justify-content: center;
       position: relative;
-      // background-color: red;
 
       img {
         position: absolute;
@@ -43,12 +42,6 @@
       }
 
       .rightHand {
-        // width: 100px;
-        // height: auto;
-        // top: 172px;
-        // right: -29px;
-        // transform: rotate(-90deg);
-
         width: 101px;
         height: auto;
         top: 172px;
@@ -56,12 +49,6 @@
         transform: rotate(-90deg);
       }
       .leftHand {
-        // width: 99px;
-        // height: auto;
-        // top: 168px;
-        // left: -30px;
-        // transform: rotate(-90deg);
-
         width: 101px;
         height: auto;
         top: 168px;
@@ -73,8 +60,7 @@
 
   .right {
     flex-basis: 100%;
-    // background: $light-1;
-    backdrop-filter: blur(15px);
+    background: $light-1;
     padding: 15px 30px;
 
     .btnBox {
