@@ -73,7 +73,8 @@
 
   .right {
     flex-basis: 100%;
-    background: $light-1;
+    // background: $light-1;
+    backdrop-filter: blur(15px);
     padding: 15px 30px;
 
     .btnBox {
@@ -93,7 +94,8 @@
         }
 
         .btnChild {
-          background: #fff;
+          // background: #fff;
+          background: transparent;
           box-shadow: 1px 1px 5px #cfcfcf, -1px -1px 5px #cfcfcf;
           overflow-x: scroll;
           width: 480px;
@@ -127,20 +129,22 @@
         }
       }
     }
-    .resetBtn {
+    .bottomBtn {
       margin-top: 100px;
-      text-align: end;
+      justify-content: flex-end;
       .button {
         font-size: 17px;
         width: 150px;
         height: 40px;
-        background: $red;
         color: $light-1;
         border: none;
         transition: $trans;
         &:hover {
           width: 160px;
         }
+      }
+      .resetBtn {
+        background: $red;
       }
     }
   }

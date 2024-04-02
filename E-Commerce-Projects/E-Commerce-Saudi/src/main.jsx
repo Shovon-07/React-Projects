@@ -15,7 +15,8 @@ import UpdateInventory from "./Pages/UpdateInventory/UpdateInventory";
 import Sell from "./Pages/Sell/Sell";
 import PendingOrders from "./Pages/PendingOrders/PendingOrders";
 import History from "./Pages/History/History";
-import CustomizeImage from "./Pages/CustomizeImage/CustomizeImage.jsx";
+import CustomizeImage from "./Pages/CustomizeImage/CustomizeImage";
+import CompleteOrder from "./Pages/CompleteOrder/CompleteOrder";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
@@ -25,13 +26,13 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       // { path: "/", element: <Home /> },
-      { path: "/", element: <Customize /> },
+      { path: "/", element: <Home /> },
       { path: "/update-inventory", element: <UpdateInventory /> },
       { path: "/sell", element: <Sell /> },
       { path: "/pending-orders", element: <PendingOrders /> },
       { path: "/history", element: <History /> },
       { path: "/customize-image", element: <CustomizeImage /> },
-      { path: "/complete-order", element: <h1>complete-order</h1> },
+      { path: "/complete-order", element: <CompleteOrder /> },
     ],
   },
 ]);

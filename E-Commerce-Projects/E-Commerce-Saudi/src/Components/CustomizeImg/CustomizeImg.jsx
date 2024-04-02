@@ -31,6 +31,9 @@ import Hand_5 from "/images/dress/hand_type/Standard.png"; // img size w: 130 px
 //___ Css ___//
 import "./CustomizeImg.scss";
 
+//___ Components ___//
+import GetScreenShoot from "../GetScreenShoot/GetScreenShoot";
+
 const CustomizeImg = () => {
   // Images
   const [btnImgPreview, setBtnImgPreview] = useState({
@@ -166,8 +169,8 @@ const CustomizeImg = () => {
   return (
     <div className="CustomizeImg d-flex flex-start gap-30">
       <div className="left">
-        <h2>Preview Image</h2>
-        <div className="imageBox d-flex">
+        <h2 className="title">Preview Image</h2>
+        <div className="imageBox d-flex" id="capture">
           <img src={jubba} alt="" className="main-img" />
           <img
             src={btnImgPreview.btnImgPrev}
@@ -293,8 +296,12 @@ const CustomizeImg = () => {
             </ul>
           </div>
         </div>
-        <div className="resetBtn">
-          <button className="button" onClick={handelReset}>
+        <div className="bottomBtn d-flex gap-30">
+          {/* <button className="button genImgBtn" onClick={getScreenShoot}>
+            Generate Image
+          </button> */}
+          <GetScreenShoot btnTitle="Generate Image" />
+          <button className="button resetBtn" onClick={handelReset}>
             Reset
           </button>
         </div>

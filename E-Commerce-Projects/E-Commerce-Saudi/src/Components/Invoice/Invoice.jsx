@@ -147,7 +147,10 @@ const Invoice = () => {
           <div className="left shadow">
             <DynamicInput />
           </div>
-          <div className="right" style={{ background: "transparent" }}></div>
+          <div
+            className="right visibilityHidden"
+            style={{ background: "transparent" }}
+          ></div>
         </div>
 
         <div className="invoiceSection first d-flex flex-start gap-20">
@@ -201,7 +204,10 @@ const Invoice = () => {
               </div>
             </div>
           </div>
-          <div className="right" style={{ background: "transparent" }}></div>
+          <div
+            className="right visibilityHidden"
+            style={{ background: "transparent" }}
+          ></div>
         </div>
 
         <div className="invoiceSection first d-flex flex-start gap-20">
@@ -220,7 +226,10 @@ const Invoice = () => {
               </div>
             </div>
           </div>
-          <div className="right" style={{ background: "transparent" }}></div>
+          <div
+            className="right visibilityHidden"
+            style={{ background: "transparent" }}
+          ></div>
         </div>
       </div>
     </>
