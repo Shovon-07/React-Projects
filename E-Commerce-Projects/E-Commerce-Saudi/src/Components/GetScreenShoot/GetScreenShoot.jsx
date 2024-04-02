@@ -1,11 +1,12 @@
 import html2canvas from "html2canvas";
 import React from "react";
 
+//___ Additional utility ___//
+
 const GetScreenShoot = (props) => {
   const { btnTitle } = props;
 
   let image = "";
-  // let imageUrl = image;
   const GetScreenShoot = () => {
     let capture = document.getElementById("capture");
     // console.log(capture);
@@ -28,10 +29,10 @@ const GetScreenShoot = (props) => {
 
   return (
     <>
+      <div id="viewCaptured"></div>
       <button className="button genImgBtn" onClick={GetScreenShoot}>
         {btnTitle}
       </button>
-      {/* <div id="viewCaptured"></div> */}
     </>
   );
 };
