@@ -5,7 +5,7 @@ const GetScreenShoot = (props) => {
   const { btnTitle } = props;
 
   let image = "";
-  let imageUrl = image;
+  // let imageUrl = image;
   const GetScreenShoot = () => {
     let capture = document.getElementById("capture");
     // console.log(capture);
@@ -13,13 +13,16 @@ const GetScreenShoot = (props) => {
       .then((canvas) => {
         image = canvas.toDataURL("image/jpeg/png");
         console.log(image);
+        document.getElementById(
+          "viewCaptured"
+        ).innerHTML = `<img src="${image}" alt="" />`;
         // let a = document.createElement("a");
         // a.href = image;
         // a.download = "Capture.png";
         // a.click();
       })
       .catch((err) => {
-        console.error("We can't capture");
+        console.error("We can't capture" + err);
       });
   };
 
@@ -28,8 +31,7 @@ const GetScreenShoot = (props) => {
       <button className="button genImgBtn" onClick={GetScreenShoot}>
         {btnTitle}
       </button>
-      {/* <img src={imageUrl} alt="" /> */}
-      <div className="viewCaptured"></div>
+      {/* <div id="viewCaptured"></div> */}
     </>
   );
 };

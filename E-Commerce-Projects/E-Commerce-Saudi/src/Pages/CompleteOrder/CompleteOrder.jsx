@@ -6,7 +6,7 @@ const CompleteOrder = () => {
   return (
     <div>
       CompleteOrder
-      {/* <img src={imageUrl} alt="" /> */}
+      <div id="viewCaptured"></div>
     </div>
   );
 };
