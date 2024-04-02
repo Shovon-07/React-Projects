@@ -66,12 +66,12 @@ const CustomizeImg = () => {
     { btnImg: Btn_6, width: "16px", right: "139px" },
   ];
   const nackImg = [
-    { nakImg: Nack_1, width: "80px", right: "111px" },
-    { nakImg: Nack_2, width: "80px", right: "111px" },
-    { nakImg: Nack_3, width: "80px", right: "111px" },
-    { nakImg: Nack_4, width: "80px", right: "111px" },
-    { nakImg: Nack_5, width: "80px", right: "111px" },
-    { nakImg: Nack_6, width: "80px", right: "111px" },
+    { nakImg: Nack_1, width: "80px", right: "108px" },
+    { nakImg: Nack_2, width: "80px", right: "108px" },
+    { nakImg: Nack_3, width: "80px", right: "108px" },
+    { nakImg: Nack_4, width: "80px", right: "108px" },
+    { nakImg: Nack_5, width: "80px", right: "108px" },
+    { nakImg: Nack_6, width: "80px", right: "108px" },
   ];
   const pocketImg = [
     { pktImg: Pocket_1, width: "50px", right: "74px" },
