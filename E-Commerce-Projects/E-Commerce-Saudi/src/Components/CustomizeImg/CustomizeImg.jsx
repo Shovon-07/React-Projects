@@ -23,10 +23,10 @@ import Pocket_3 from "/images/dress/pocket_type/Triangle.jpg";
 import Pocket_4 from "/images/dress/pocket_type/Pointed.jpg";
 
 import Hand_1 from "/images/dress/hand_type/Normal Cuffed.png";
-import Hand_2 from "/images/dress/hand_type/Cuffed.png";
+import Hand_2 from "/images/dress/hand_type/Cuffed.png"; // img size w: 130 px; h:50 px direction <--
 import Hand_3 from "/images/dress/hand_type/Standard Charts.png";
 import Hand_4 from "/images/dress/hand_type/Standard small.png";
-import Hand_5 from "/images/dress/hand_type/Standard.png";
+import Hand_5 from "/images/dress/hand_type/Standard.png"; // img size w: 130 px; h:50 px direction <--
 
 //___ Css ___//
 import "./CustomizeImg.scss";
@@ -80,11 +80,18 @@ const CustomizeImg = () => {
     { pktImg: Pocket_4, width: "50px", right: "74px" },
   ];
   const handImg = [
-    { hndImg: Hand_1, width: "97px", right: "-27px", left: "-29px" },
-    { hndImg: Hand_2, width: "97px", right: "-27px", left: "-29px" },
-    { hndImg: Hand_3, width: "98px", right: "-28px", left: "-30px" },
-    { hndImg: Hand_4, width: "99px", right: "-29px", left: "-29px" },
-    { hndImg: Hand_5, width: "102px", right: "-29px", left: "-32px" },
+    { hndImg: Hand_1 },
+    { hndImg: Hand_2 },
+    { hndImg: Hand_3 },
+    { hndImg: Hand_4 },
+    { hndImg: Hand_5 },
+    // img size w: 130 px; h:50 px direction <--
+
+    // { hndImg: Hand_1, width: "100px", right: "-29px", left: "-31px" },
+    // { hndImg: Hand_2, width: "100px", right: "-29px", left: "-31px" },
+    // { hndImg: Hand_3, width: "100px", right: "-29px", left: "-31px" },
+    // { hndImg: Hand_4, width: "99px", right: "-29px", left: "-30px" },
+    // { hndImg: Hand_5, width: "102px", right: "-29px", left: "-33px" },
   ];
 
   const handelButtonImgPreview = (items) => {
