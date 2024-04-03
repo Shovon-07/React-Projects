@@ -12,7 +12,7 @@ const CompleteOrder = () => {
       img = res.data.Image;
       console.log(img);
       document.getElementById("viewCapturedImg").innerHTML = `<img
-      src=${dress}
+      src="/images/${img}"
       alt=""
       />`;
       // return { img };
