@@ -13,18 +13,35 @@ class ProcessImgController extends Controller
     	if(!$img) {
     		return "No image found";
     	} else {
-				$imgName = time()."png";
+				// For not replace image
+				// $imgName = "Captured_".time().".png";
+
+				// For replace image
+				$imgName = "Captured".".png";
+
 				$source = fopen($img,"r");
+				// $destination = fopen("ScreenShoot/".$imgName,"w");
+				
+				// Save out of backend project
 				$destination = fopen("ScreenShoot/".$imgName,"w");
+				
 				stream_copy_to_stream($source,$destination);
 				fclose($source);
 				fclose($destination);
 				return $img;
     	}
     }
+
+		function DummyGetApi() {
+			$data = ["Image"=>"Captured_1712120209.png"];
+			return $data;
+		}
 }
 
 /***
+ * ==> Controller
+ * > $destination = fopen("frontend folder path/".$imgName,"w");
+ * 
  * ==> Route
  * use App\Http\Controllers\Frontend\ProcessImgController;
  * Route::prefix('/')->group(function () {    

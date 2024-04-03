@@ -10,24 +10,18 @@ const GetScreenShoot = (props) => {
 
   const handleScreenShoot = () => {
     let capture = document.getElementById("capture");
-    // console.log(capture);
     html2canvas(capture)
       .then((canvas) => {
         let image = canvas.toDataURL("image/png");
         // console.log(image);
-        document.getElementById(
-          "viewCaptured"
-        ).innerHTML = `<img src="${image}" alt="" />`;
-        localStorage.setItem("img", image);
+        // document.getElementById(
+        //   "viewCaptured"
+        // ).innerHTML = `<img src="${image}" alt="" />`;
+        // localStorage.setItem("img", image);
 
         http.post("/api/process-img", { imageData: image }).then((res) => {
           console.log(res.data);
         });
-
-        // let a = document.createElement("a");
-        // a.href = image;
-        // a.download = "/images/Capture.png";
-        // a.click();
       })
       .catch((err) => {
         console.error("We can't capture" + err);
@@ -36,7 +30,7 @@ const GetScreenShoot = (props) => {
 
   return (
     <>
-      <div id="viewCaptured"></div>
+      {/* <div id="viewCaptured"></div> */}
       <button className="button genImgBtn" onClick={handleScreenShoot}>
         {btnTitle}
       </button>
