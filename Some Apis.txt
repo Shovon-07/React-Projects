@@ -1,4 +1,0 @@
-//___ Apis ___//
-
-# Youtube data api
- > AIzaSyBE9ml7lXbn5Qiyx7InNBwCgfuoVYw--Z4
