@@ -1,0 +1,11 @@
+:root {
+  --light-1: #fff;
+  --light-3: #7c7c7c;
+
+  --dark-1: #313131;
+
+  --main-color: rgb(255, 115, 0);
+
+  --border: 1px solid var(--dark-1);
+  --shadow: 1px 1px 10px #848282;
+}
