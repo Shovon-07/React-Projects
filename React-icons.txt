@@ -52,3 +52,21 @@
 
 => Minus
 > import { FaMinus } from "react-icons/fa6";
+
+=> Notification
+> import { IoNotifications } from "react-icons/io5";
+
+=> Message
+> import { AiFillMessage } from "react-icons/ai";
+
+=> Settings
+> import { IoMdSettings } from "react-icons/io";
+
+=> Arrow
+> import { IoIosArrowForward, IoMdArrowDropdown } from "react-icons/io";
+
+=> Dashboard
+> import { MdDashboard } from "react-icons/md";
+
+=> Bar
+> import { FaBarsStaggered } from "react-icons/fa6";
