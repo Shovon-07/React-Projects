@@ -1,78 +1,64 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 //___ Css ___//
-import "./DynamicInput.scss";
+import "./DynamicInput.css";
 
 const DynamicInput = () => {
-  const [sectionCounter, setSectionCounter] = useState([1]);
+  const [inputList, setinputList] = useState([{ plot: "" }]);
 
-  const handelSectionCounter = () => {
-    setSectionCounter([
-      ...sectionCounter,
-      sectionCounter.push(1 * Math.random()),
-    ]);
+  const handleinputchange = (e, index) => {
+    const { name, value } = e.target;
+    const list = [...inputList];
+    list[index][name] = value;
+    setinputList(list);
   };
 
-  let i = "";
-  const handelRemoveSection = (deletingSec) => {
-    const removed = sectionCounter.filter(
-      (secCount) => secCount !== deletingSec
-    );
-    setSectionCounter(removed);
+  const handleremove = () => {
+    if (inputList.length == 1) {
+      return;
+    } else {
+      setinputList(inputList.slice(0, -1));
+    }
+  };
+
+  const handleaddclick = () => {
+    setinputList([...inputList, { plot: "" }]);
   };
 
   return (
-    <>
-      {sectionCounter.map((item, index) => {
+    <div className="c">
+      <h3 className="pageTitle">Dynamic Input</h3>
+      {inputList.map((x, i) => {
         return (
-          <div className="DynamicInput d-flex flex-start gap-20" key={index}>
-            <div>
-              <p className="title">Item</p>
-              <select>
-                <option value="" defaultChecked>
-                  Bank account
-                </option>
-                <option value="">Paypal</option>
-                <option value="">Credit/Debit Card</option>
-                <option value="">UPI Transfer</option>
-              </select>
-              <textarea
-                name=""
-                id=""
-                cols="30"
-                rows="3"
-                placeholder="Item information"
-              ></textarea>
-            </div>
-            <div>
-              <p className="title">Cost</p>
-              <input type="text" placeholder="00" />
-              <p>Discount: 0% 0% 0%</p>
-            </div>
-            <div>
-              <p className="title">Qty</p>
-              <input type="text" placeholder="1" />
-            </div>
-            <div>
-              <p className="title">Price</p>
-              <p>$24.00</p>
-            </div>
-            <p className="d-none">{(i = item)}</p>
+          <div className="inputWrapper" key={i}>
+            <input
+              type="text"
+              name="plot"
+              placeholder={`Plot ${i + 1}`}
+              onChange={(e) => handleinputchange(e, i)}
+            />
           </div>
         );
       })}
-
-      <div className="d-flex gap-30 controllBtn">
-        <div>
-          <button className="button" onClick={handelSectionCounter}>
-            Add Item
-          </button>
-        </div>
-        <p className="cross cursor" onClick={() => handelRemoveSection(i)}>
-          X
-        </p>
+      <div className="addRemBtn d-flex gap-30">
+        <button
+          type="button"
+          className="minus"
+          style={{ background: "#ec0202", padding: "0 15px" }}
+          onClick={handleremove}
+        >
+          -
+        </button>
+        <button
+          type="button"
+          className="plus"
+          style={{ background: "#029802", padding: "0 10px" }}
+          onClick={handleaddclick}
+        >
+          +
+        </button>
       </div>
-    </>
+    </div>
   );
 };
 
