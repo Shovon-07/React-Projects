@@ -43,7 +43,7 @@ const Cart = () => {
 
   const handleMinus = () => {
     // setQuentity((prev) => prev - 1);
-    alert("sex");
+    alert("minus");
   };
 
   const handlePlus = () => {

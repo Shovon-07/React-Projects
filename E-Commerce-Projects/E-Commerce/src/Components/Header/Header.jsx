@@ -73,6 +73,9 @@ const Header = (props) => {
                     </Link>
                   </div>
                 </li>
+                <li>
+                  <Link to="/learn-react">Learn React</Link>
+                </li>
               </div>
             </div>
             <div className="appBtn d-flex gap-10">
