@@ -6,6 +6,7 @@ import Footer from "../../Components/Footer/Footer";
 import MemoBtn from "./MemoBtn";
 import MemoCount from "./MemoCount";
 import MemoTitle from "./MemoTitle";
+import LearnUseReducer from "./LearnUseReducer";
 
 const LearnReact = () => {
   const [incOne, setIncOne] = useState(0);
@@ -43,6 +44,12 @@ const LearnReact = () => {
           <MemoCount title="Inc by five title" counter={incFive} />
           <MemoBtn handleClick={incFiveFunc}>Inc by five button</MemoBtn>
         </div>
+
+        <br />
+        <hr />
+        <br />
+        {/* Learn use reducer */}
+        <LearnUseReducer />
       </div>
       <Footer />
     </>
