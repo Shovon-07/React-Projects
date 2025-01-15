@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, useEffect, useState } from "react";
 import io from "socket.io-client";
+
+//___ Components ___//.
+const CahtBox = lazy(() => import("./Components/CahtBox/CahtBox"));
 
 const App = () => {
   const socket = io.connect("/");
@@ -14,6 +17,7 @@ const App = () => {
   return (
     <div>
       <h1>{data}</h1>
+      <CahtBox />
     </div>
   );
 };
