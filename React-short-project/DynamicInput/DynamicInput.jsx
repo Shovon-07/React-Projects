@@ -1,65 +1,47 @@
+//===> Need tailwind css
+
 import { useState } from "react";
 
-//___ Css ___//
-import "./DynamicInput.css";
+//===> Icons
+import { RxCross2 } from "react-icons/rx";
 
-const DynamicInput = () => {
-  const [inputList, setinputList] = useState([{ plot: "" }]);
+export default function DynamicInputFields() {
+  const [fields, setFields] = useState([""]);
 
-  const handleinputchange = (e, index) => {
-    const { name, value } = e.target;
-    const list = [...inputList];
-    list[index][name] = value;
-    setinputList(list);
+  const addField = () => {
+    setFields([...fields, ""]);
   };
 
-  const handleremove = () => {
-    if (inputList.length == 1) {
-      return;
-    } else {
-      setinputList(inputList.slice(0, -1));
-    }
+  const removeField = (index) => {
+    setFields(fields.filter((_, i) => i !== index));
   };
 
-  const handleaddclick = () => {
-    setinputList([...inputList, { plot: "" }]);
+  const handleChange = (index, value) => {
+    const updatedFields = [...fields];
+    updatedFields[index] = value;
+    setFields(updatedFields);
   };
 
   return (
-    <div className="c">
-      <h3 className="pageTitle">Dynamic Input</h3>
-      {inputList.map((x, i) => {
-        return (
-          <div className="inputWrapper" key={i}>
-            <input
-              type="text"
-              name="plot"
-              placeholder={`Plot ${i + 1}`}
-              onChange={(e) => handleinputchange(e, i)}
-            />
-          </div>
-        );
-      })}
-      <div className="addRemBtn d-flex gap-30">
-        <button
-          type="button"
-          className="minus"
-          style={{ background: "#ec0202", padding: "0 15px" }}
-          onClick={handleremove}
-        >
-          -
-        </button>
-        <button
-          type="button"
-          className="plus"
-          style={{ background: "#029802", padding: "0 10px" }}
-          onClick={handleaddclick}
-        >
-          +
-        </button>
-      </div>
+    <div className="p-6 max-w-md mx-auto bg-white shadow-md rounded-lg">
+      <h2 className="text-xl font-semibold mb-4">Dynamic Input Fields</h2>
+      {fields.map((field, index) => (
+        <div key={index} className="flex items-center gap-2 mb-2">
+          <input
+            type="text"
+            value={field}
+            onChange={(e) => handleChange(index, e.target.value)}
+            className="p-2 border rounded w-full"
+            placeholder={`Field ${index + 1}`}
+          />
+          <button size="icon" onClick={() => removeField(index)}>
+            <RxCross2 className="icon" />
+          </button>
+        </div>
+      ))}
+      <button onClick={addField} className="mt-2">
+        Add More
+      </button>
     </div>
   );
-};
-
-export default DynamicInput;
+}
