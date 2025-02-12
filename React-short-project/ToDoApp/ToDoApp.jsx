@@ -145,5 +145,9 @@ export default ToDoApp;
 
 /***
  * Backup data
+ * Data 1
+ [{"id":1738055860718,"text":"যেকোনো user create এর সময় অব্শ্যই Backend থেকে autometic Dashboard-page permission টা দিয়ে দিতে হবে * ।","isComplete":false},{"id":1738055866696,"text":"অথবা database এ Dashboard-page এর id কখনও change হওয়া যাবেনা *** ।","isComplete":false}]
+
+ * Data 2
  [{"id":1737812583471,"text":"Employee create এর সময় credit limit & basic salary 0 দিতে হবে","isComplete":false},{"id":1737812630914,"text":"শুধুমাত্র Officer and manager designatin হলে relation create icon থাকবে","isComplete":false},{"id":1737812646763,"text":"Supplier details page modify","isComplete":false},{"id":1737812659843,"text":"Supplier details table modify","isComplete":false},{"id":1737812694569,"text":"Select date change করে expire date হবে","isComplete":false},{"id":1737812743490,"text":"stock-in এ calculate price option হবে","isComplete":false},{"id":1737812781593,"text":"Product datails table এ total bill change করে grand total হবে","isComplete":false},{"id":1737812812325,"text":"Customer table থেকে balance & due delete হবে","isComplete":false},{"id":1737812853337,"text":"customer details page এ change","isComplete":false}]
  * ***/
