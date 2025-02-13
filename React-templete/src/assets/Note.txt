@@ -1,11 +1,18 @@
 //===> Essential packeges (***) <===//
-> axios
-> react-helmet-async
-> react-icons
+> axios 
+    >> npm i axios
+> crypto-js 
+    >> npm i crypto-js
 > react-router-dom (v: 6.28.0)
-> react-toastify
-> socket.io-client
-> crypto-js
+    >> 
+> react-icons
+    >> npm i react-icons
+> react-toastify 
+    >> npm i --save react-toastify
+> socket.io-client 
+    >> npm i socket.io-client
+> react-helmet-async
+    >> 
 
 //===> Not essential packeges <===//
 > tailwindcss
