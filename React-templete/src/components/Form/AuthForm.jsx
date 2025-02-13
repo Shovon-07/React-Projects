@@ -2,14 +2,14 @@ import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-//===> Css
+//___ Css ___//
 import "./AuthForm.css";
 
-//===> Icons
+//___ Icons ___//
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
 
-//===> Utilities
+//___ Additional utilities ___//
 import ApiConfig from "../../assets/js/ApiConfig";
 import { Encryption } from "../../assets/js/Encryption";
 
@@ -40,7 +40,7 @@ const AuthForm = (props) => {
   const submit = async (e) => {
     e.preventDefault();
 
-    if (api == "/login") {
+    if (api == "/auth/login") {
       if (inputData.email == "") {
         toast.error("Please enter email address");
       } else if (inputData.password == "") {
@@ -60,33 +60,33 @@ const AuthForm = (props) => {
 
               setTimeout(() => {
                 // Set user data
-                setIsAuthenticated(response.data.token);
-                setUserRole(response.data.permissions);
+                setIsAuthenticated(response.data.data.token);
+                setUserRole(["Dashboard-page", "Profile-page"]); //permission / role array
 
                 // Set token in cookie
                 document.cookie = `_Auth_AJS+c0mPanY-07@12#31_token=${Encryption(
-                  response.data.token,
+                  response.data.data.token,
                   import.meta.env.VITE_SECRET_KEY
                 )}`;
 
                 // Set user role in cookie
                 document.cookie = `_Role_AJS+c0mPanY-07@12#31_user=${Encryption(
-                  response.data.permissions,
+                  ["Dashboard-page", "Profile-page"],
                   import.meta.env.VITE_SECRET_KEY
                 )}`;
 
                 // Set user id in cookie
-                document.cookie = `_UID_AJS+c0mPanY-07@12#31_user=${response.data.user.employee.id}`;
+                document.cookie = `_UID_AJS+c0mPanY-07@12#31_user=${response.data.data._id}`;
 
                 // Set user name in cookie
                 document.cookie = `_Unme_AJS+c0mPanY-07@12#31_user=${Encryption(
-                  response.data.user.employee.name,
+                  response.data.data.fullname,
                   import.meta.env.VITE_SECRET_KEY
                 )}`;
 
                 // Set user image in cookie
                 document.cookie = `_Uimg_AJS+c0mPanY-07@12#31_user=${Encryption(
-                  response.data.user.employee.image,
+                  response.data.data.profilePic,
                   import.meta.env.VITE_SECRET_KEY
                 )}`;
 
@@ -106,7 +106,9 @@ const AuthForm = (props) => {
             }
           })
           .catch((err) => {
+            setLoader(false);
             console.log(err);
+            toast.error(err.response.data.message);
           });
       }
     } else if (api == "/signup") {
@@ -220,10 +222,3 @@ const AuthForm = (props) => {
 };
 
 export default AuthForm;
-
-/***
- * Email : shovon@mail.com
- * Pass : 123456789
- * Encrypted : $2y$12$sClCjNbLjgksnzIW672QhO.kZjgoarTFnG2h8kKcU9eIrSGL4uh5G
- *
- ****/
